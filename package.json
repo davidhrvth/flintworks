@@ -1,0 +1,26 @@
+{
+  "name": "flintworks",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "flintworks-next",
+    "flintworks-backend",
+    "flintworks"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "npm run dev -w flintworks-next & npm run dev -w flintworks-backend",
+    "dev:next": "npm run dev -w flintworks-next",
+    "dev:backend": "npm run dev -w flintworks-backend",
+    "dev:vite": "npm run dev -w flintworks-vite",
+    "build": "npm run build -w flintworks-next && npm run build -w flintworks-backend",
+    "build:next": "npm run build -w flintworks-next",
+    "build:backend": "npm run build -w flintworks-backend",
+    "build:vite": "npm run build -w flintworks-vite",
+    "lint": "npm run lint -w flintworks-next && npm run lint -w flintworks-vite",
+    "start:next": "npm run start -w flintworks-next",
+    "start:backend": "npm run start -w flintworks-backend"
+  }
+}

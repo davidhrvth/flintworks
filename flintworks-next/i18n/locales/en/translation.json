@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "home": {
+      "title": "Flintworks — The Spark for Your Business",
+      "description": "Flintworks — a Budapest-based software agency. We build web apps, mobile products, business websites, and startup MVPs.",
+      "ogTitle": "Flintworks — The Spark for Your Business",
+      "ogDescription": "The spark for your business. We build what others can't."
+    },
+    "services": {
+      "title": "Services — Flintworks",
+      "description": "Web apps, business websites, mobile apps, and startup development. See everything Flintworks builds."
+    },
+    "pricing": {
+      "title": "Pricing — Flintworks",
+      "description": "Simple, transparent pricing for web apps, business websites, mobile apps, and startup development. Fixed packages with no surprises."
+    },
+    "work": {
+      "title": "Work — Flintworks",
+      "description": "Case studies and portfolio from Flintworks — web apps, mobile apps, business websites, and startup MVPs."
+    },
+    "studio": {
+      "title": "Studio — Flintworks",
+      "description": "The Flintworks Studio — our in-house product arm building apps and tools we actually want to use."
+    },
+    "about": {
+      "title": "About — Flintworks",
+      "description": "Flintworks is a Budapest-based software development agency built on craft, transparency, and delivering software that actually works."
+    },
+    "contact": {
+      "title": "Contact — Flintworks",
+      "description": "Start a project with Flintworks. Tell us what you're building and we'll get back to you within 24 hours."
+    }
+  },
+  "nav": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "work": "Work",
+    "studio": "Studio",
+    "about": "About",
+    "startProject": "Start a Project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "The Spark for Your Business",
+    "line1": "We Build",
+    "line2": "What Others",
+    "line3": "Can't",
+    "subheadline": "Flintworks is a Budapest-based software agency forging web apps, mobile products, and digital platforms for businesses that mean business — in Hungary and beyond.",
+    "seeOurWork": "See Our Work",
+    "getQuote": "Get a Quote"
+  },
+  "home": {
+    "whyFlintworks": {
+      "eyebrow": "Why Flintworks",
+      "heading": "The standard we hold ourselves to.",
+      "items": {
+        "01": {
+          "title": "Built to perform",
+          "body": "Every line of code we write is accountable to production. We optimize for real users, real load, and real edge cases — not just the happy path."
+        },
+        "02": {
+          "title": "Delivered on time",
+          "body": "We set realistic timelines and we hit them. No ghost acts, no endless revisions, no missed milestones. You'll always know where the project stands."
+        },
+        "03": {
+          "title": "Designed to convert",
+          "body": "Craft and commercial intent aren't opposites. We build things that look sharp and drive outcomes — whether that's sign-ups, sales, or scale."
+        }
+      }
+    },
+    "recentWork": {
+      "eyebrow": "Recent Work",
+      "heading": "Things we've forged.",
+      "viewAll": "View all work"
+    },
+    "studio": {
+      "eyebrow": "Flintworks Studio",
+      "heading": "We don't just build for clients — we build our own.",
+      "body": "Flintworks Studio is the product arm of our agency — where we build in-house apps, tools, and platforms to stay sharp and solve problems we actually care about.",
+      "cta": "See the Studio"
+    },
+    "bottomCta": {
+      "heading": "Ready to build",
+      "highlight": "something?",
+      "body": "Tell us about your project and we'll get back to you within 24 hours.",
+      "cta": "Start a Project"
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "What We Build",
+      "heading": "What We Build",
+      "subheading": "From MVPs to production-scale platforms — we handle the full spectrum of software development, with a focus on quality, speed, and outcomes."
+    },
+    "localNote": "Working with a Hungarian business? We understand the local market, regulatory landscape, and what it takes to compete — both domestically and across the EU.",
+    "deliverables": "Deliverables",
+    "useCases": "Typical Use Cases",
+    "startWith": "Start with {{name}}",
+    "comingSoonText": "Marketing services are coming soon. Leave your email to be notified.",
+    "notifyPlaceholder": "your@email.com",
+    "notifyButton": "Notify Me",
+    "learnMore": "Learn more",
+    "grid": {
+      "eyebrow": "What We Build",
+      "heading": "Everything you need to launch, scale, and grow."
+    },
+    "cta": {
+      "heading": "Not sure which service you need?",
+      "body": "Tell us about your project and we'll recommend the right approach.",
+      "button": "Talk to Us"
+    },
+    "comingSoon": "Coming Soon",
+    "items": {
+      "web-apps": {
+        "name": "Web Apps & Platforms",
+        "tagline": "Full-stack web applications built to scale.",
+        "description": [
+          "We build full-stack web applications, SaaS platforms, dashboards, and portals that handle real load and real users. From MVPs to production-scale systems, we architect for the long term.",
+          "Our stack is modern, our deployments are fast, and our code is clean. Whether you need a customer-facing product or an internal tool, we deliver software that works.",
+          "We think through the data model, the auth layer, the API design, and the performance characteristics before writing a single line of code."
+        ],
+        "deliverables": [
+          "Full-stack application architecture",
+          "RESTful or GraphQL API design",
+          "Authentication & authorization systems",
+          "Admin dashboards and data management",
+          "Third-party integrations (Stripe, Twilio, etc.)",
+          "Deployment and CI/CD pipeline setup",
+          "Performance optimization and monitoring"
+        ],
+        "useCases": [
+          "SaaS products for B2B or B2C",
+          "Internal company platforms and tools",
+          "Customer portals and self-service dashboards",
+          "Marketplace and e-commerce platforms"
+        ]
+      },
+      "business-websites": {
+        "name": "Business Websites",
+        "tagline": "Marketing sites that actually convert.",
+        "description": [
+          "Your website is your most important salesperson. We build marketing sites, landing pages, and company websites that are fast, SEO-optimized, and built to convert visitors into customers.",
+          "We combine sharp design with technical rigor — making sure your site loads fast, ranks well, and reflects your brand with precision.",
+          "Every site we build is mobile-first, accessible, and structured for search engines from the ground up."
+        ],
+        "deliverables": [
+          "Custom design and development",
+          "Mobile-first responsive layout",
+          "SEO optimization (meta, schema, sitemap)",
+          "Contact forms and lead capture",
+          "CMS integration for easy content updates",
+          "Analytics and conversion tracking setup",
+          "Performance and accessibility audit"
+        ],
+        "useCases": [
+          "Company and agency websites",
+          "Product landing pages",
+          "Service business websites",
+          "Portfolio and professional sites"
+        ]
+      },
+      "mobile-apps": {
+        "name": "Mobile Apps",
+        "tagline": "iOS and Android from a single codebase.",
+        "description": [
+          "We build cross-platform mobile applications with React Native — one codebase, two platforms, no compromise on quality. Your app will feel native on both iOS and Android.",
+          "From idea to App Store, we handle the full lifecycle: design, development, testing, and submission. We build for performance, offline capability, and a great user experience.",
+          "We have experience with complex mobile features — push notifications, biometric auth, geolocation, camera integrations, and payment flows."
+        ],
+        "deliverables": [
+          "Cross-platform React Native development",
+          "iOS and Android app builds",
+          "App Store and Google Play submission",
+          "Push notification infrastructure",
+          "Offline-first data architecture",
+          "Native device API integrations",
+          "App performance profiling"
+        ],
+        "useCases": [
+          "Consumer apps (B2C)",
+          "Business productivity tools",
+          "On-demand service applications",
+          "Connected hardware companion apps"
+        ]
+      },
+      "startup-development": {
+        "name": "Startup Development",
+        "tagline": "Idea → MVP → launch. We become your dev team.",
+        "description": [
+          "For founders who need to move fast without burning runway on the wrong things, we offer end-to-end product development. We take your idea from concept to a shippable MVP.",
+          "We've helped early-stage founders validate their assumptions, build investor demos, and launch their first version to real users — on time and on budget.",
+          "We work as a true development partner: advising on architecture, suggesting simpler alternatives, and pushing back when a feature doesn't serve the core goal."
+        ],
+        "deliverables": [
+          "Product scoping and technical roadmap",
+          "MVP architecture and development",
+          "Founder-friendly process and communication",
+          "Investor demo and pitch-ready product",
+          "User testing and iteration support",
+          "Handoff documentation for future team",
+          "Post-launch support period"
+        ],
+        "useCases": [
+          "Pre-seed and seed stage startups",
+          "Non-technical founders building their first product",
+          "Founders needing to validate before raising",
+          "Existing startups that need to move faster"
+        ]
+      },
+      "marketing": {
+        "name": "Marketing",
+        "tagline": "Growth strategy, SEO, and paid acquisition.",
+        "description": [
+          "Digital marketing, SEO, paid ads, and growth services to help your product find its audience. Coming soon to Flintworks."
+        ],
+        "deliverables": [],
+        "useCases": []
+      }
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "hero": {
+      "heading": "Simple, transparent pricing",
+      "subheading": "Fixed packages for clarity. Custom quotes for complexity. No surprises."
+    },
+    "web": {
+      "eyebrow": "Web Development",
+      "heading": "Web & Platform Pricing",
+      "subtext": "Choose a package that fits your project. All pricing starts here — complex projects get a custom quote."
+    },
+    "mobile": {
+      "eyebrow": "Mobile Development",
+      "heading": "Building for mobile?",
+      "subtext": "Cross-platform apps for iOS and Android with React Native."
+    },
+    "custom": {
+      "heading": "Not sure which fits?",
+      "body": "Let's figure it out together. Tell us about your project and we'll give you a clear, honest quote.",
+      "cta": "Get a Custom Quote"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Common questions"
+    },
+    "currencyNote": "Prices shown are indicative. Final quotes are tailored to your project.",
+    "mostPopular": "Most Popular",
+    "startingAt": "starting at",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "price": "€2,500",
+        "priceHUF": "900 000 Ft",
+        "description": "Best for business websites and simple landing pages.",
+        "features": [
+          "Up to 8 pages",
+          "Custom design",
+          "Mobile-responsive layout",
+          "Contact form integration",
+          "Basic SEO setup",
+          "Google Analytics setup",
+          "2 rounds of revisions"
+        ],
+        "cta": "Get Started"
+      },
+      "growth": {
+        "name": "Growth",
+        "price": "€7,500",
+        "priceHUF": "2 700 000 Ft",
+        "description": "Best for web app MVPs and business platforms.",
+        "features": [
+          "Full-stack web application",
+          "User authentication & accounts",
+          "Admin dashboard",
+          "API integrations (up to 3)",
+          "Database design & setup",
+          "Deployment & CI/CD pipeline",
+          "4 weeks of post-launch support"
+        ],
+        "cta": "Get Started"
+      },
+      "scale": {
+        "name": "Scale",
+        "price": "Custom",
+        "priceHUF": "Egyedi",
+        "description": "For large-scale apps, SaaS products, or end-to-end startup builds.",
+        "features": [
+          "Everything in Growth",
+          "Unlimited integrations",
+          "Multi-tenant / SaaS architecture",
+          "Advanced auth (SSO, roles)",
+          "Custom analytics and reporting",
+          "Dedicated project manager",
+          "3 months of post-launch support"
+        ],
+        "cta": "Let's Talk"
+      },
+      "mobile-mvp": {
+        "name": "Mobile MVP",
+        "price": "€8,000",
+        "priceHUF": "2 900 000 Ft",
+        "description": "Get your mobile app idea into users' hands fast.",
+        "features": [
+          "React Native (iOS + Android)",
+          "Up to 8 screens",
+          "User authentication",
+          "Basic API integration",
+          "App Store submission support",
+          "30 days post-launch support"
+        ],
+        "cta": "Get Started"
+      },
+      "custom-mobile": {
+        "name": "Custom Mobile App",
+        "price": "Custom",
+        "priceHUF": "Egyedi",
+        "description": "Full-featured mobile app with complex integrations and custom functionality.",
+        "features": [
+          "Everything in Mobile MVP",
+          "Unlimited screens & flows",
+          "Push notifications",
+          "Offline support",
+          "Native device integrations",
+          "Custom backend API"
+        ],
+        "cta": "Let's Talk"
+      }
+    },
+    "faqItems": [
+      {
+        "question": "Do you work with non-technical founders?",
+        "answer": "Absolutely. A large part of our work is with founders who have great ideas but no engineering background. We translate your product vision into technical requirements, explain trade-offs in plain language, and keep you in the loop at every step."
+      },
+      {
+        "question": "What's your typical timeline?",
+        "answer": "A business website typically takes 3–5 weeks. A web app MVP runs 6–12 weeks depending on complexity. We establish a clear timeline before starting any project and commit to hitting those milestones."
+      },
+      {
+        "question": "Do you offer ongoing support after launch?",
+        "answer": "Yes. Every project includes a post-launch support period (varies by package). After that, we offer ongoing retainer arrangements for maintenance, updates, and continued development."
+      },
+      {
+        "question": "Can I start with a smaller package and scale up?",
+        "answer": "Yes. We build with scalability in mind from the start. Many clients begin with a Starter or Growth package and expand as their product grows. We'll architect things so that scaling up doesn't require rewriting everything."
+      },
+      {
+        "question": "What if I already have a design?",
+        "answer": "Great — we'll work with it. We're comfortable building from Figma files, existing brand guidelines, or partial designs. If you need design work too, we can handle that as well."
+      },
+      {
+        "question": "Do you sign NDAs?",
+        "answer": "Yes. We're happy to sign an NDA before discussing your project. Confidentiality is standard practice for us."
+      }
+    ]
+  },
+  "work": {
+    "eyebrow": "Portfolio",
+    "heading": "Things We've Forged",
+    "subheading": "A selection of products, platforms, and websites we've built for clients who needed things done right.",
+    "viewCaseStudy": "View Case Study",
+    "cta": {
+      "heading": "Want your project here?",
+      "subtext": "We'd love to add your product to this page. Let's build something worth showing off.",
+      "button": "Start a Project"
+    },
+    "projects": {
+      "alpha": {
+        "name": "Project Alpha",
+        "category": "Web App",
+        "description": "A full-stack SaaS dashboard for operations teams — real-time data, multi-tenant architecture, and a clean analytics interface built to handle thousands of daily active users."
+      },
+      "beta": {
+        "name": "Project Beta",
+        "category": "Website",
+        "description": "Multi-location service company needed a fast, modern marketing site that could generate leads and reflect their premium positioning in a competitive market."
+      },
+      "gamma": {
+        "name": "Project Gamma",
+        "category": "Mobile",
+        "description": "Cross-platform consumer app connecting service providers with customers — built with React Native for iOS and Android, with real-time chat and location features."
+      }
+    }
+  },
+  "studio": {
+    "eyebrow": "The Studio",
+    "heading": "The Flintworks Studio",
+    "subheading": "We don't just build for clients — we build our own products too.",
+    "subheading2": "The Studio is the product arm of Flintworks — where we take ideas that matter to us and build them from scratch, using the same rigor we bring to every client project.",
+    "inProgress": {
+      "eyebrow": "In Progress",
+      "heading": "What we're building.",
+      "subtext": "These projects are currently in development. We'll share more as they get closer to launch."
+    },
+    "followBuild": "Follow the Build",
+    "inDev": "In Development",
+    "philosophy": {
+      "eyebrow": "Why We Build",
+      "heading": "Builders build.",
+      "paragraphs": [
+        "We started the Studio because the best way to stay sharp as a development agency is to keep shipping our own products. Building for ourselves forces us to make real decisions, not just implement someone else's requirements.",
+        "It also means we're constantly testing our own stack, finding the rough edges, and discovering what actually works at scale — knowledge that directly benefits every client we work with.",
+        "The Studio is also where we take on problems we genuinely care about solving. Not everything needs to be a client engagement."
+      ]
+    },
+    "projects": {
+      "studio-web": {
+        "name": "Project TBD",
+        "platform": "Web App",
+        "description": "A web application we're building in-house to solve a problem we kept running into in our day-to-day work. Details coming soon."
+      },
+      "studio-mobile": {
+        "name": "Project TBD",
+        "platform": "Mobile App",
+        "description": "A cross-platform mobile app currently in development. We'll be sharing more about this one as we get closer to launch."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "heading": "Built",
+    "headingHighlight": "Different",
+    "subheading": "Flintworks exists to build software that actually works — on time, on budget, and built to last.",
+    "story": {
+      "eyebrow": "Our approach",
+      "heading": "A focused agency that punches above its weight.",
+      "paragraphs": [
+        "Flintworks is a senior-level software agency with a simple philosophy: do fewer things, but do them exceptionally well. We're not trying to be everything to everyone — we specialize in the work we're genuinely great at.",
+        "We take on projects we believe in and treat every build as if it were our own product. That means asking hard questions, pushing back on scope that doesn't serve your goals, and caring deeply about what ships.",
+        "When you work with us, you're working with people who have shipped real products to real users — not interns learning on your budget. We've seen what goes wrong at scale, and we build accordingly."
+      ]
+    },
+    "values": {
+      "eyebrow": "What we stand for",
+      "heading": "Our values.",
+      "items": {
+        "craft": {
+          "title": "Craft over shortcuts",
+          "body": "We take the time to do things right. A quick hack today is a costly rewrite tomorrow. We build things that last."
+        },
+        "transparency": {
+          "title": "Transparency always",
+          "body": "No hidden complexity, no surprise scope changes. You'll always know what we're doing and why."
+        },
+        "speed": {
+          "title": "Speed without sacrifice",
+          "body": "Moving fast doesn't mean moving recklessly. We find the efficient path to quality — every time."
+        },
+        "builders": {
+          "title": "Builders, not order-takers",
+          "body": "We push back when something doesn't serve the goal. We're invested in your outcome, not just the deliverable."
+        }
+      }
+    },
+    "budapest": {
+      "eyebrow": "Where We're From",
+      "heading": "Based in Budapest. Built for the World.",
+      "body": "We're proud to be a Hungarian-built agency. Budapest is one of Europe's fastest-growing tech hubs, and we're part of that story — bringing world-class software development to local businesses and international clients alike."
+    },
+    "stack": {
+      "eyebrow": "Our stack",
+      "heading": "Technologies we work with.",
+      "subtext": "Battle-tested tools that deliver results in production."
+    },
+    "cta": {
+      "heading": "Ready to work with us?",
+      "body": "Tell us about your project. We'll respond within 24 hours.",
+      "button": "Get in Touch"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Let's build",
+    "headingHighlight": "something",
+    "info": {
+      "heading": "Let's build something together",
+      "body": "Whether you have a fully-formed idea or just a problem that needs solving, we'd love to hear about it. Fill in the form and we'll set up a call.",
+      "location": "Budapest, Hungary",
+      "locationNote": "We work with clients across Hungary and internationally.",
+      "response": "We typically respond within 24 hours.",
+      "findUs": "Find us online",
+      "next": {
+        "label": "What happens next?",
+        "step1": "We review your message within 24 hours",
+        "step2": "We schedule a 30-minute discovery call",
+        "step3": "You get a clear proposal with timeline and pricing"
+      }
+    }
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "companyOptional": "(optional)",
+    "service": "Service",
+    "budget": "Budget Range",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "companyPlaceholder": "Company name",
+    "messagePlaceholder": "Tell us about your project...",
+    "services": {
+      "placeholder": "Select a service...",
+      "webApp": "Web App & Platform",
+      "businessWebsite": "Business Website",
+      "mobileApp": "Mobile App",
+      "startup": "Startup Development",
+      "other": "Other / Not Sure"
+    },
+    "budgets": {
+      "placeholder": "Select a budget range...",
+      "under5k": "Under €5,000",
+      "5kTo15k": "€5,000 – €15,000",
+      "15kTo50k": "€15,000 – €50,000",
+      "over50k": "Over €50,000",
+      "unknown": "Not sure yet"
+    },
+    "validation": "Please fill in all required fields.",
+    "error": "Something went wrong. Please try again or email us directly at hello@flintworks.io",
+    "sending": "Sending...",
+    "sendIt": "Send It",
+    "success": {
+      "heading": "Message sent!",
+      "body": "We'll be in touch within 24 hours."
+    }
+  },
+  "marketing": {
+    "nav": "Marketing",
+    "navSoon": "Soon",
+    "badge": "Coming Soon",
+    "sectionEyebrow": "Marketing & Growth",
+    "sectionHeading": "Marketing & Growth",
+    "sectionSubtext": "A full marketing department — coming to Flintworks. Brand identity, SEO, paid ads, social media, and more.",
+    "notifyText": "Marketing services are coming soon. Leave your email and we'll let you know the moment we launch.",
+    "notifyPlaceholder": "your@email.com",
+    "notifyButton": "Notify Me",
+    "notifySuccess": "You're on the list!",
+    "subServices": {
+      "brand-identity": {
+        "name": "Brand Identity Design",
+        "description": "Logo design, color systems, typography, brand guidelines, and everything your business needs to look the part — from business cards to full brand books."
+      },
+      "seo": {
+        "name": "Search Engine Optimization",
+        "description": "On-page and technical SEO, keyword research, content strategy, and local SEO — so your customers find you before they find your competitors."
+      },
+      "ppc": {
+        "name": "Paid Advertising (PPC)",
+        "description": "Google Ads, Meta Ads (Facebook & Instagram), and TikTok campaigns — built around your budget, your goals, and real measurable returns."
+      },
+      "social-media": {
+        "name": "Social Media Management",
+        "description": "Content creation, scheduling, community management, and strategy for Facebook, Instagram, LinkedIn, and TikTok."
+      },
+      "email-marketing": {
+        "name": "Email Marketing",
+        "description": "Newsletter campaigns, automated flows, list building, and performance reporting — turning your audience into repeat customers."
+      },
+      "content-marketing": {
+        "name": "Content Marketing",
+        "description": "Blog writing, lead magnets, and content strategies that build authority, drive organic traffic, and support your sales funnel."
+      },
+      "analytics": {
+        "name": "Analytics & Reporting",
+        "description": "Google Analytics 4, Meta Pixel setup, conversion tracking, and monthly performance reports — so you always know exactly what's working."
+      },
+      "cro": {
+        "name": "Conversion Rate Optimization (CRO)",
+        "description": "Landing page audits, A/B testing, UX copywriting, and data-driven improvements that turn more visitors into paying customers."
+      }
+    },
+    "home": {
+      "heading": "Marketing is coming to Flintworks.",
+      "subtext": "We're building out a full marketing department — brand identity, SEO, paid ads, social media, and more. One agency. Everything you need to grow."
+    },
+    "pricing": {
+      "eyebrow": "Marketing Packages",
+      "heading": "Marketing is coming soon.",
+      "subtext": "We're building out a full marketing department. Pricing will be announced at launch — join the list to be first.",
+      "comingSoonLabel": "Coming Soon",
+      "getNotified": "Get Notified",
+      "bestFor": "Best for",
+      "includes": "Includes",
+      "tiers": {
+        "starter": {
+          "name": "Starter",
+          "bestFor": "Small businesses needing a digital presence",
+          "includes": "Brand identity + basic SEO"
+        },
+        "growth": {
+          "name": "Growth",
+          "bestFor": "Growing businesses wanting leads",
+          "includes": "SEO + social media + email marketing"
+        },
+        "full-service": {
+          "name": "Full Service",
+          "bestFor": "Businesses wanting full marketing management",
+          "includes": "Everything — ads, content, analytics, CRO"
+        }
+      }
+    },
+    "meta": {
+      "title": "Marketing — Flintworks",
+      "description": "Brand identity, SEO, paid advertising, social media, and more — the Flintworks Marketing department is coming soon."
+    },
+    "hero": {
+      "eyebrow": "Coming Soon",
+      "heading": "Marketing & Growth",
+      "subheading": "We're building a full in-house marketing department. Brand identity, SEO, paid ads, social media management, and more — all under one roof, from the team you already trust."
+    },
+    "subServicesEyebrow": "What's Included",
+    "subServicesHeading": "Everything you need to grow.",
+    "bottomCta": {
+      "heading": "Be first to know.",
+      "body": "Marketing is coming to Flintworks. Leave your email and we'll reach out the moment we're ready to take on clients."
+    },
+    "about": {
+      "visionEyebrow": "Full-Service Vision",
+      "vision": "Development is only half the picture. We're building Flintworks into a full-service digital agency — pairing world-class software development with strategic marketing, so our clients don't just get a great product, they get one that grows."
+    }
+  },
+  "footer": {
+    "tagline": "Forged in Budapest. Built for the world.",
+    "location": "Budapest, Hungary 🇭🇺",
+    "copyright": "© 2025 Flintworks. All rights reserved.",
+    "sections": {
+      "services": "Services",
+      "company": "Company",
+      "connect": "Connect"
+    },
+    "links": {
+      "webApps": "Web Apps",
+      "websites": "Websites",
+      "mobileApps": "Mobile Apps",
+      "startups": "Startups",
+      "work": "Work",
+      "studio": "Studio",
+      "about": "About",
+      "pricing": "Pricing",
+      "contact": "Contact"
+    }
+  }
+}

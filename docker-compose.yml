@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: flintworks-next/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - flintworks-next/.env.production
+    environment:
+      CONTACT_BACKEND_URL: http://backend:3001
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: flintworks-backend/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - flintworks-backend/.env.production
+    ports:
+      - "127.0.0.1:3001:3001"

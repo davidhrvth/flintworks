@@ -1,0 +1,285 @@
+<!-- TODO: replace placeholder links and sender address before going live -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Számla / Invoice {{invoice_number}} — Flintworks</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0A0A0B; font-family: 'Syne', 'Inter', Arial, sans-serif;">
+
+  <!-- Outer wrapper -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0A0A0B;">
+    <tr>
+      <td align="center" style="padding: 40px 16px;">
+
+        <!-- Email card — max 600px -->
+        <table border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%; background-color: #111114; border: 1px solid #1E1E24; border-radius: 8px; overflow: hidden;">
+
+          <!-- ═══════════════════════════════════════ -->
+          <!-- HEADER                                  -->
+          <!-- ═══════════════════════════════════════ -->
+          <tr>
+            <td style="padding: 36px 40px 28px 40px; border-bottom: 1px solid #1E1E24;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <!-- Logo -->
+                  <td valign="middle">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #F0F0F5; letter-spacing: 0.12em; text-transform: uppercase;">FLINTWORKS</span>
+                    <span style="font-size: 18px; color: #FF4D00; margin-left: 6px;">✦</span>
+                    <br />
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; letter-spacing: 0.08em; opacity: 0.7;">Forged in Budapest.</span>
+                  </td>
+                  <!-- Invoice label -->
+                  <td align="right" valign="middle">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: 0.14em; text-transform: uppercase; display: block;">SZÁMLA / INVOICE</span>
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 18px; font-weight: 700; color: #F0F0F5; display: block; margin-top: 4px;">{{invoice_number}}</span>
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; display: block; margin-top: 2px;">{{invoice_date}}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════════════════════════════════ -->
+          <!-- BODY                                    -->
+          <!-- ═══════════════════════════════════════ -->
+          <tr>
+            <td style="padding: 36px 40px 0 40px;">
+
+              <!-- ─── Seller / Buyer block ──────────── -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px;">
+                <tr>
+                  <!-- Seller -->
+                  <td width="50%" valign="top" style="padding-right: 16px;">
+                    <p style="margin: 0 0 6px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.12em; text-transform: uppercase;">Eladó / Seller</p>
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 700; color: #F0F0F5;">Flintworks</p>
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; line-height: 1.6;">Budapest, Hungary</p>
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; line-height: 1.6;">Adószám: {{flintworks_tax_number}}</p>
+                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; line-height: 1.6;">hello@flintworks.io</p>
+                  </td>
+                  <!-- Buyer -->
+                  <td width="50%" valign="top" style="padding-left: 16px; border-left: 1px solid #1E1E24;">
+                    <p style="margin: 0 0 6px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.12em; text-transform: uppercase;">Vevő / Buyer</p>
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 700; color: #F0F0F5;">{{client_name}}</p>
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; line-height: 1.6;">{{client_address}}</p>
+                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; line-height: 1.6;">Adószám: {{client_tax_number}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- ─── Period + Due date meta row ──────── -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0A0A0B; border: 1px solid #1E1E24; border-radius: 6px; margin-bottom: 28px;">
+                <tr>
+                  <!-- Period -->
+                  <td width="33%" style="padding: 16px 20px; border-right: 1px solid #1E1E24;">
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.1em; text-transform: uppercase;">Időszak / Period</p>
+                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{period}}</p>
+                  </td>
+                  <!-- Payment method -->
+                  <td width="34%" style="padding: 16px 20px; border-right: 1px solid #1E1E24;">
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.1em; text-transform: uppercase;">Fizetési mód</p>
+                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{payment_method}}</p>
+                  </td>
+                  <!-- Due date — highlighted in #FF4D00 -->
+                  <td width="33%" style="padding: 16px 20px;">
+                    <p style="margin: 0 0 3px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.1em; text-transform: uppercase;">Fizetési határidő</p>
+                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 700; color: #FF4D00;">{{due_date}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- ─── Line items table ──────────────── -->
+              <!-- Column headers -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 2px;">
+                <tr style="background-color: #0A0A0B;">
+                  <td style="padding: 10px 16px; border: 1px solid #1E1E24; border-radius: 5px 0 0 0;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.1em; text-transform: uppercase;">Tétel / Item</span>
+                  </td>
+                  <td align="right" style="padding: 10px 16px; border: 1px solid #1E1E24; border-left: none; border-radius: 0 5px 0 0; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.1em; text-transform: uppercase;">Összeg / Amount ({{currency}})</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Row 1 — Domain -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 2px;">
+                <tr style="background-color: #111114;">
+                  <td style="padding: 13px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">Domain fenntartás</span>
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; margin-left: 6px; opacity: 0.6;">Domain renewal</span>
+                  </td>
+                  <td align="right" style="padding: 13px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{domain_fee}}</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Row 2 — Email hosting -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 2px;">
+                <tr style="background-color: #0A0A0B;">
+                  <td style="padding: 13px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">Email hosting</span>
+                  </td>
+                  <td align="right" style="padding: 13px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{email_fee}}</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Row 3 — Server hosting -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 2px;">
+                <tr style="background-color: #111114;">
+                  <td style="padding: 13px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">Szerverköltség</span>
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; margin-left: 6px; opacity: 0.6;">Server / hosting</span>
+                  </td>
+                  <td align="right" style="padding: 13px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{hosting_fee}}</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Row 4 — Developer upkeep -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 2px;">
+                <tr style="background-color: #0A0A0B;">
+                  <td style="padding: 13px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">Fejlesztői karbantartás</span>
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; margin-left: 6px; opacity: 0.6;">Developer upkeep</span>
+                  </td>
+                  <td align="right" style="padding: 13px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{upkeep_fee}}</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Row 5 — Other (optional) -->
+              <!-- To show this row: uncomment the block below and populate {{other_fee}} -->
+              <!--
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 2px;">
+                <tr style="background-color: #111114;">
+                  <td style="padding: 13px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">Egyéb</span>
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; margin-left: 6px; opacity: 0.6;">Other</span>
+                  </td>
+                  <td align="right" style="padding: 13px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{other_fee}}</span>
+                  </td>
+                </tr>
+              </table>
+              -->
+
+              <!-- ─── Subtotal / VAT / Total ─────────── -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 28px; margin-top: 2px;">
+
+                <!-- Subtotal -->
+                <tr style="background-color: #0A0A0B;">
+                  <td style="padding: 11px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF;">Nettó összeg / Subtotal</span>
+                  </td>
+                  <td align="right" style="padding: 11px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{subtotal}} {{currency}}</span>
+                  </td>
+                </tr>
+
+                <!-- VAT -->
+                <tr style="background-color: #111114;">
+                  <td style="padding: 11px 16px; border: 1px solid #1E1E24; border-top: none;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF;">ÁFA / VAT ({{vat_rate}}%)</span>
+                  </td>
+                  <td align="right" style="padding: 11px 16px; border: 1px solid #1E1E24; border-left: none; border-top: none; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{vat_amount}} {{currency}}</span>
+                  </td>
+                </tr>
+
+                <!-- Total — highlighted -->
+                <tr style="background-color: #FF4D00;">
+                  <td style="padding: 14px 16px; border-radius: 0 0 0 5px;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; font-weight: 700; color: #F0F0F5; letter-spacing: 0.04em; text-transform: uppercase;">Fizetendő összeg / Total Due</span>
+                  </td>
+                  <td align="right" style="padding: 14px 16px; border-radius: 0 0 5px 0; white-space: nowrap;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 18px; font-weight: 700; color: #F0F0F5;">{{total}} {{currency}}</span>
+                  </td>
+                </tr>
+
+              </table>
+
+              <!-- ─── Payment instructions ──────────── -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0A0A0B; border: 1px solid #1E1E24; border-radius: 6px; margin-bottom: 32px;">
+                <tr>
+                  <td style="padding: 20px 24px;">
+                    <p style="margin: 0 0 12px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.12em; text-transform: uppercase;">Fizetési adatok / Payment Details</p>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td width="160" valign="top" style="padding-bottom: 8px;">
+                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #C4C4CF; text-transform: uppercase; letter-spacing: 0.06em;">Fizetési mód</span>
+                        </td>
+                        <td valign="top" style="padding-bottom: 8px;">
+                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5;">{{payment_method}}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="160" valign="top">
+                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #C4C4CF; text-transform: uppercase; letter-spacing: 0.06em;">Bankszámlaszám</span>
+                        </td>
+                        <td valign="top">
+                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; color: #F0F0F5; letter-spacing: 0.04em;">{{bank_account}}</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- ═══════════════════════════════════════ -->
+          <!-- PAID STAMP — uncomment when settled     -->
+          <!-- ═══════════════════════════════════════ -->
+
+          <!--
+          PAID STAMP — uncomment this entire block when the invoice is settled.
+          Note: Pure CSS rotation is stripped by most email clients.
+          This renders as a flat accent banner rather than a rotated stamp.
+          For a true diagonal stamp, generate a pre-stamped PDF instead.
+
+          <tr>
+            <td style="padding: 0 40px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="background-color: #0A0A0B; border: 2px solid #FF4D00; border-radius: 4px; padding: 12px 0;">
+                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #FF4D00; letter-spacing: 0.24em; text-transform: uppercase;">&#10003; FIZETVE / PAID</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          -->
+
+          <!-- ═══════════════════════════════════════ -->
+          <!-- FOOTER                                  -->
+          <!-- ═══════════════════════════════════════ -->
+          <tr>
+            <td align="center" style="padding: 28px 40px; border-top: 1px solid #1E1E24; margin-top: 0;">
+              <p style="margin: 0 0 8px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 13px; font-style: italic; color: #C4C4CF; line-height: 1.6;">
+                Köszönjük a bizalmát. — Thank you for your trust.
+              </p>
+              <p style="margin: 0 0 4px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; opacity: 0.5;">Flintworks · Digital Performance Agency · Budapest, Hungary</p>
+              <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; color: #C4C4CF; opacity: 0.5;">
+                <a href="https://flintworks.io" target="_blank" style="color: #C4C4CF; text-decoration: underline;">flintworks.io</a>
+                &nbsp;·&nbsp;
+                <a href="mailto:hello@flintworks.io" style="color: #C4C4CF; text-decoration: underline;">hello@flintworks.io</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Email card -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

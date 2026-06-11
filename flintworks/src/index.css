@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0A0A0B;
+  --surface: #111114;
+  --border: #1E1E24;
+  --ember: #FF4D00;
+  --flame: #FF8C42;
+  --text-muted: #6B6B7A;
+  --text-body: #C4C4CF;
+  --text-heading: #F0F0F5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-body);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 77, 0, 0.25);
+  color: var(--text-heading);
+}
+
+/* Glassmorphism utility */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(17, 17, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Ember glow utility */
+.ember-glow {
+  box-shadow: 0 0 30px rgba(255, 77, 0, 0.2), 0 0 60px rgba(255, 77, 0, 0.08);
+}
+
+.ember-glow-hover:hover {
+  box-shadow: 0 0 40px rgba(255, 77, 0, 0.3), 0 0 80px rgba(255, 77, 0, 0.12);
+}
+
+/* Text gradient */
+.text-ember-gradient {
+  background: linear-gradient(135deg, #FF4D00 0%, #FF8C42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
