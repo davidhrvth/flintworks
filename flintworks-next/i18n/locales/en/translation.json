@@ -43,9 +43,8 @@
   },
   "hero": {
     "badge": "The Spark for Your Business",
-    "line1": "We Build",
-    "line2": "What Others",
-    "line3": "Can't",
+    "line1": "We Forge",
+    "line2": "The Future",
     "subheadline": "Flintworks is a Budapest-based software agency forging web apps, mobile products, and digital platforms for businesses that mean business — in Hungary and beyond.",
     "seeOurWork": "See Our Work",
     "getQuote": "Get a Quote"
@@ -393,6 +392,7 @@
       "subtext": "These projects are currently in development. We'll share more as they get closer to launch."
     },
     "followBuild": "Follow the Build",
+    "viewCaseStudy": "View Case Study",
     "inDev": "In Development",
     "philosophy": {
       "eyebrow": "Why We Build",
@@ -410,9 +410,78 @@
         "description": "A web application we're building in-house to solve a problem we kept running into in our day-to-day work. Details coming soon."
       },
       "studio-mobile": {
-        "name": "Project TBD",
+        "name": "VIBE",
         "platform": "Mobile App",
-        "description": "A cross-platform mobile app currently in development. We'll be sharing more about this one as we get closer to launch."
+        "description": "Your passport to nightlife — a Budapest electronic discovery app with map-first event finding, AI-assisted catalog enrichment, and verified-attendee ratings across the scene."
+      }
+    }
+  },
+  "caseStudy": {
+    "backToStudio": "Back to Studio",
+    "relatedCta": "Want something like this built?",
+    "relatedCtaButton": "Start a Project",
+    "appStore": "App Store",
+    "playStore": "Google Play",
+    "watchDemo": "Watch Demo",
+    "status": {
+      "preLaunch": "Launching {{month}}",
+      "launched": "Launched"
+    },
+    "launchMonths": {
+      "august2026": "August 2026"
+    },
+    "metricsComingSoon": "Metrics coming soon after launch.",
+    "screenshotAlt": "{{name}} screenshot {{n}}",
+    "sections": {
+      "problem": "The Problem",
+      "approach": "Our Approach",
+      "architecture": "Architecture",
+      "challenge": "The Challenge",
+      "solution": "How We Solved It",
+      "features": "Key Features",
+      "techStack": "Tech Stack",
+      "metrics": "Impact",
+      "screenshots": "Product"
+    },
+    "techLayers": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "infra": "Infra",
+      "integrations": "Integrations"
+    },
+    "projects": {
+      "studio-mobile": {
+        "name": "VIBE",
+        "oneLiner": "Your passport to nightlife.",
+        "metaDescription": "VIBE is Flintworks Studio's Budapest nightlife discovery app — map-first events, AI catalog enrichment, and verified-attendee ratings. Launching August 2026.",
+        "role": "David — developer and co-founder",
+        "timeline": "~3 months of build · Launch August 17, 2026",
+        "platform": "Mobile App",
+        "problem": "Budapest electronic nightlife discovery is fragmented across Instagram, Facebook Events, ticket pages, and chats. Fans — primarily local scene regulars around 20–35 — need one trustworthy place for what's on, where, lineup, and price path — not another nearest-venue map. They also need trust signals after nights out. VIBE positions as a personal nightlife OS: discovery, scene graph, and ratings, without becoming a primary ticket vendor.",
+        "approach": "Solo technical build as co-founder inside Flintworks Studio: React Native/Expo consumer app, custom Express/Postgres API, admin CMS, and an AI-assisted catalog pipeline that keeps listings fresh and structured. Product thesis: win catalog completeness, enrichment, and ratings; outbound ticket links only — not full ticket selling.",
+        "architecture": [
+          "Mobile: Expo/React Native, Expo Router, Mapbox map with clustering, OAuth (Apple/Google/Facebook) + email auth, PostHog analytics, Expo push notifications.",
+          "API: Express 5, PostgreSQL, JWT auth, role-aware surfaces for users, platform admin, and org/artist admin.",
+          "Jobs: Redis + BullMQ scheduler worker for catalog refresh, ratings recalculation, and push dispatch.",
+          "AI catalog: flyer → structured event fields with cost-conscious inference; community lineup extraction for set times; artist enrichment for genres.",
+          "Ratings: one short flow gated to verified attendees across events, artists, organizations, and venues.",
+          "Ops: GitHub Actions deploy to VPS (API + scheduler worker); admin UI for entities, ratings, and scheduler."
+        ],
+        "challenge": "Keep a Budapest nightlife catalog complete and fresh while inferring missing structure with AI — especially from flyers — without runaway inference cost. Separately: set times often arrive late; artists lack clean genre tags; ratings only matter if they're trustworthy and quick.",
+        "solution": [
+          "Treat flyer vision as a primary structured-data source where listings are incomplete.",
+          "Run AI selectively and with cost controls so continuous enrichment stays affordable.",
+          "Ship a community lineup AI extraction path so set times land in the catalog as they appear.",
+          "Ship an artist enrichment path that infers genres for discovery and filtering.",
+          "Ship one verified-attendee rating flow that scores the whole entity graph — event, artist, org, venue — in a fast UX."
+        ],
+        "features": [
+          "Map-first Budapest discovery — what's on, where it is",
+          "Flyer → structured event AI with cost-aware freshness",
+          "Community lineup AI — set times as they appear",
+          "Verified-attendee multi-entity ratings for events, artists, orgs, and venues",
+          "Artist genre enrichment for discovery and filtering"
+        ]
       }
     }
   },

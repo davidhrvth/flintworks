@@ -1,33 +1,33 @@
 {
   "meta": {
     "home": {
-      "title": "Flintworks — A szikra a vállalatának",
-      "description": "A Flintworks budapesti szoftverfejlesztő ügynökség. Webalkalmazásokat, mobilapplikációkat és digitális platformokat építünk komoly vállalkozásoknak — Magyarországon és azon túl.",
-      "ogTitle": "Flintworks — Üzleti fejlesztések szikrája",
+      "title": "Flintworks - A szikra a vállalatának",
+      "description": "A Flintworks budapesti szoftverfejlesztő ügynökség. Webalkalmazásokat, mobilapplikációkat és digitális platformokat építünk komoly vállalkozásoknak - Magyarországon és azon túl.",
+      "ogTitle": "Flintworks - Üzleti fejlesztések szikrája",
       "ogDescription": "Ami mások számára lehetetlen, azt mi megépítjük."
     },
     "services": {
-      "title": "Szolgáltatások — Flintworks",
+      "title": "Szolgáltatások - Flintworks",
       "description": "Webalkalmazások, vállalati weboldalak, mobilapplikációk és startup fejlesztés. Minden, amit a Flintworks épít."
     },
     "pricing": {
-      "title": "Áraink — Flintworks",
+      "title": "Áraink - Flintworks",
       "description": "Átlátható árképzés webalkalmazásokhoz, weboldalakhoz, mobilapplikációkhoz és startup fejlesztéshez. Fix csomagok, meglepetések nélkül."
     },
     "work": {
-      "title": "Munkáink — Flintworks",
-      "description": "Esettanulmányok és portfólió a Flintworkstől — webalkalmazások, mobilapplikációk, vállalati weboldalak és startup MVP-k."
+      "title": "Munkáink - Flintworks",
+      "description": "Esettanulmányok és portfólió a Flintworkstől - webalkalmazások, mobilapplikációk, vállalati weboldalak és startup MVP-k."
     },
     "studio": {
-      "title": "Stúdió — Flintworks",
-      "description": "A Flintworks Stúdió — belső termékfejlesztési részlegünk, ahol saját applikációkat és eszközöket fejlesztünk."
+      "title": "Stúdió - Flintworks",
+      "description": "A Flintworks Stúdió - belső termékfejlesztési részlegünk, ahol saját applikációkat és eszközöket fejlesztünk."
     },
     "about": {
-      "title": "Rólunk — Flintworks",
+      "title": "Rólunk - Flintworks",
       "description": "A Flintworks egy budapesti szoftverfejlesztő ügynökség, amelyet a minőség, az átláthatóság és a megbízható szoftverszállítás alapelvére építettünk."
     },
     "contact": {
-      "title": "Kapcsolat — Flintworks",
+      "title": "Kapcsolat - Flintworks",
       "description": "Indítson projektet a Flintworksszel. Meséljen arról, amit épít, és 24 órán belül visszajelzünk."
     }
   },
@@ -43,10 +43,10 @@
   },
   "hero": {
     "badge": "Üzleti fejlesztések szikrája",
-    "line1": "Amit mások",
-    "line2": "nem tudnak,",
+    "line1": "A jövőt",
+    "line2": "építjük",
     "line3": "mi megépítjük.",
-    "subheadline": "A Flintworks egy budapesti szoftverfejlesztő ügynökség, amely webalkalmazásokat, mobilapplikációkat és digitális platformokat épít komoly vállalkozásoknak — Magyarországon és azon túl.",
+    "subheadline": "A Flintworks egy budapesti szoftverfejlesztő ügynökség, amely webalkalmazásokat, mobilapplikációkat és digitális platformokat épít komoly vállalkozásoknak - Magyarországon és azon túl.",
     "seeOurWork": "Munkáink",
     "getQuote": "Ajánlatot Kérek"
   },
@@ -57,7 +57,7 @@
       "items": {
         "01": {
           "title": "Teljesítményre tervezve",
-          "body": "Minden egyes kódsor felelős a produkciós környezetért. Valós felhasználókra, valós terhelésre és valós határhelyzetekre optimalizálunk — nem csak a tökéletes esetre."
+          "body": "Minden egyes kódsor felelős a produkciós környezetért. Valós felhasználókra, valós terhelésre és valós határhelyzetekre optimalizálunk - nem csak a tökéletes esetre."
         },
         "02": {
           "title": "Határidőre szállítva",
@@ -65,7 +65,7 @@
         },
         "03": {
           "title": "Konverzióra tervezve",
-          "body": "A minőség és az üzleti hatékonyság nem zárja ki egymást. Olyan dolgokat fejlesztünk, amelyek élesek és eredményeket hoznak — legyen az regisztráció, értékesítés vagy növekedés."
+          "body": "A minőség és az üzleti hatékonyság nem zárja ki egymást. Olyan dolgokat fejlesztünk, amelyek élesek és eredményeket hoznak - legyen az regisztráció, értékesítés vagy növekedés."
         }
       }
     },
@@ -76,8 +76,8 @@
     },
     "studio": {
       "eyebrow": "Flintworks Stúdió",
-      "heading": "Nem csak ügyfeleknek fejlesztünk — a sajátunkat is építjük.",
-      "body": "A Flintworks Stúdió az ügynökség termékfejlesztési ága — ahol saját applikációkat, eszközöket és platformokat építünk, hogy élesek maradjunk, és olyan problémákat oldjunk meg, amelyek valóban fontosak nekünk.",
+      "heading": "Nem csak ügyfeleknek fejlesztünk - a sajátunkat is építjük.",
+      "body": "A Flintworks Stúdió az ügynökség termékfejlesztési ága - ahol saját applikációkat, eszközöket és platformokat építünk, hogy élesek maradjunk, és olyan problémákat oldjunk meg, amelyek valóban fontosak nekünk.",
       "cta": "A Stúdióról"
     },
     "bottomCta": {
@@ -91,12 +91,12 @@
     "hero": {
       "eyebrow": "Amit fejlesztünk",
       "heading": "Amit fejlesztünk",
-      "subheading": "MVP-ktől a termelési léptékű platformokig — a szoftverfejlesztés teljes spektrumát lefed­jük, a minőségre, a sebességre és az eredményekre összpontosítva."
+      "subheading": "MVP-ktől a termelési léptékű platformokig - a szoftverfejlesztés teljes spektrumát lefed­jük, a minőségre, a sebességre és az eredményekre összpontosítva."
     },
-    "localNote": "Magyar vállalkozással dolgozik? Ismerjük a hazai piacot, a szabályozási környezetet, és azt, ami a versenyképességhez kell — itthon és az EU-ban egyaránt.",
+    "localNote": "Magyar vállalkozással dolgozik? Ismerjük a hazai piacot, a szabályozási környezetet, és azt, ami a versenyképességhez kell - itthon és az EU-ban egyaránt.",
     "deliverables": "Szállítandók",
     "useCases": "Tipikus felhasználási területek",
-    "startWith": "Indulás — {{name}}",
+    "startWith": "Indulás - {{name}}",
     "comingSoonText": "A marketingszolgáltatások hamarosan elérhetők. Adja meg e-mail-címét, és értesítjük.",
     "notifyPlaceholder": "email@ceg.hu",
     "notifyButton": "Értesítsen",
@@ -141,7 +141,7 @@
         "tagline": "Marketing oldalak, amelyek ténylegesen konvertálnak.",
         "description": [
           "A weboldaluk a legfontosabb értékesítőjük. Olyan marketing oldalakat, landingeket és vállalati weboldalakat fejlesztünk, amelyek gyorsak, SEO-optimalizáltak, és látogatókból ügyfeleket csinálnak.",
-          "Éles designt ötvözünk technikai precizitással — gondoskodunk arról, hogy az oldal gyorsan töltődjön, jól szerepeljen a keresőkben, és pontosan tükrözze a márkát.",
+          "Éles designt ötvözünk technikai precizitással - gondoskodunk arról, hogy az oldal gyorsan töltődjön, jól szerepeljen a keresőkben, és pontosan tükrözze a márkát.",
           "Minden weboldalt mobilra elsőként, akadálymentesen és a keresőmotorok számára strukturáltan építünk."
         ],
         "deliverables": [
@@ -162,11 +162,11 @@
       },
       "mobile-apps": {
         "name": "Mobilapplikációk",
-        "tagline": "iOS és Android — egyetlen kódbázisból.",
+        "tagline": "iOS és Android - egyetlen kódbázisból.",
         "description": [
-          "React Native segítségével platformfüggetlen mobilalkalmazásokat fejlesztünk — egy kódbázis, két platform, a minőség feláldozása nélkül. Az applikáció natívnak hat mind iOS-en, mind Androidon.",
+          "React Native segítségével platformfüggetlen mobilalkalmazásokat fejlesztünk - egy kódbázis, két platform, a minőség feláldozása nélkül. Az applikáció natívnak hat mind iOS-en, mind Androidon.",
           "Az ötlettől az App Store-ig a teljes életciklust kezeljük: design, fejlesztés, tesztelés és beküldés. Teljesítményre, offline képességre és kiváló felhasználói élményre fejlesztünk.",
-          "Tapasztalatunk van összetett mobilfunkciókkal — push értesítések, biometrikus azonosítás, geolokáció, kamera-integráció és fizetési folyamatok."
+          "Tapasztalatunk van összetett mobilfunkciókkal - push értesítések, biometrikus azonosítás, geolokáció, kamera-integráció és fizetési folyamatok."
         ],
         "deliverables": [
           "Platformfüggetlen React Native fejlesztés",
@@ -189,7 +189,7 @@
         "tagline": "Ötlet → MVP → piacra lépés. Mi leszünk a fejlesztőcsapat.",
         "description": [
           "Azoknak az alapítóknak, akiknek gyorsan kell haladniuk anélkül, hogy rossz irányba égessék el a tőkéjüket, végponttól végpontig tartó termékfejlesztést kínálunk. Az ötlettől a piacképes MVP-ig visszük a projektet.",
-          "Segítettük korai fázisú alapítóknak hipotéziseik validálását, befektetői demók elkészítését és az első verzió piacra juttatását — határidőre és kereten belül.",
+          "Segítettük korai fázisú alapítóknak hipotéziseik validálását, befektetői demók elkészítését és az első verzió piacra juttatását - határidőre és kereten belül.",
           "Valódi fejlesztési partnerként dolgozunk: tanácsot adunk az architektúráról, egyszerűbb alternatívákat javaslunk, és visszautasítjuk azokat a funkciókat, amelyek nem szolgálják az alapcélt."
         ],
         "deliverables": [
@@ -212,7 +212,7 @@
         "name": "Marketing",
         "tagline": "Növekedési stratégia, SEO és fizetett hirdetések.",
         "description": [
-          "Digitális marketing, SEO, fizetett hirdetések és növekedési szolgáltatások — hamarosan elérhetők a Flintworksnél."
+          "Digitális marketing, SEO, fizetett hirdetések és növekedési szolgáltatások - hamarosan elérhetők a Flintworksnél."
         ],
         "deliverables": [],
         "useCases": []
@@ -228,7 +228,7 @@
     "web": {
       "eyebrow": "Webfejlesztés",
       "heading": "Web és platform áraink",
-      "subtext": "Válassza ki a projektjéhez illő csomagot. Minden árazás innen indul — összetettebb projekteknél egyedi ajánlatot adunk."
+      "subtext": "Válassza ki a projektjéhez illő csomagot. Minden árazás innen indul - összetettebb projekteknél egyedi ajánlatot adunk."
     },
     "mobile": {
       "eyebrow": "Mobilfejlesztés",
@@ -346,7 +346,7 @@
       },
       {
         "question": "Mi a helyzet, ha már van kész designom?",
-        "answer": "Remek — örömmel dolgozunk vele. Figma-fájlokból, meglévő arculati irányelvekből vagy részleges designokból egyaránt építünk. Ha designmunkára is szükség van, azt is el tudjuk végezni."
+        "answer": "Remek - örömmel dolgozunk vele. Figma-fájlokból, meglévő arculati irányelvekből vagy részleges designokból egyaránt építünk. Ha designmunkára is szükség van, azt is el tudjuk végezni."
       },
       {
         "question": "Írnak titoktartási megállapodást (NDA)?",
@@ -368,7 +368,7 @@
       "alpha": {
         "name": "Alpha projekt",
         "category": "Webalkalmazás",
-        "description": "Teljes stackű SaaS irányítópult műveleti csapatok számára — valós idejű adatok, multi-tenant architektúra és áttekinthető analitikai felület, napi több ezer aktív felhasználó kiszolgálására."
+        "description": "Teljes stackű SaaS irányítópult műveleti csapatok számára - valós idejű adatok, multi-tenant architektúra és áttekinthető analitikai felület, napi több ezer aktív felhasználó kiszolgálására."
       },
       "beta": {
         "name": "Beta projekt",
@@ -378,28 +378,29 @@
       "gamma": {
         "name": "Gamma projekt",
         "category": "Mobilapplikáció",
-        "description": "Platformfüggetlen fogyasztói applikáció, amely összeköti a szolgáltatókat az ügyfelekkel — React Native-vel iOS-re és Androidra, valós idejű chat és helymeghatározás funkciókkal."
+        "description": "Platformfüggetlen fogyasztói applikáció, amely összeköti a szolgáltatókat az ügyfelekkel - React Native-vel iOS-re és Androidra, valós idejű chat és helymeghatározás funkciókkal."
       }
     }
   },
   "studio": {
     "eyebrow": "A Stúdió",
     "heading": "A Flintworks Stúdió",
-    "subheading": "Nem csak ügyfeleknek fejlesztünk — a sajátunkat is építjük.",
-    "subheading2": "A Stúdió a Flintworks termékfejlesztési ága — ahol a számunkra fontos ötleteket nulláról felépítjük, ugyanolyan rigorózus megközelítéssel, mint minden ügyfélprojektünknél.",
+    "subheading": "Nem csak ügyfeleknek fejlesztünk - a sajátunkat is építjük.",
+    "subheading2": "A Stúdió a Flintworks termékfejlesztési ága - ahol a számunkra fontos ötleteket nulláról felépítjük, ugyanolyan rigorózus megközelítéssel, mint minden ügyfélprojektünknél.",
     "inProgress": {
       "eyebrow": "Fejlesztés alatt",
       "heading": "Amin éppen dolgozunk.",
       "subtext": "Ezek a projektek jelenleg fejlesztés alatt állnak. Többet osztunk meg róluk, ahogy közelednek a megjelenéshez."
     },
     "followBuild": "Kövessék a fejlesztést",
+    "viewCaseStudy": "Esettanulmány megtekintése",
     "inDev": "Fejlesztés alatt",
     "philosophy": {
       "eyebrow": "Miért fejlesztünk",
       "heading": "A fejlesztők fejlesztenek.",
       "paragraphs": [
         "Azért hoztuk létre a Stúdiót, mert egy fejlesztő ügynökség számára a legjobb módja az éles maradásnak az, ha folyamatosan saját termékeket is szállít. A saját magunknak való fejlesztés valódi döntéshozatalt kényszerít ki, nem csupán mások elvárásainak megvalósítását.",
-        "Ez egyben azt is jelenti, hogy folyamatosan teszteljük saját stackünket, megtaláljuk a problémás pontokat és felfedezzük, mi működik igazán éles körülmények között — olyan tudás ez, amely közvetlenül minden ügyfelünk projektjét is gazdagítja.",
+        "Ez egyben azt is jelenti, hogy folyamatosan teszteljük saját stackünket, megtaláljuk a problémás pontokat és felfedezzük, mi működik igazán éles körülmények között - olyan tudás ez, amely közvetlenül minden ügyfelünk projektjét is gazdagítja.",
         "A Stúdió az a hely is, ahol olyan problémákat veszünk magunknak, amelyek valóban fontosak nekünk. Nem minden igényel ügyfélmegbízást."
       ]
     },
@@ -410,9 +411,78 @@
         "description": "Olyan webalkalmazás, amelyet belső használatra fejlesztünk, hogy megoldjunk egy problémát, amellyel mindennapi munkánkban újra és újra találkoztunk. Részletek hamarosan."
       },
       "studio-mobile": {
-        "name": "Projekt: TBD",
-        "platform": "Mobilapplikáció",
-        "description": "Platformfüggetlen mobilalkalmazás, amely jelenleg fejlesztés alatt áll. Minél közelebb kerülünk a megjelenéshez, annál többet osztunk meg róla."
+        "name": "VIBE",
+        "platform": "Mobilalkalmazás",
+        "description": "Az éjszakai élet útlevele — budapesti elektronikus discovery app térképes programkereséssel, AI-alapú katalógusgazdagítással és ellenőrzött résztvevői értékelésekkel a teljes jelenet mentén."
+      }
+    }
+  },
+  "caseStudy": {
+    "backToStudio": "Vissza a Stúdióhoz",
+    "relatedCta": "Hasonló terméket szeretne?",
+    "relatedCtaButton": "Projektet Indítunk",
+    "appStore": "App Store",
+    "playStore": "Google Play",
+    "watchDemo": "Demó megtekintése",
+    "status": {
+      "preLaunch": "Megjelenés: {{month}}",
+      "launched": "Megjelent"
+    },
+    "launchMonths": {
+      "august2026": "2026. augusztus"
+    },
+    "metricsComingSoon": "A metrikák a megjelenés után érkeznek.",
+    "screenshotAlt": "{{name}} képernyőkép {{n}}",
+    "sections": {
+      "problem": "A probléma",
+      "approach": "Megközelítésünk",
+      "architecture": "Architektúra",
+      "challenge": "A kihívás",
+      "solution": "Hogyan oldottuk meg",
+      "features": "Főbb funkciók",
+      "techStack": "Tech stack",
+      "metrics": "Hatás",
+      "screenshots": "Termék"
+    },
+    "techLayers": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "infra": "Infra",
+      "integrations": "Integrációk"
+    },
+    "projects": {
+      "studio-mobile": {
+        "name": "VIBE",
+        "oneLiner": "Az éjszakai élet útlevele.",
+        "metaDescription": "A VIBE a Flintworks Stúdió budapesti nightlife discovery appja — térképes programkeresés, AI katalógusgazdagítás és ellenőrzött résztvevői értékelések. Megjelenés: 2026. augusztus.",
+        "role": "David — fejlesztő és társalapító",
+        "timeline": "~3 hónap fejlesztés · Megjelenés: 2026. augusztus 17.",
+        "platform": "Mobilalkalmazás",
+        "problem": "A budapesti elektronikus nightlife felfedezése széttöredezett az Instagram, a Facebook Events, a jegyoldalak és a chatcsoportok között. A rajongóknak — elsősorban a helyi jelenet 20–35 éves rendszeres látogatóinak — egy megbízható hely kell arra, hogy mi van, hol, kikkel és milyen áron — nem egy újabb „legközelebbi hely” térkép. Szükségük van bizalmi jelekkel a bulik után is. A VIBE személyes nightlife OS-ként pozicionál: felfedezés, jelenetgráf és értékelések, anélkül hogy elsődleges jegyárusítóvá válna.",
+        "approach": "Solo technikai építés társalapítóként a Flintworks Stúdión belül: React Native/Expo fogyasztói app, saját Express/Postgres API, admin CMS, és AI-alapú katalóguspipeline, ami frissen és strukturáltan tartja a listákat. Termék tézis: a katalógus teljességén, gazdagításon és értékeléseken nyerni; kifelé mutató jegy linkek — nem teljes jegyértékesítés.",
+        "architecture": [
+          "Mobil: Expo/React Native, Expo Router, Mapbox térkép clusteringgel, OAuth (Apple/Google/Facebook) + e-mail auth, PostHog analytics, Expo push értesítések.",
+          "API: Express 5, PostgreSQL, JWT auth, szerepkör-tudatos felületek felhasználóknak, platform adminnak és org/artist adminnak.",
+          "Jobok: Redis + BullMQ scheduler worker katalógusfrissítéshez, értékelés-újraszámoláshoz és push küldéshez.",
+          "AI katalógus: flyer → strukturált eseménymezők költségtudatos inferenciával; közösségi lineup kinyerés set time-okhoz; artist gazdagítás műfajokhoz.",
+          "Értékelések: egy rövid flow, ellenőrzött résztvevőkhöz kötve, eseményeken, előadókon, szervezeteken és helyszíneken át.",
+          "Ops: GitHub Actions deploy VPS-re (API + scheduler worker); admin UI entitásokhoz, értékelésekhez és schedulerhez."
+        ],
+        "challenge": "Budapesti nightlife katalógust teljesnek és frissnek tartani, miközben AI-val következtetjük ki a hiányzó struktúrát — különösen flyerből — anélkül, hogy az inferencia költsége elszabadulna. Emellett: a set time-ok gyakran későn érkeznek; az előadóknak nincsenek tiszta műfajcímkéi; az értékelések csak akkor számítanak, ha megbízhatóak és gyorsak.",
+        "solution": [
+          "A flyer-víziót elsődleges strukturált adatforrásként kezeljük, ahol a listák hiányosak.",
+          "Az AI-t szelektíven és költségkontrollal futtatjuk, hogy a folyamatos gazdagítás megfizethető maradjon.",
+          "Közösségi lineup AI kinyerési útvonalat szállítunk, hogy a set time-ok megjelenésükkor bekerüljenek a katalógusba.",
+          "Artist gazdagítási útvonalat szállítunk, amely műfajokat következtet a felfedezéshez és szűréshez.",
+          "Egy ellenőrzött résztvevői értékelési flow-t szállítunk, amely a teljes entitásgráfot pontozza — esemény, előadó, szervezet, helyszín — gyors UX-ben."
+        ],
+        "features": [
+          "Térkép-első budapesti felfedezés — mi van, hol",
+          "Flyer → strukturált esemény AI költségtudatos frissességgel",
+          "Közösségi lineup AI — set time-ok ahogy megjelennek",
+          "Ellenőrzött résztvevői multi-entitás értékelések eseményekre, előadókra, szervezetekre és helyszínekre",
+          "Artist műfajgazdagítás a felfedezéshez és szűréshez"
+        ]
       }
     }
   },
@@ -420,14 +490,14 @@
     "eyebrow": "Rólunk",
     "heading": "Másképpen",
     "headingHighlight": "felépítve",
-    "subheading": "A Flintworks azért létezik, hogy valóban működő szoftvereket fejlesszen — határidőre, kereten belül és tartósan.",
+    "subheading": "A Flintworks azért létezik, hogy valóban működő szoftvereket fejlesszen - határidőre, kereten belül és tartósan.",
     "story": {
       "eyebrow": "Megközelítésünk",
       "heading": "Egy fókuszált ügynökség, amely súlyán felül teljesít.",
       "paragraphs": [
-        "A Flintworks egy senior szintű szoftverfejlesztő ügynökség, egy egyszerű elvvel: kevesebbet csinálunk, de kivételesen jól csináljuk. Nem akarunk mindenki számára minden lenni — arra a munkára specializálódtunk, amelyben igazán kitűnünk.",
+        "A Flintworks egy senior szintű szoftverfejlesztő ügynökség, egy egyszerű elvvel: kevesebbet csinálunk, de kivételesen jól csináljuk. Nem akarunk mindenki számára minden lenni - arra a munkára specializálódtunk, amelyben igazán kitűnünk.",
         "Olyan projekteket vállalunk, amelyekben hiszünk, és minden fejlesztést úgy kezeljük, mintha a saját termékünk lenne. Ez azt jelenti: nehéz kérdéseket teszünk fel, visszautasítjuk a hatókört, ami nem szolgálja az Önök céljait, és mélyen törődünk azzal, ami végül kiszáll.",
-        "Amikor velünk dolgoznak, olyan emberekkel dolgoznak, akik valódi termékeket szállítottak valódi felhasználóknak — nem ingyengyakorlaton lévő hallgatókkal. Láttuk, mi szokott rosszul menni nagy léptékben, és ennek megfelelően fejlesztünk."
+        "Amikor velünk dolgoznak, olyan emberekkel dolgoznak, akik valódi termékeket szállítottak valódi felhasználóknak - nem ingyengyakorlaton lévő hallgatókkal. Láttuk, mi szokott rosszul menni nagy léptékben, és ennek megfelelően fejlesztünk."
       ]
     },
     "values": {
@@ -455,7 +525,7 @@
     "budapest": {
       "eyebrow": "Honnan jövünk",
       "heading": "Budapestről. A világnak.",
-      "body": "Büszkék vagyunk arra, hogy magyar alapítású ügynökség vagyunk. Budapest Európa egyik legdinamikusabban fejlődő tech-központja, és mi is részei vagyunk ennek a történetnek — világszínvonalú szoftverfejlesztést hozva a hazai vállalkozásoknak és nemzetközi ügyfeleknek egyaránt."
+      "body": "Büszkék vagyunk arra, hogy magyar alapítású ügynökség vagyunk. Budapest Európa egyik legdinamikusabban fejlődő tech-központja, és mi is részei vagyunk ennek a történetnek - világszínvonalú szoftverfejlesztést hozva a hazai vállalkozásoknak és nemzetközi ügyfeleknek egyaránt."
     },
     "stack": {
       "eyebrow": "Technológiai stackünk",
@@ -530,7 +600,7 @@
     "badge": "Hamarosan",
     "sectionEyebrow": "Marketing & Növekedés",
     "sectionHeading": "Marketing & Növekedés",
-    "sectionSubtext": "Teljes marketing részleg — hamarosan a Flintworksnél. Arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más.",
+    "sectionSubtext": "Teljes marketing részleg - hamarosan a Flintworksnél. Arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más.",
     "notifyText": "A marketingszolgáltatások hamarosan elérhetők. Adja meg e-mail-címét, és értesítjük a megjelenéskor.",
     "notifyPlaceholder": "email@ceg.hu",
     "notifyButton": "Értesítsen",
@@ -538,15 +608,15 @@
     "subServices": {
       "brand-identity": {
         "name": "Arculattervezés",
-        "description": "Logótervezés, színrendszerek, tipográfia, arculati kézikönyv és minden, ami ahhoz kell, hogy vállalkozása profinak nézzen ki — névjegykártyától a teljes brand bookig."
+        "description": "Logótervezés, színrendszerek, tipográfia, arculati kézikönyv és minden, ami ahhoz kell, hogy vállalkozása profinak nézzen ki - névjegykártyától a teljes brand bookig."
       },
       "seo": {
         "name": "Keresőoptimalizálás (SEO)",
-        "description": "On-page és technikai SEO, kulcsszókutatás, tartalomstratégia és lokális keresőoptimalizálás — hogy ügyfelei előbb találjanak rá Önre, mint a versenytársakra."
+        "description": "On-page és technikai SEO, kulcsszókutatás, tartalomstratégia és lokális keresőoptimalizálás - hogy ügyfelei előbb találjanak rá Önre, mint a versenytársakra."
       },
       "ppc": {
         "name": "Fizetett hirdetések (PPC)",
-        "description": "Google Ads, Meta Ads (Facebook és Instagram) és TikTok kampányok — az Ön büdzséjére, céljaihoz és mérhető eredményekre építve."
+        "description": "Google Ads, Meta Ads (Facebook és Instagram) és TikTok kampányok - az Ön büdzséjére, céljaihoz és mérhető eredményekre építve."
       },
       "social-media": {
         "name": "Közösségi média kezelés",
@@ -554,7 +624,7 @@
       },
       "email-marketing": {
         "name": "E-mail marketing",
-        "description": "Hírlevél-kampányok, automatizált folyamatok, listaépítés és teljesítményriportok — hogy közönségéből visszatérő ügyfelek legyenek."
+        "description": "Hírlevél-kampányok, automatizált folyamatok, listaépítés és teljesítményriportok - hogy közönségéből visszatérő ügyfelek legyenek."
       },
       "content-marketing": {
         "name": "Tartalommarketing",
@@ -562,7 +632,7 @@
       },
       "analytics": {
         "name": "Analitika és riportálás",
-        "description": "Google Analytics 4, Meta Pixel beállítás, konverziókövetés és havi teljesítményriportok — hogy mindig pontosan tudja, mi működik."
+        "description": "Google Analytics 4, Meta Pixel beállítás, konverziókövetés és havi teljesítményriportok - hogy mindig pontosan tudja, mi működik."
       },
       "cro": {
         "name": "Konverziósráta-optimalizálás (CRO)",
@@ -571,12 +641,12 @@
     },
     "home": {
       "heading": "A marketing hamarosan megérkezik a Flintworksbe.",
-      "subtext": "Teljes marketing részleget építünk — arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más. Egy ügynökség. Minden, amire a növekedéshez szükség van."
+      "subtext": "Teljes marketing részleget építünk - arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más. Egy ügynökség. Minden, amire a növekedéshez szükség van."
     },
     "pricing": {
       "eyebrow": "Marketing csomagok",
       "heading": "A marketing hamarosan érkezik.",
-      "subtext": "Teljes marketing részleget építünk. Az árakat a megjelenéskor közöljük — iratkozzon fel, hogy elsőként értesüljön.",
+      "subtext": "Teljes marketing részleget építünk. Az árakat a megjelenéskor közöljük - iratkozzon fel, hogy elsőként értesüljön.",
       "comingSoonLabel": "Hamarosan",
       "getNotified": "Értesítsen",
       "bestFor": "Ideális",
@@ -595,18 +665,18 @@
         "full-service": {
           "name": "Teljes körű csomag",
           "bestFor": "Vállalkozásoknak, amelyek teljes marketing menedzsmentet szeretnének",
-          "includes": "Minden — hirdetések, tartalom, analitika, CRO"
+          "includes": "Minden - hirdetések, tartalom, analitika, CRO"
         }
       }
     },
     "meta": {
-      "title": "Marketing — Flintworks",
-      "description": "Arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más — a Flintworks Marketing részlege hamarosan elérhető."
+      "title": "Marketing - Flintworks",
+      "description": "Arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más - a Flintworks Marketing részlege hamarosan elérhető."
     },
     "hero": {
       "eyebrow": "Hamarosan",
       "heading": "Marketing & Növekedés",
-      "subheading": "Teljes körű belső marketing részleget építünk. Arculattervezés, SEO, fizetett hirdetések, közösségimédia-kezelés és még sok más — egy helyen, attól a csapattól, amelyben már megbízik."
+      "subheading": "Teljes körű belső marketing részleget építünk. Arculattervezés, SEO, fizetett hirdetések, közösségimédia-kezelés és még sok más - egy helyen, attól a csapattól, amelyben már megbízik."
     },
     "subServicesEyebrow": "Ami benne van",
     "subServicesHeading": "Minden, amire a növekedéshez szükség van.",
@@ -616,13 +686,13 @@
     },
     "about": {
       "visionEyebrow": "Teljes körű jövőkép",
-      "vision": "A fejlesztés csak a kép fele. A Flintworkst teljes körű digitális ügynökséggé építjük — világszínvonalú szoftverfejlesztést stratégiai marketinggel párosítva, hogy ügyfeleink ne csak egy kiváló terméket kapjanak, hanem olyat, amely növekszik is."
+      "vision": "A fejlesztés csak a kép fele. A Flintworkst teljes körű digitális ügynökséggé építjük - világszínvonalú szoftverfejlesztést stratégiai marketinggel párosítva, hogy ügyfeleink ne csak egy kiváló terméket kapjanak, hanem olyat, amely növekszik is."
     }
   },
   "footer": {
     "tagline": "Budapesten kovácsolva. A világnak építve.",
     "location": "Budapest, Magyarország 🇭🇺",
-    "copyright": "© 2025 Flintworks. Minden jog fenntartva.",
+    "copyright": "© 2026 Flintworks. Minden jog fenntartva.",
     "sections": {
       "services": "Szolgáltatások",
       "company": "Cégünk",

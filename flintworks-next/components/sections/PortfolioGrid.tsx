@@ -61,7 +61,7 @@ export function PortfolioGrid({ limit }: { limit?: number }) {
             </div>
 
             <Link
-              href={`/work#${project.id}`}
+              href={project.caseStudyUrl || `/work#${project.id}`}
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-ember hover:text-flame transition-colors group/link"
             >
               {t('work.viewCaseStudy')}
