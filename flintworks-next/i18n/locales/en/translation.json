@@ -251,6 +251,38 @@
     "savePercent": "Save ~80%",
     "listPriceA11y": "List price {{listPrice}}, early-client price {{price}}",
     "tiers": {
+      "refresh": {
+        "name": "Refresh",
+        "listPrice": "€900",
+        "listPriceHUF": "350 000 Ft",
+        "price": "€400",
+        "priceHUF": "150 000 Ft",
+        "description": "Visual and UX update on a sound existing site — content mostly kept.",
+        "features": [
+          "Visual / UX refresh on current CMS",
+          "Mobile polish and key page updates",
+          "No heavy migration or rebuild",
+          "Analytics check and basic SEO touch-up",
+          "Client-owned handover"
+        ],
+        "cta": "Get Started"
+      },
+      "landing": {
+        "name": "Landing",
+        "listPrice": "€1,200",
+        "listPriceHUF": "450 000 Ft",
+        "price": "€500",
+        "priceHUF": "200 000 Ft",
+        "description": "Thin validation page for startups — not a full MVP.",
+        "features": [
+          "Single high-converting landing page",
+          "Waitlist or lead capture form",
+          "Custom craft design",
+          "Mobile-responsive layout",
+          "Basic analytics setup"
+        ],
+        "cta": "Get Started"
+      },
       "starter": {
         "name": "Starter",
         "listPrice": "€3,900",
@@ -338,6 +370,22 @@
           "Custom backend API"
         ],
         "cta": "Let's Talk"
+      },
+      "discovery": {
+        "name": "Discovery",
+        "listPrice": "€2,500",
+        "listPriceHUF": "1 000 000 Ft",
+        "price": "€200",
+        "priceHUF": "80 000 Ft",
+        "description": "Paid micro-audit / clarity sprint — credited toward a build if you continue.",
+        "features": [
+          "Scope and risk diagnosis",
+          "Refresh vs redesign vs rebuild recommendation",
+          "Written roadmap and estimate band",
+          "Credited toward a follow-on build",
+          "30-minute debrief call"
+        ],
+        "cta": "Book Discovery"
       }
     },
     "faqItems": [
@@ -659,26 +707,38 @@
     "pricing": {
       "eyebrow": "Marketing Packages",
       "heading": "Marketing is coming soon.",
-      "subtext": "We're building out a full marketing department. Pricing will be announced at launch — join the list to be first.",
+      "subtext": "Early-client retainer bands while we build the department — join the list to be first when we open capacity. Agency fee ≠ media spend.",
       "comingSoonLabel": "Coming Soon",
       "getNotified": "Get Notified",
       "bestFor": "Best for",
       "includes": "Includes",
       "tiers": {
         "starter": {
-          "name": "Starter",
+          "name": "Launch",
           "bestFor": "Small businesses needing a digital presence",
-          "includes": "Brand identity + basic SEO"
+          "includes": "1 channel (SEO or PPC); media budget separate; 1–2 month pilot",
+          "listPrice": "€450/mo",
+          "listPriceHUF": "180 000 Ft/hó",
+          "price": "€250/mo",
+          "priceHUF": "100 000 Ft/hó"
         },
         "growth": {
           "name": "Growth",
           "bestFor": "Growing businesses wanting leads",
-          "includes": "SEO + social media + email marketing"
+          "includes": "2–3 channels + reporting; media budget separate",
+          "listPrice": "€800/mo",
+          "listPriceHUF": "320 000 Ft/hó",
+          "price": "€500/mo",
+          "priceHUF": "200 000 Ft/hó"
         },
         "full-service": {
-          "name": "Full Service",
+          "name": "Scale",
           "bestFor": "Businesses wanting full marketing management",
-          "includes": "Everything — ads, content, analytics, CRO"
+          "includes": "Full-funnel management — ads, content, analytics, CRO",
+          "listPrice": "€1,500+/mo",
+          "listPriceHUF": "600 000+ Ft/hó",
+          "price": "€710+/mo",
+          "priceHUF": "285 000+ Ft/hó"
         }
       }
     },

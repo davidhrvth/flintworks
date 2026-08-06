@@ -17,9 +17,33 @@ function resolvePrice(
   t: (key: string, opts?: { defaultValue?: string }) => string,
   key: string,
 ): string {
-  const value = t(key, { defaultValue: '' })
+  const value = t(key, { defaultValue: '' }).trim()
   if (!value || value === key) return ''
   return value
+}
+
+/** Extract leading numeric amount from display strings like "€3,900" or "1 500 000 Ft". */
+function parseAmount(display: string): number | null {
+  const digits = display.replace(/[^\d]/g, '')
+  if (!digits) return null
+  const n = Number(digits)
+  return Number.isFinite(n) && n > 0 ? n : null
+}
+
+/** True when off ≈ Phase-1 Starter band (~80%), so we can show savePercent honestly. */
+function roughlyEightyPercentOff(listPrice: string, price: string): boolean {
+  const list = parseAmount(listPrice)
+  const sale = parseAmount(price)
+  if (!list || !sale || sale >= list) return false
+  const off = 1 - sale / list
+  return off >= 0.72 && off <= 0.85
+}
+
+function isNumericDiscount(listPrice: string, price: string): boolean {
+  const list = parseAmount(listPrice)
+  const sale = parseAmount(price)
+  if (list != null && sale != null) return sale < list
+  return Boolean(listPrice && price && listPrice !== price)
 }
 
 export function PricingCards({ tiers, currency }: PricingCardsProps) {
@@ -38,7 +62,8 @@ export function PricingCards({ tiers, currency }: PricingCardsProps) {
           : `pricing.tiers.${tier.id}.listPrice`
         const price = resolvePrice(t, priceKey)
         const listPrice = resolvePrice(t, listKey)
-        const showDiscount = Boolean(listPrice && price && listPrice !== price)
+        const showDiscount = isNumericDiscount(listPrice, price)
+        const showSavePercent = showDiscount && roughlyEightyPercentOff(listPrice, price)
         const features = t(`pricing.tiers.${tier.id}.features`, { returnObjects: true }) as string[]
         const cta = t(`pricing.tiers.${tier.id}.cta`)
 
@@ -75,7 +100,9 @@ export function PricingCards({ tiers, currency }: PricingCardsProps) {
                       {listPrice}
                     </span>
                   )}
-                  <span className="font-display font-bold text-4xl text-text-heading">{price}</span>
+                  <span className="font-display font-bold text-4xl text-text-heading">
+                    {price || '—'}
+                  </span>
                 </div>
                 {showDiscount && (
                   <>
@@ -84,9 +111,11 @@ export function PricingCards({ tiers, currency }: PricingCardsProps) {
                     </span>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <EmberBadge variant="surface">{t('pricing.earlyClient')}</EmberBadge>
-                      <span className="font-mono text-xs font-medium text-ember tracking-wide">
-                        {t('pricing.savePercent')}
-                      </span>
+                      {showSavePercent && (
+                        <span className="font-mono text-xs font-medium text-ember tracking-wide">
+                          {t('pricing.savePercent')}
+                        </span>
+                      )}
                     </div>
                   </>
                 )}

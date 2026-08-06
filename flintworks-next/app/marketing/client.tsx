@@ -7,8 +7,11 @@ import { useTranslation } from 'react-i18next'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { EmberBadge } from '@/components/ui/EmberBadge'
+import { useState } from 'react'
 import { MarketingNotifyForm } from '@/components/ui/MarketingNotifyForm'
 import { MarketingPricingCard } from '@/components/ui/MarketingPricingCard'
+import { CurrencyToggle, type Currency } from '@/components/ui/CurrencyToggle'
+import { marketingPricingTiers } from '@/data/pricing'
 
 const marketingSubServices = [
   { id: 'brand-identity', icon: PenTool },
@@ -21,10 +24,9 @@ const marketingSubServices = [
   { id: 'cro', icon: TrendingUp },
 ]
 
-const marketingPricingTiers = ['starter', 'growth', 'full-service'] as const
-
 export default function MarketingPageContent() {
   const { t } = useTranslation()
+  const [currency, setCurrency] = useState<Currency>('EUR')
 
   return (
     <>
@@ -100,10 +102,15 @@ export default function MarketingPageContent() {
             </div>
           </AnimatedSection>
 
+          <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <CurrencyToggle currency={currency} onChange={setCurrency} />
+            <p className="text-text-muted text-xs">{t('pricing.currencyNote')}</p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {marketingPricingTiers.map((tierId, i) => (
               <AnimatedSection key={tierId} delay={i * 0.1}>
-                <MarketingPricingCard tierId={tierId} />
+                <MarketingPricingCard tierId={tierId} currency={currency} />
               </AnimatedSection>
             ))}
           </div>

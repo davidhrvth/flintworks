@@ -248,6 +248,38 @@
     "mostPopular": "Legnépszerűbb",
     "startingAt": "kezdőára",
     "tiers": {
+      "refresh": {
+        "name": "Frissítés",
+        "price": "€400",
+        "priceHUF": "150 000 Ft",
+        "description": "Vizuális és UX frissítés egy stabil meglévő oldalon — a tartalom nagyrészt megmarad.",
+        "features": [
+          "Vizuális / UX frissítés a jelenlegi CMS-en",
+          "Mobil finomhangolás és kulcsoldalak frissítése",
+          "Nincs súlyos migráció vagy újraépítés",
+          "Analitika ellenőrzés és alapszintű SEO",
+          "Ügyfél által birtokolt átadás"
+        ],
+        "cta": "Kezdjük el",
+        "listPrice": "€900",
+        "listPriceHUF": "350 000 Ft"
+      },
+      "landing": {
+        "name": "Landing",
+        "price": "€500",
+        "priceHUF": "200 000 Ft",
+        "description": "Vékony validációs oldal startupoknak — nem teljes MVP.",
+        "features": [
+          "Egy konverzióra optimalizált landingoldal",
+          "Várólista vagy leadgyűjtő űrlap",
+          "Egyedi craft design",
+          "Mobilra optimalizált elrendezés",
+          "Alapszintű analitika beállítás"
+        ],
+        "cta": "Kezdjük el",
+        "listPrice": "€1 200",
+        "listPriceHUF": "450 000 Ft"
+      },
       "starter": {
         "name": "Alapcsomag",
         "price": "€800",
@@ -335,6 +367,22 @@
         "cta": "Beszéljük meg",
         "listPrice": "€40 000+",
         "listPriceHUF": "15 000 000+ Ft"
+      },
+      "discovery": {
+        "name": "Discovery",
+        "price": "€200",
+        "priceHUF": "80 000 Ft",
+        "description": "Fizetett mikro-audit / tisztázó sprint — beszámít a folytatólagos fejlesztésbe.",
+        "features": [
+          "Hatáskör és kockázatdiagnózis",
+          "Frissítés vs redesign vs újraépítés javaslat",
+          "Írásos roadmap és becsült sáv",
+          "Beszámít a követő fejlesztésbe",
+          "30 perces átbeszélő hívás"
+        ],
+        "cta": "Discovery foglalása",
+        "listPrice": "€2 500",
+        "listPriceHUF": "1 000 000 Ft"
       }
     },
     "faqItems": [
@@ -660,26 +708,38 @@
     "pricing": {
       "eyebrow": "Marketing csomagok",
       "heading": "A marketing hamarosan érkezik.",
-      "subtext": "Teljes marketing részleget építünk. Az árakat a megjelenéskor közöljük - iratkozzon fel, hogy elsőként értesüljön.",
+      "subtext": "Korai ügyfél retainer-sávok, amíg a részleget építjük — iratkozzon fel, hogy elsőként értesüljön, amint nyílik a kapacitás. Az ügynökségi díj ≠ média költség.",
       "comingSoonLabel": "Hamarosan",
       "getNotified": "Értesítsen",
       "bestFor": "Ideális",
       "includes": "Tartalmazza",
       "tiers": {
         "starter": {
-          "name": "Alapcsomag",
+          "name": "Launch",
           "bestFor": "Kis vállalkozásoknak, amelyek digitális jelenlétet szeretnének",
-          "includes": "Arculattervezés + alapszintű SEO"
+          "includes": "1 csatorna (SEO vagy PPC); média külön; 1–2 hónapos pilot",
+          "listPrice": "€450/hó",
+          "listPriceHUF": "180 000 Ft/hó",
+          "price": "€250/hó",
+          "priceHUF": "100 000 Ft/hó"
         },
         "growth": {
-          "name": "Növekedési csomag",
+          "name": "Growth",
           "bestFor": "Növekvő vállalkozásoknak, amelyek leadeket szeretnének",
-          "includes": "SEO + közösségi média + e-mail marketing"
+          "includes": "2–3 csatorna + riportálás; média külön",
+          "listPrice": "€800/hó",
+          "listPriceHUF": "320 000 Ft/hó",
+          "price": "€500/hó",
+          "priceHUF": "200 000 Ft/hó"
         },
         "full-service": {
-          "name": "Teljes körű csomag",
+          "name": "Scale",
           "bestFor": "Vállalkozásoknak, amelyek teljes marketing menedzsmentet szeretnének",
-          "includes": "Minden - hirdetések, tartalom, analitika, CRO"
+          "includes": "Teljes tölcsér — hirdetések, tartalom, analitika, CRO",
+          "listPrice": "€1 500+/hó",
+          "listPriceHUF": "600 000+ Ft/hó",
+          "price": "€710+/hó",
+          "priceHUF": "285 000+ Ft/hó"
         }
       }
     },

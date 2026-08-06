@@ -12,9 +12,7 @@ import { GlowCard } from '@/components/ui/GlowCard'
 import { MarketingPricingCard } from '@/components/ui/MarketingPricingCard'
 import { ENABLE_MARKETING } from '@/config/features'
 import { CurrencyToggle, type Currency } from '@/components/ui/CurrencyToggle'
-import { webPricingTiers, mobilePricingTiers } from '@/data/pricing'
-
-const marketingPricingTiers = ['starter', 'growth', 'full-service'] as const
+import { webPricingTiers, mobilePricingTiers, marketingPricingTiers } from '@/data/pricing'
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false)
@@ -146,7 +144,7 @@ export default function PricingPageContent() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {marketingPricingTiers.map((tierId, i) => (
                 <AnimatedSection key={tierId} delay={i * 0.1}>
-                  <MarketingPricingCard tierId={tierId} />
+                  <MarketingPricingCard tierId={tierId} currency={currency} />
                 </AnimatedSection>
               ))}
             </div>

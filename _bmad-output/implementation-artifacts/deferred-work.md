@@ -19,3 +19,7 @@
 - source_spec: `_bmad-output/implementation-artifacts/spec-research-pricing-early-stage-discount.md`
   summary: Contact form budget options still start at “Under €5,000” while Starter early sale is €800 — ranges no longer match the offer ladder.
   evidence: Blind Hunter finding; ContactForm budgets pre-existed and were not in Phase 1 scope.
+
+- source_spec: `_bmad-output/implementation-artifacts/spec-research-pricing-phase-2.md`
+  summary: Pricing FAQ still steers to “Starter or Growth” and never mentions Refresh, Landing, or Discovery.
+  evidence: Blind Hunter finding; Phase 2 added volume SKUs but FAQ copy was out of scope and still describes the old ladder.
