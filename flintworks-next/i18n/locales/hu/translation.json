@@ -250,8 +250,8 @@
     "tiers": {
       "starter": {
         "name": "Alapcsomag",
-        "price": "€2 500",
-        "priceHUF": "900 000 Ft",
+        "price": "€800",
+        "priceHUF": "300 000 Ft",
         "description": "Vállalati weboldalakhoz és egyszerű landingoldalakhoz.",
         "features": [
           "Legfeljebb 8 aloldal",
@@ -262,12 +262,14 @@
           "Google Analytics beállítása",
           "2 körös módosítási lehetőség"
         ],
-        "cta": "Kezdjük el"
+        "cta": "Kezdjük el",
+        "listPrice": "€3 900",
+        "listPriceHUF": "1 500 000 Ft"
       },
       "growth": {
         "name": "Növekedési csomag",
-        "price": "€7 500",
-        "priceHUF": "2 700 000 Ft",
+        "price": "€3 690",
+        "priceHUF": "1 400 000 Ft",
         "description": "Webalkalmazás MVP-khez és üzleti platformokhoz.",
         "features": [
           "Teljes stackű webalkalmazás",
@@ -278,12 +280,14 @@
           "Deployment és CI/CD pipeline",
           "4 hetes megjelenés utáni támogatás"
         ],
-        "cta": "Kezdjük el"
+        "cta": "Kezdjük el",
+        "listPrice": "€18 000",
+        "listPriceHUF": "7 000 000 Ft"
       },
       "scale": {
         "name": "Skálázási csomag",
-        "price": "Egyedi",
-        "priceHUF": "Egyedi",
+        "price": "€8 210+",
+        "priceHUF": "3 000 000+ Ft",
         "description": "Nagyobb léptékű applikációkhoz, SaaS termékekhez vagy teljes körű startup fejlesztéshez.",
         "features": [
           "Minden, ami a Növekedési csomagban",
@@ -294,12 +298,14 @@
           "Dedikált projektmenedzser",
           "3 hónapos megjelenés utáni támogatás"
         ],
-        "cta": "Beszéljük meg"
+        "cta": "Beszéljük meg",
+        "listPrice": "€40 000+",
+        "listPriceHUF": "15 000 000+ Ft"
       },
       "mobile-mvp": {
         "name": "Mobil MVP",
-        "price": "€8 000",
-        "priceHUF": "2 900 000 Ft",
+        "price": "€4 510",
+        "priceHUF": "1 700 000 Ft",
         "description": "Juttassa el mobilapplikáció-ötletét a felhasználók kezébe gyorsan.",
         "features": [
           "React Native (iOS + Android)",
@@ -309,12 +315,14 @@
           "App Store beküldési támogatás",
           "30 napos megjelenés utáni támogatás"
         ],
-        "cta": "Kezdjük el"
+        "cta": "Kezdjük el",
+        "listPrice": "€22 000",
+        "listPriceHUF": "8 500 000 Ft"
       },
       "custom-mobile": {
         "name": "Egyedi mobilapplikáció",
-        "price": "Egyedi",
-        "priceHUF": "Egyedi",
+        "price": "€8 210+",
+        "priceHUF": "3 000 000+ Ft",
         "description": "Teljes funkciókészletű mobilalkalmazás összetett integrációkkal és egyedi funkcionalitással.",
         "features": [
           "Minden, ami a Mobil MVP-ben",
@@ -324,7 +332,9 @@
           "Natív eszközintegrációk",
           "Egyedi backend API"
         ],
-        "cta": "Beszéljük meg"
+        "cta": "Beszéljük meg",
+        "listPrice": "€40 000+",
+        "listPriceHUF": "15 000 000+ Ft"
       }
     },
     "faqItems": [
@@ -352,7 +362,11 @@
         "question": "Írnak titoktartási megállapodást (NDA)?",
         "answer": "Igen. A projekt megbeszélése előtt szívesen aláírunk NDA-t. A titoktartás nálunk bevett gyakorlat."
       }
-    ]
+    ],
+    "earlyPackagingNote": "Korai ügyfél-csomagolás, amíg van kapacitás — a listás ár a kiforrott craft sáv; a jelenlegi „kezdőár” a bevezető ajánlat.",
+    "earlyClient": "Korai ügyfél",
+    "savePercent": "Akár ~80% kedvezmény",
+    "listPriceA11y": "Listás ár {{listPrice}}, korai ügyfél ár {{price}}"
   },
   "work": {
     "eyebrow": "Portfólió",

@@ -13,6 +13,15 @@ interface PricingCardsProps {
   currency: Currency
 }
 
+function resolvePrice(
+  t: (key: string, opts?: { defaultValue?: string }) => string,
+  key: string,
+): string {
+  const value = t(key, { defaultValue: '' })
+  if (!value || value === key) return ''
+  return value
+}
+
 export function PricingCards({ tiers, currency }: PricingCardsProps) {
   const { t } = useTranslation()
 
@@ -21,12 +30,17 @@ export function PricingCards({ tiers, currency }: PricingCardsProps) {
       {tiers.map((tier, i) => {
         const name = t(`pricing.tiers.${tier.id}.name`)
         const description = t(`pricing.tiers.${tier.id}.description`)
-        const price = currency === 'HUF'
-          ? t(`pricing.tiers.${tier.id}.priceHUF`)
-          : t(`pricing.tiers.${tier.id}.price`)
+        const priceKey = currency === 'HUF'
+          ? `pricing.tiers.${tier.id}.priceHUF`
+          : `pricing.tiers.${tier.id}.price`
+        const listKey = currency === 'HUF'
+          ? `pricing.tiers.${tier.id}.listPriceHUF`
+          : `pricing.tiers.${tier.id}.listPrice`
+        const price = resolvePrice(t, priceKey)
+        const listPrice = resolvePrice(t, listKey)
+        const showDiscount = Boolean(listPrice && price && listPrice !== price)
         const features = t(`pricing.tiers.${tier.id}.features`, { returnObjects: true }) as string[]
         const cta = t(`pricing.tiers.${tier.id}.cta`)
-        const priceNote = tier.custom ? '' : t('pricing.startingAt')
 
         return (
           <AnimatedSection key={tier.id} delay={i * 0.1}>
@@ -49,12 +63,33 @@ export function PricingCards({ tiers, currency }: PricingCardsProps) {
               </div>
 
               <div className="mb-6">
-                {priceNote && (
-                  <p className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
-                    {priceNote}
-                  </p>
+                <p className="font-mono text-xs text-text-muted mb-1 tracking-wider">
+                  {t('pricing.startingAt')}
+                </p>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  {showDiscount && (
+                    <span
+                      className="font-display text-lg text-text-muted/80 line-through decoration-text-muted"
+                      aria-hidden="true"
+                    >
+                      {listPrice}
+                    </span>
+                  )}
+                  <span className="font-display font-bold text-4xl text-text-heading">{price}</span>
+                </div>
+                {showDiscount && (
+                  <>
+                    <span className="sr-only">
+                      {t('pricing.listPriceA11y', { listPrice, price })}
+                    </span>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <EmberBadge variant="surface">{t('pricing.earlyClient')}</EmberBadge>
+                      <span className="font-mono text-xs font-medium text-ember tracking-wide">
+                        {t('pricing.savePercent')}
+                      </span>
+                    </div>
+                  </>
                 )}
-                <div className="font-display font-bold text-4xl text-text-heading">{price}</div>
               </div>
 
               <ul className="space-y-3 flex-1 mb-8">

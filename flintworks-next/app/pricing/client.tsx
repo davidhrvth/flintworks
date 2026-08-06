@@ -76,12 +76,17 @@ export default function PricingPageContent() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <CurrencyToggle currency={currency} onChange={setCurrency} />
-        <div className="flex items-center gap-2 text-text-muted text-xs">
-          <Info size={12} className="text-ember shrink-0" />
-          <span>{t('pricing.currencyNote')}</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <CurrencyToggle currency={currency} onChange={setCurrency} />
+          <div className="flex items-center gap-2 text-text-muted text-xs">
+            <Info size={12} className="text-ember shrink-0" />
+            <span>{t('pricing.currencyNote')}</span>
+          </div>
         </div>
+        <p className="text-text-muted text-sm max-w-3xl leading-relaxed">
+          {t('pricing.earlyPackagingNote')}
+        </p>
       </div>
 
       <section className="py-20 lg:py-28">

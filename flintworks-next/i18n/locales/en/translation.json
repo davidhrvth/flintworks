@@ -244,13 +244,19 @@
       "heading": "Common questions"
     },
     "currencyNote": "Prices shown are indicative. Final quotes are tailored to your project.",
+    "earlyPackagingNote": "Early-client packaging while capacity is open — list price is our mature craft band; current “from” is the introductory offer.",
     "mostPopular": "Most Popular",
     "startingAt": "starting at",
+    "earlyClient": "Early client",
+    "savePercent": "Save ~80%",
+    "listPriceA11y": "List price {{listPrice}}, early-client price {{price}}",
     "tiers": {
       "starter": {
         "name": "Starter",
-        "price": "€2,500",
-        "priceHUF": "900 000 Ft",
+        "listPrice": "€3,900",
+        "listPriceHUF": "1 500 000 Ft",
+        "price": "€800",
+        "priceHUF": "300 000 Ft",
         "description": "Best for business websites and simple landing pages.",
         "features": [
           "Up to 8 pages",
@@ -265,8 +271,10 @@
       },
       "growth": {
         "name": "Growth",
-        "price": "€7,500",
-        "priceHUF": "2 700 000 Ft",
+        "listPrice": "€18,000",
+        "listPriceHUF": "7 000 000 Ft",
+        "price": "€3,690",
+        "priceHUF": "1 400 000 Ft",
         "description": "Best for web app MVPs and business platforms.",
         "features": [
           "Full-stack web application",
@@ -281,8 +289,10 @@
       },
       "scale": {
         "name": "Scale",
-        "price": "Custom",
-        "priceHUF": "Egyedi",
+        "listPrice": "€40,000+",
+        "listPriceHUF": "15 000 000+ Ft",
+        "price": "€8,210+",
+        "priceHUF": "3 000 000+ Ft",
         "description": "For large-scale apps, SaaS products, or end-to-end startup builds.",
         "features": [
           "Everything in Growth",
@@ -297,8 +307,10 @@
       },
       "mobile-mvp": {
         "name": "Mobile MVP",
-        "price": "€8,000",
-        "priceHUF": "2 900 000 Ft",
+        "listPrice": "€22,000",
+        "listPriceHUF": "8 500 000 Ft",
+        "price": "€4,510",
+        "priceHUF": "1 700 000 Ft",
         "description": "Get your mobile app idea into users' hands fast.",
         "features": [
           "React Native (iOS + Android)",
@@ -312,8 +324,10 @@
       },
       "custom-mobile": {
         "name": "Custom Mobile App",
-        "price": "Custom",
-        "priceHUF": "Egyedi",
+        "listPrice": "€40,000+",
+        "listPriceHUF": "15 000 000+ Ft",
+        "price": "€8,210+",
+        "priceHUF": "3 000 000+ Ft",
         "description": "Full-featured mobile app with complex integrations and custom functionality.",
         "features": [
           "Everything in Mobile MVP",
