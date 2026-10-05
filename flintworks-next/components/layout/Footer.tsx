@@ -3,14 +3,7 @@
 import Link from 'next/link'
 import { Code2, Briefcase, MessageCircle, Mail, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-
-function SparkIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M10 2L11.5 8.5L18 10L11.5 11.5L10 18L8.5 11.5L2 10L8.5 8.5L10 2Z" fill="#FF4D00" />
-    </svg>
-  )
-}
+import { Logo } from '../ui/Logo'
 
 const socialLinks = [
   { icon: Code2, label: 'GitHub', href: 'https://github.com' },
@@ -46,11 +39,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <SparkIcon />
-              <span className="font-display font-bold text-base tracking-widest text-text-heading">
-                FLINTWORKS
-              </span>
+            <Link href="/" className="inline-flex items-center mb-5">
+              <Logo height={30} animated />
             </Link>
             <p className="text-text-muted text-sm leading-relaxed mb-1 max-w-xs">
               {t('footer.tagline')}

@@ -7,6 +7,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from '../ui/LanguageSwitcher'
+import { Logo } from '../ui/Logo'
 import { ENABLE_MARKETING } from '@/config/features'
 
 function SoonBadge({ label }: { label: string }) {
@@ -14,15 +15,6 @@ function SoonBadge({ label }: { label: string }) {
     <span className="ml-1.5 px-1.5 py-0.5 rounded text-[10px] font-bold bg-ember/15 text-ember border border-ember/30 font-mono leading-none align-middle">
       {label}
     </span>
-  )
-}
-
-function SparkIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M10 2L11.5 8.5L18 10L11.5 11.5L10 18L8.5 11.5L2 10L8.5 8.5L10 2Z" fill="#FF4D00" />
-      <path d="M15 4L15.8 7.2L19 8L15.8 8.8L15 12L14.2 8.8L11 8L14.2 7.2L15 4Z" fill="#FF8C42" opacity="0.6" />
-    </svg>
   )
 }
 
@@ -67,13 +59,10 @@ export function Navbar() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-18">
           <Link
             href="/"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ember/60 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
             aria-label="Flintworks home"
           >
-            <SparkIcon />
-            <span className="font-display font-bold text-lg tracking-widest text-text-heading group-hover:text-ember transition-colors duration-200">
-              FLINTWORKS
-            </span>
+            <Logo height={30} animated />
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1">

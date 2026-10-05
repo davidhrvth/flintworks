@@ -60,11 +60,26 @@
         },
         "02": {
           "title": "Delivered on time",
-          "body": "We set realistic timelines and we hit them. No ghost acts, no endless revisions, no missed milestones. You'll always know where the project stands."
+          "body": "We set realistic timelines and we hit them. No ghost acts, no endless revisions, no missed milestones. You'll always know where the project stands.",
+          "tracker": {
+            "project": "YOUR PROJECT",
+            "onTime": "ON TIME",
+            "steps": [
+              { "label": "Ordered", "status": "Order received", "note": "We agree on exactly what you need." },
+              { "label": "Being built", "status": "Being built", "note": "You see real progress, every week." },
+              { "label": "Almost ready", "status": "Almost ready", "note": "You try it out before anyone else." },
+              { "label": "Delivered", "status": "Delivered, on time", "note": "Live on the day we promised." }
+            ]
+          }
         },
         "03": {
           "title": "Designed to convert",
-          "body": "Craft and commercial intent aren't opposites. We build things that look sharp and drive outcomes — whether that's sign-ups, sales, or scale."
+          "body": "Craft and commercial intent aren't opposites. We build things that look sharp and drive outcomes — whether that's sign-ups, sales, or scale.",
+          "chart": {
+            "metric": "SIGN-UPS VS. A YEAR AGO",
+            "months": ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"],
+            "launches": ["Faster pages", "Clear pricing", "1-click sign-up", "Onboarding", "Referrals", "Mobile app", "New checkout", "Live chat", "Free trial", "Case studies"]
+          }
         }
       }
     },
@@ -224,16 +239,6 @@
       "heading": "Simple, transparent pricing",
       "subheading": "Fixed packages for clarity. Custom quotes for complexity. No surprises."
     },
-    "web": {
-      "eyebrow": "Web Development",
-      "heading": "Web & Platform Pricing",
-      "subtext": "Choose a package that fits your project. All pricing starts here — complex projects get a custom quote."
-    },
-    "mobile": {
-      "eyebrow": "Mobile Development",
-      "heading": "Building for mobile?",
-      "subtext": "Cross-platform apps for iOS and Android with React Native."
-    },
     "custom": {
       "heading": "Not sure which fits?",
       "body": "Let's figure it out together. Tell us about your project and we'll give you a clear, honest quote.",
@@ -245,51 +250,15 @@
     },
     "currencyNote": "Prices shown are indicative. Final quotes are tailored to your project.",
     "earlyPackagingNote": "Early-client packaging while capacity is open — list price is our mature craft band; current “from” is the introductory offer.",
-    "mostPopular": "Most Popular",
     "startingAt": "starting at",
     "earlyClient": "Early client",
-    "savePercent": "Save ~80%",
     "listPriceA11y": "List price {{listPrice}}, early-client price {{price}}",
     "tiers": {
-      "refresh": {
-        "name": "Refresh",
-        "listPrice": "€900",
-        "listPriceHUF": "350 000 Ft",
-        "price": "€400",
-        "priceHUF": "150 000 Ft",
-        "description": "Visual and UX update on a sound existing site — content mostly kept.",
-        "features": [
-          "Visual / UX refresh on current CMS",
-          "Mobile polish and key page updates",
-          "No heavy migration or rebuild",
-          "Analytics check and basic SEO touch-up",
-          "Client-owned handover"
-        ],
-        "cta": "Get Started"
-      },
-      "landing": {
-        "name": "Landing",
-        "listPrice": "€1,200",
-        "listPriceHUF": "450 000 Ft",
-        "price": "€500",
-        "priceHUF": "200 000 Ft",
-        "description": "Thin validation page for startups — not a full MVP.",
-        "features": [
-          "Single high-converting landing page",
-          "Waitlist or lead capture form",
-          "Custom craft design",
-          "Mobile-responsive layout",
-          "Basic analytics setup"
-        ],
-        "cta": "Get Started"
-      },
-      "starter": {
-        "name": "Starter",
-        "listPrice": "€3,900",
-        "listPriceHUF": "1 500 000 Ft",
+      "website": {
+        "name": "Business Website",
         "price": "€800",
         "priceHUF": "300 000 Ft",
-        "description": "Best for business websites and simple landing pages.",
+        "description": "A fast, professional site that brings in enquiries.",
         "features": [
           "Up to 8 pages",
           "Custom design",
@@ -301,90 +270,39 @@
         ],
         "cta": "Get Started"
       },
-      "growth": {
-        "name": "Growth",
-        "listPrice": "€18,000",
-        "listPriceHUF": "7 000 000 Ft",
-        "price": "€3,690",
-        "priceHUF": "1 400 000 Ft",
-        "description": "Best for web app MVPs and business platforms.",
+      "web-app": {
+        "name": "Web App",
+        "description": "Platforms, portals, booking systems and SaaS products, built around how your business works.",
         "features": [
           "Full-stack web application",
-          "User authentication & accounts",
+          "User accounts and roles",
           "Admin dashboard",
-          "API integrations (up to 3)",
-          "Database design & setup",
-          "Deployment & CI/CD pipeline",
-          "4 weeks of post-launch support"
-        ],
-        "cta": "Get Started"
-      },
-      "scale": {
-        "name": "Scale",
-        "listPrice": "€40,000+",
-        "listPriceHUF": "15 000 000+ Ft",
-        "price": "€8,210+",
-        "priceHUF": "3 000 000+ Ft",
-        "description": "For large-scale apps, SaaS products, or end-to-end startup builds.",
-        "features": [
-          "Everything in Growth",
-          "Unlimited integrations",
-          "Multi-tenant / SaaS architecture",
-          "Advanced auth (SSO, roles)",
-          "Custom analytics and reporting",
-          "Dedicated project manager",
-          "3 months of post-launch support"
+          "API and payment integrations",
+          "Database design and hosting setup",
+          "Deployment and CI/CD pipeline",
+          "Post-launch support"
         ],
         "cta": "Let's Talk"
       },
-      "mobile-mvp": {
-        "name": "Mobile MVP",
-        "listPrice": "€22,000",
-        "listPriceHUF": "8 500 000 Ft",
-        "price": "€4,510",
-        "priceHUF": "1 700 000 Ft",
-        "description": "Get your mobile app idea into users' hands fast.",
+      "mobile-app": {
+        "name": "Mobile App",
+        "description": "Cross-platform iOS and Android apps with React Native, from first version to the App Store.",
         "features": [
           "React Native (iOS + Android)",
-          "Up to 8 screens",
-          "User authentication",
-          "Basic API integration",
-          "App Store submission support",
-          "30 days post-launch support"
-        ],
-        "cta": "Get Started"
-      },
-      "custom-mobile": {
-        "name": "Custom Mobile App",
-        "listPrice": "€40,000+",
-        "listPriceHUF": "15 000 000+ Ft",
-        "price": "€8,210+",
-        "priceHUF": "3 000 000+ Ft",
-        "description": "Full-featured mobile app with complex integrations and custom functionality.",
-        "features": [
-          "Everything in Mobile MVP",
-          "Unlimited screens & flows",
+          "User accounts and sign-in",
           "Push notifications",
-          "Offline support",
-          "Native device integrations",
-          "Custom backend API"
+          "Maps, camera and other device features",
+          "Custom backend API",
+          "App Store and Google Play submission",
+          "Post-launch support"
         ],
         "cta": "Let's Talk"
       },
       "discovery": {
         "name": "Discovery",
-        "listPrice": "€2,500",
-        "listPriceHUF": "1 000 000 Ft",
         "price": "€200",
         "priceHUF": "80 000 Ft",
-        "description": "Paid micro-audit / clarity sprint — credited toward a build if you continue.",
-        "features": [
-          "Scope and risk diagnosis",
-          "Refresh vs redesign vs rebuild recommendation",
-          "Written roadmap and estimate band",
-          "Credited toward a follow-on build",
-          "30-minute debrief call"
-        ],
+        "description": "Not sure what you need yet? A paid clarity sprint: scope, risks and a written roadmap with an estimate. The fee is credited toward the build if you continue.",
         "cta": "Book Discovery"
       }
     },
@@ -395,7 +313,7 @@
       },
       {
         "question": "What's your typical timeline?",
-        "answer": "A business website typically takes 3–5 weeks. A web app MVP runs 6–12 weeks depending on complexity. We establish a clear timeline before starting any project and commit to hitting those milestones."
+        "answer": "A business website typically takes 2–3 weeks. A web app MVP runs 6–12 weeks, and a mobile app 6–12 weeks as well, depending on complexity. We establish a clear timeline before starting any project and commit to hitting those milestones."
       },
       {
         "question": "Do you offer ongoing support after launch?",
@@ -403,7 +321,7 @@
       },
       {
         "question": "Can I start with a smaller package and scale up?",
-        "answer": "Yes. We build with scalability in mind from the start. Many clients begin with a Starter or Growth package and expand as their product grows. We'll architect things so that scaling up doesn't require rewriting everything."
+        "answer": "Yes. We build with scalability in mind from the start. Many clients begin with a website or a focused first version of their app and expand as the product grows. We'll architect things so that scaling up doesn't require rewriting everything."
       },
       {
         "question": "What if I already have a design?",
@@ -413,12 +331,22 @@
         "question": "Do you sign NDAs?",
         "answer": "Yes. We're happy to sign an NDA before discussing your project. Confidentiality is standard practice for us."
       }
-    ]
+    ],
+    "packages": {
+      "eyebrow": "What we build",
+      "heading": "Websites, web apps and mobile apps",
+      "subtext": "Business websites start from a fixed price. Every app is different, so we talk first and quote after."
+    },
+    "quoteOnly": {
+      "label": "priced per project",
+      "heading": "Custom quote",
+      "body": "We talk first, then send you a clear quote."
+    }
   },
   "work": {
     "eyebrow": "Portfolio",
     "heading": "Things We've Forged",
-    "subheading": "A selection of products, platforms, and websites we've built for clients who needed things done right.",
+    "subheading": "A selection of products, platforms, and websites — built for clients who needed things done right, and for ourselves.",
     "viewCaseStudy": "View Case Study",
     "cta": {
       "heading": "Want your project here?",
@@ -426,22 +354,24 @@
       "button": "Start a Project"
     },
     "projects": {
-      "alpha": {
-        "name": "Project Alpha",
-        "category": "Web App",
-        "description": "A full-stack SaaS dashboard for operations teams — real-time data, multi-tenant architecture, and a clean analytics interface built to handle thousands of daily active users."
+      "vibe": {
+        "name": "VIBE",
+        "category": "iOS App",
+        "description": "Our own iOS app for Budapest's electronic nightlife: every event, lineup and ticket on one map. 339 events imported automatically from three ticketing sources, with AI reading the flyers. Three months from first commit to the App Store."
       },
-      "beta": {
-        "name": "Project Beta",
-        "category": "Website",
-        "description": "Multi-location service company needed a fast, modern marketing site that could generate leads and reflect their premium positioning in a competitive market."
+      "skomai-logistico": {
+        "name": "SKOMAI Logistico",
+        "category": "Business Website",
+        "description": "A fast bilingual website for a Hungary–Spain market-entry consultancy, built entirely by us from scratch — design, development and Spanish copy. A free 10-step pre-qualification form replaced the generic contact form, so every enquiry arrives with the answers and documents the team needs."
       },
-      "gamma": {
-        "name": "Project Gamma",
-        "category": "Mobile",
-        "description": "Cross-platform consumer app connecting service providers with customers — built with React Native for iOS and Android, with real-time chat and location features."
+      "horgasz-szallas": {
+        "name": "Horgász Szállás",
+        "category": "Booking Platform",
+        "description": "A booking platform for fishing lodges across Hungary. Anglers filter by water, fish species and dates, then send a stay request the owner accepts or declines — with overlap checks against double bookings, Last Minute deals and real-time chat."
       }
-    }
+    },
+    "visitSite": "Visit Live Site",
+    "comingSoon": "Launching Soon"
   },
   "studio": {
     "eyebrow": "The Studio",
@@ -449,9 +379,9 @@
     "subheading": "We don't just build for clients — we build our own products too.",
     "subheading2": "The Studio is the product arm of Flintworks — where we take ideas that matter to us and build them from scratch, using the same rigor we bring to every client project.",
     "inProgress": {
-      "eyebrow": "In Progress",
+      "eyebrow": "Our Products",
       "heading": "What we're building.",
-      "subtext": "These projects are currently in development. We'll share more as they get closer to launch."
+      "subtext": "Products we build and run in-house."
     },
     "followBuild": "Follow the Build",
     "viewCaseStudy": "View Case Study",
@@ -466,17 +396,13 @@
       ]
     },
     "projects": {
-      "studio-web": {
-        "name": "Project TBD",
-        "platform": "Web App",
-        "description": "A web application we're building in-house to solve a problem we kept running into in our day-to-day work. Details coming soon."
-      },
       "studio-mobile": {
         "name": "VIBE",
         "platform": "Mobile App",
-        "description": "Your passport to nightlife — a Budapest electronic discovery app with map-first event finding, AI-assisted catalog enrichment, and verified-attendee ratings across the scene."
+        "description": "Your passport to nightlife — Budapest's electronic scene on one map: every event, lineup and ticket, with ratings from verified attendees."
       }
-    }
+    },
+    "live": "Live on the App Store"
   },
   "caseStudy": {
     "backToStudio": "Back to Studio",
@@ -515,35 +441,43 @@
       "studio-mobile": {
         "name": "VIBE",
         "oneLiner": "Your passport to nightlife.",
-        "metaDescription": "VIBE is Flintworks Studio's Budapest nightlife discovery app — map-first events, AI catalog enrichment, and verified-attendee ratings. Launching August 2026.",
+        "metaDescription": "VIBE is Flintworks Studio's iOS app for Budapest's electronic nightlife — every event, lineup and ticket on one map, automated event import with AI flyer reading, and ratings from verified attendees. Live on the App Store.",
         "role": "David — developer and co-founder",
-        "timeline": "~3 months of build · Launch August 17, 2026",
+        "timeline": "3 months to build · Launched August 29, 2026",
         "platform": "Mobile App",
         "problem": "Budapest electronic nightlife discovery is fragmented across Instagram, Facebook Events, ticket pages, and chats. Fans — primarily local scene regulars around 20–35 — need one trustworthy place for what's on, where, lineup, and price path — not another nearest-venue map. They also need trust signals after nights out. VIBE positions as a personal nightlife OS: discovery, scene graph, and ratings, without becoming a primary ticket vendor.",
-        "approach": "Solo technical build as co-founder inside Flintworks Studio: React Native/Expo consumer app, custom Express/Postgres API, admin CMS, and an AI-assisted catalog pipeline that keeps listings fresh and structured. Product thesis: win catalog completeness, enrichment, and ratings; outbound ticket links only — not full ticket selling.",
+        "approach": "Solo technical build as co-founder inside Flintworks Studio: a React Native/Expo app, a custom Express/Postgres API, an admin panel, and a scraper worker that imports events from Oneticket, Cooltix and Resident Advisor. Product thesis: win on catalog completeness, lineups and ratings; send people to the ticket sellers and keep their tickets in an offline wallet — never sell tickets ourselves.",
         "architecture": [
-          "Mobile: Expo/React Native, Expo Router, Mapbox map with clustering, OAuth (Apple/Google/Facebook) + email auth, PostHog analytics, Expo push notifications.",
-          "API: Express 5, PostgreSQL, JWT auth, role-aware surfaces for users, platform admin, and org/artist admin.",
-          "Jobs: Redis + BullMQ scheduler worker for catalog refresh, ratings recalculation, and push dispatch.",
-          "AI catalog: flyer → structured event fields with cost-conscious inference; community lineup extraction for set times; artist enrichment for genres.",
-          "Ratings: one short flow gated to verified attendees across events, artists, organizations, and venues.",
-          "Ops: GitHub Actions deploy to VPS (API + scheduler worker); admin UI for entities, ratings, and scheduler."
+          "Mobile: Expo/React Native, Expo Router, Mapbox map with clustering, Apple/Google/Facebook and email sign-in, PostHog analytics, Expo push notifications.",
+          "API: Express 5, PostgreSQL (65 migrations), Zod validation, JWT auth, role-aware surfaces for users, artists, organisers and platform admins.",
+          "Jobs: Redis + BullMQ worker for scheduled ticket refresh, ratings recalculation and rating-prompt pushes.",
+          "Ingestion: a scraper worker pulls events from Oneticket, Cooltix and Resident Advisor; each new flyer gets one Gemini vision pass to fill in structured fields.",
+          "Ratings: one short post-event flow, open only to attendees verified by a wallet ticket or by being at the venue during the event.",
+          "Ops: GitHub Actions deploys the API, worker, admin panel and scraper, with health-checked restarts on a VPS; 179 test files across server, scraper and app."
         ],
         "challenge": "Keep a Budapest nightlife catalog complete and fresh while inferring missing structure with AI — especially from flyers — without runaway inference cost. Separately: set times often arrive late; artists lack clean genre tags; ratings only matter if they're trustworthy and quick.",
         "solution": [
-          "Treat flyer vision as a primary structured-data source where listings are incomplete.",
-          "Run AI selectively and with cost controls so continuous enrichment stays affordable.",
-          "Ship a community lineup AI extraction path so set times land in the catalog as they appear.",
-          "Ship an artist enrichment path that infers genres for discovery and filtering.",
-          "Ship one verified-attendee rating flow that scores the whole entity graph — event, artist, org, venue — in a fast UX."
+          "Scrape three ticketing sources automatically, and run Gemini only on new events' flyers — known URLs just refresh their ticket offers.",
+          "Lock scheduled jobs to zero paid AI calls, and give artist genre inference a 9-month cooldown after an early cost spike.",
+          "Let the community upload a lineup screenshot: AI extracts set times by room, and nothing is saved until the user confirms.",
+          "Infer artist genres from a fixed allowlist, at most five per artist, so discovery filters stay clean.",
+          "Gate ratings to verified attendance — a wallet ticket, or being at the venue during the event — and keep the flow to four quick steps: entry, vibe, lineup, confirm."
         ],
         "features": [
-          "Map-first Budapest discovery — what's on, where it is",
-          "Flyer → structured event AI with cost-aware freshness",
-          "Community lineup AI — set times as they appear",
-          "Verified-attendee multi-entity ratings for events, artists, orgs, and venues",
-          "Artist genre enrichment for discovery and filtering"
-        ]
+          "Map-first Budapest discovery — what's on, where, and what's open now",
+          "Automated event import from three ticketing sources, with AI flyer reading",
+          "Room-by-room timetables with “now playing”, including multi-day festivals",
+          "Ratings from verified attendees for events, artists and venue vibe",
+          "Offline ticket wallet — share a ticket PDF in, the QR code is ready at the door",
+          "Community lineup AI — set times from a single screenshot"
+        ],
+        "metrics": {
+          "events": "events in the catalog, imported from 3 sources",
+          "ratings": "ratings from verified attendees",
+          "ratedAttendances": "verified attendances that ended in a rating",
+          "buildMonths": "months from first commit to the App Store"
+        },
+        "metricsNote": "Figures as of September 2026."
       }
     }
   },

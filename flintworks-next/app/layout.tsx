@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { Navbar } from '@/components/layout/Navbar'
-import { Footer } from '@/components/layout/Footer'
 import { DocumentLang } from '@/components/layout/DocumentLang'
 import { I18nInit } from '@/components/I18nInit'
 
@@ -26,6 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://flintworks.io'),
+  manifest: '/site.webmanifest',
   title: {
     default: 'Flintworks — Software Agency Budapest',
     template: '%s | Flintworks',
@@ -56,9 +55,7 @@ export default function RootLayout({
         <I18nInit />
         <DocumentLang />
         <div className="min-h-screen bg-background flex flex-col">
-          <Navbar />
           <main className="flex-1">{children}</main>
-          <Footer />
         </div>
       </body>
     </html>

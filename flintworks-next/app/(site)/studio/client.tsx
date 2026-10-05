@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Smartphone, Monitor, Flame } from 'lucide-react'
+import { ArrowRight, Smartphone, Flame } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { SectionHeading } from '@/components/ui/SectionHeading'
@@ -10,10 +10,10 @@ import { EmberBadge } from '@/components/ui/EmberBadge'
 import { getCaseStudyById } from '@/data/case-studies'
 
 const studioProjectMeta = [
-  { id: 'studio-web', icon: Monitor, tags: ['React', 'TypeScript', 'Supabase'] },
   {
     id: 'studio-mobile',
     icon: Smartphone,
+    live: true,
     tags: ['React Native', 'Expo', 'TypeScript', 'Mapbox', 'Node.js'],
   },
 ]
@@ -73,10 +73,14 @@ export default function StudioPageContent() {
                       <div className="p-3 rounded-xl bg-ember/10 border border-ember/20">
                         <Icon size={24} className="text-ember" />
                       </div>
-                      <EmberBadge variant="in-dev">
-                        <span className="w-1.5 h-1.5 rounded-full bg-ember animate-pulse" />
-                        {t('studio.inDev')}
-                      </EmberBadge>
+                      {project.live ? (
+                        <EmberBadge variant="ember">{t('studio.live')}</EmberBadge>
+                      ) : (
+                        <EmberBadge variant="in-dev">
+                          <span className="w-1.5 h-1.5 rounded-full bg-ember animate-pulse" />
+                          {t('studio.inDev')}
+                        </EmberBadge>
+                      )}
                     </div>
 
                     <div className="mb-2">

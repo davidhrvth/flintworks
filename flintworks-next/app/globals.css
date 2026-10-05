@@ -94,6 +94,45 @@ body {
   background-clip: text;
 }
 
+/* Logo hover — same language as the client-site badge: the stone tilts,
+   the struck face flashes, a spark flies off it, a glint runs along the name.
+   Triggered by hovering the logo or keyboard-focusing its link. */
+.fw-logo__mark {
+  transition: transform 0.55s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+.fw-logo__hot,
+.fw-logo__spark {
+  opacity: 0;
+}
+.fw-logo__spark {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+:is(.fw-logo--animated:hover, :focus-visible > .fw-logo--animated) .fw-logo__mark {
+  transform: rotate(-12deg);
+}
+:is(.fw-logo--animated:hover, :focus-visible > .fw-logo--animated) .fw-logo__hot {
+  animation: fw-logo-flash 0.6s ease-out;
+}
+:is(.fw-logo--animated:hover, :focus-visible > .fw-logo--animated) .fw-logo__spark {
+  animation: fw-logo-spark 0.7s ease-out 0.05s both;
+}
+:is(.fw-logo--animated:hover, :focus-visible > .fw-logo--animated) .fw-logo__letter {
+  animation: fw-logo-glint 0.5s ease-out calc(120ms + var(--i) * 35ms) both;
+}
+@keyframes fw-logo-flash {
+  15% { opacity: 0.95; }
+  100% { opacity: 0; }
+}
+@keyframes fw-logo-spark {
+  0% { opacity: 0; transform: scale(0) rotate(0deg); }
+  30% { opacity: 1; transform: scale(1.15) rotate(45deg); }
+  100% { opacity: 0; transform: scale(0.2) rotate(90deg); }
+}
+@keyframes fw-logo-glint {
+  40% { fill: #FF8C42; }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

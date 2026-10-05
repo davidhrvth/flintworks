@@ -37,7 +37,7 @@
     "work": "Munkáink",
     "studio": "Stúdió",
     "about": "Rólunk",
-    "startProject": "Projektet Indítunk",
+    "startProject": "Projektindítás",
     "openMenu": "Menü megnyitása",
     "closeMenu": "Menü bezárása"
   },
@@ -57,15 +57,30 @@
       "items": {
         "01": {
           "title": "Teljesítményre tervezve",
-          "body": "Minden egyes kódsor felelős a produkciós környezetért. Valós felhasználókra, valós terhelésre és valós határhelyzetekre optimalizálunk - nem csak a tökéletes esetre."
+          "body": "Minden egyes sor kód az éles környezet stabilitását szolgálja. Valós felhasználókra, valós terhelésre és valós határhelyzetekre optimalizálunk - nem csak a tökéletes esetre."
         },
         "02": {
           "title": "Határidőre szállítva",
-          "body": "Reális határidőket szabunk meg, és tartjuk is azokat. Nincs eltűnés, nincs végtelen módosítás, nincs kicsúszott mérföldkő. Önök mindig tudják, hol tart a projekt."
+          "body": "Reális határidőket szabunk meg, és tartjuk is azokat. Nincs eltűnés, nincs végtelen módosítás, nincs kicsúszott mérföldkő. Önök mindig tudják, hol tart a projekt.",
+          "tracker": {
+            "project": "AZ ÖNÖK PROJEKTJE",
+            "onTime": "IDŐBEN",
+            "steps": [
+              { "label": "Megrendelve", "status": "Megrendelés rögzítve", "note": "Pontosan egyeztetjük, mire van szükségük." },
+              { "label": "Készül", "status": "Készül", "note": "Minden héten látják a valódi haladást." },
+              { "label": "Majdnem kész", "status": "Majdnem kész", "note": "Élesítés előtt Önök próbálják ki elsőként." },
+              { "label": "Átadva", "status": "Átadva, határidőre", "note": "Élesben, azon a napon, amit megígértünk." }
+            ]
+          }
         },
         "03": {
           "title": "Konverzióra tervezve",
-          "body": "A minőség és az üzleti hatékonyság nem zárja ki egymást. Olyan dolgokat fejlesztünk, amelyek élesek és eredményeket hoznak - legyen az regisztráció, értékesítés vagy növekedés."
+          "body": "A minőség és az üzleti hatékonyság nem zárja ki egymást. Olyan dolgokat fejlesztünk, amelyek letisztultak és eredményeket hoznak - legyen az regisztráció, értékesítés vagy növekedés.",
+          "chart": {
+            "metric": "REGISZTRÁCIÓK EGY ÉVVEL KORÁBBHOZ KÉPEST",
+            "months": ["JAN", "FEB", "MÁR", "ÁPR", "MÁJ", "JÚN", "JÚL", "AUG", "SZEP", "OKT", "NOV", "DEC"],
+            "launches": ["Gyorsabb oldalak", "Átlátható árak", "Gyors regisztráció", "Jobb bevezetés", "Ajánlói program", "Mobilapp", "Új fizetési oldal", "Élő chat", "Ingyenes próba", "Esettanulmányok"]
+          }
         }
       }
     },
@@ -77,14 +92,14 @@
     "studio": {
       "eyebrow": "Flintworks Stúdió",
       "heading": "Nem csak ügyfeleknek fejlesztünk - a sajátunkat is építjük.",
-      "body": "A Flintworks Stúdió az ügynökség termékfejlesztési ága - ahol saját applikációkat, eszközöket és platformokat építünk, hogy élesek maradjunk, és olyan problémákat oldjunk meg, amelyek valóban fontosak nekünk.",
+      "body": "A Flintworks Stúdió az ügynökség termékfejlesztési ága - ahol saját applikációkat, eszközöket és platformokat építünk, hogy a legfrissebb technológiák élén maradjunk, és olyan problémákat oldjunk meg, amelyek valóban fontosak nekünk.",
       "cta": "A Stúdióról"
     },
     "bottomCta": {
       "heading": "Kész valami",
       "highlight": "nagyra?",
       "body": "Meséljen a projektjéről, és 24 órán belül visszajelzünk.",
-      "cta": "Projektet Indítunk"
+      "cta": "Projektindítás"
     }
   },
   "services": {
@@ -114,14 +129,14 @@
     "items": {
       "web-apps": {
         "name": "Webalkalmazások és platformok",
-        "tagline": "Skálázható, teljes stackű webalkalmazások.",
+        "tagline": "Skálázható, full-stack webalkalmazások.",
         "description": [
-          "Teljes stackű webalkalmazásokat, SaaS platformokat, irányítópultokat és portálokat fejlesztünk, amelyek valós terhelést és valós felhasználókat kezelnek. Az MVP-ktől a termelési léptékű rendszerekig hosszú távra tervezünk.",
+          "Full-stack webalkalmazásokat, SaaS platformokat, irányítópultokat és portálokat fejlesztünk, amelyek valós terhelést és valós felhasználókat kezelnek. Az MVP-ktől a termelési léptékű rendszerekig hosszú távra tervezünk.",
           "Technológiai stackünk korszerű, a deploymentek gyorsak, a kódunk tiszta. Legyen szó ügyféloldali termékről vagy belső eszközről, működőképes szoftvert szállítunk.",
           "Az adatmodellt, az autentikációs réteget, az API-tervezést és a teljesítményi jellemzőket már az első sor megírása előtt átgondoljuk."
         ],
         "deliverables": [
-          "Teljes stackű alkalmazásarchitektúra",
+          "Full-stack alkalmazásarchitektúra",
           "RESTful vagy GraphQL API tervezés",
           "Hitelesítési és jogosultságkezelési rendszerek",
           "Adminisztrátori irányítópultok és adatkezelés",
@@ -225,19 +240,9 @@
       "heading": "Egyszerű, átlátható árazás",
       "subheading": "Fix csomagok az egyszerűségért. Egyedi ajánlatok a bonyolultabb igényekhez. Meglepetések nélkül."
     },
-    "web": {
-      "eyebrow": "Webfejlesztés",
-      "heading": "Web és platform áraink",
-      "subtext": "Válassza ki a projektjéhez illő csomagot. Minden árazás innen indul - összetettebb projekteknél egyedi ajánlatot adunk."
-    },
-    "mobile": {
-      "eyebrow": "Mobilfejlesztés",
-      "heading": "Mobilra fejlesztenének?",
-      "subtext": "Platformfüggetlen applikációk iOS-re és Androidra, React Native segítségével."
-    },
     "custom": {
-      "heading": "Nem tudja, melyik illik?",
-      "body": "Gondoljuk át együtt. Meséljen a projektjéről, és világos, őszinte ajánlatot adunk.",
+      "heading": "Nem tudja, melyik illik az Ön cégéhez?",
+      "body": "Gondoljuk át együtt. Meséljen a projektjéről, és kidolgozott árajánlatot adunk.",
       "cta": "Egyedi ajánlatot kérek"
     },
     "faq": {
@@ -245,46 +250,13 @@
       "heading": "Gyakori kérdések"
     },
     "currencyNote": "A feltüntetett árak tájékoztató jellegűek. A végleges ajánlat az Ön projektjéhez igazodik.",
-    "mostPopular": "Legnépszerűbb",
     "startingAt": "kezdőára",
     "tiers": {
-      "refresh": {
-        "name": "Frissítés",
-        "price": "€400",
-        "priceHUF": "150 000 Ft",
-        "description": "Vizuális és UX frissítés egy stabil meglévő oldalon — a tartalom nagyrészt megmarad.",
-        "features": [
-          "Vizuális / UX frissítés a jelenlegi CMS-en",
-          "Mobil finomhangolás és kulcsoldalak frissítése",
-          "Nincs súlyos migráció vagy újraépítés",
-          "Analitika ellenőrzés és alapszintű SEO",
-          "Ügyfél által birtokolt átadás"
-        ],
-        "cta": "Kezdjük el",
-        "listPrice": "€900",
-        "listPriceHUF": "350 000 Ft"
-      },
-      "landing": {
-        "name": "Landing",
-        "price": "€500",
-        "priceHUF": "200 000 Ft",
-        "description": "Vékony validációs oldal startupoknak — nem teljes MVP.",
-        "features": [
-          "Egy konverzióra optimalizált landingoldal",
-          "Várólista vagy leadgyűjtő űrlap",
-          "Egyedi craft design",
-          "Mobilra optimalizált elrendezés",
-          "Alapszintű analitika beállítás"
-        ],
-        "cta": "Kezdjük el",
-        "listPrice": "€1 200",
-        "listPriceHUF": "450 000 Ft"
-      },
-      "starter": {
-        "name": "Alapcsomag",
+      "website": {
+        "name": "Céges weboldal",
         "price": "€800",
         "priceHUF": "300 000 Ft",
-        "description": "Vállalati weboldalakhoz és egyszerű landingoldalakhoz.",
+        "description": "Gyors, igényes weboldal, amely megkereséseket hoz.",
         "features": [
           "Legfeljebb 8 aloldal",
           "Egyedi design",
@@ -294,95 +266,42 @@
           "Google Analytics beállítása",
           "2 körös módosítási lehetőség"
         ],
-        "cta": "Kezdjük el",
-        "listPrice": "€3 900",
-        "listPriceHUF": "1 500 000 Ft"
+        "cta": "Kezdjük el"
       },
-      "growth": {
-        "name": "Növekedési csomag",
-        "price": "€3 690",
-        "priceHUF": "1 400 000 Ft",
-        "description": "Webalkalmazás MVP-khez és üzleti platformokhoz.",
+      "web-app": {
+        "name": "Webalkalmazás",
+        "description": "Platformok, ügyfélportálok, foglalási rendszerek és SaaS termékek, a vállalkozása működésére szabva.",
         "features": [
-          "Teljes stackű webalkalmazás",
-          "Felhasználói hitelesítés és fiókok",
-          "Adminisztrátori irányítópult",
-          "API-integrációk (legfeljebb 3)",
-          "Adatbázis tervezés és beállítás",
+          "Full-stack webalkalmazás",
+          "Felhasználói fiókok és jogosultságok",
+          "Adminisztrátori felület",
+          "API- és fizetési integrációk",
+          "Adatbázis-tervezés és üzemeltetési beállítás",
           "Deployment és CI/CD pipeline",
-          "4 hetes megjelenés utáni támogatás"
+          "Megjelenés utáni támogatás"
         ],
-        "cta": "Kezdjük el",
-        "listPrice": "€18 000",
-        "listPriceHUF": "7 000 000 Ft"
+        "cta": "Beszéljük meg"
       },
-      "scale": {
-        "name": "Skálázási csomag",
-        "price": "€8 210+",
-        "priceHUF": "3 000 000+ Ft",
-        "description": "Nagyobb léptékű applikációkhoz, SaaS termékekhez vagy teljes körű startup fejlesztéshez.",
-        "features": [
-          "Minden, ami a Növekedési csomagban",
-          "Korlátlan számú integráció",
-          "Multi-tenant / SaaS architektúra",
-          "Fejlett hitelesítés (SSO, szerepkörök)",
-          "Egyedi analitika és riportálás",
-          "Dedikált projektmenedzser",
-          "3 hónapos megjelenés utáni támogatás"
-        ],
-        "cta": "Beszéljük meg",
-        "listPrice": "€40 000+",
-        "listPriceHUF": "15 000 000+ Ft"
-      },
-      "mobile-mvp": {
-        "name": "Mobil MVP",
-        "price": "€4 510",
-        "priceHUF": "1 700 000 Ft",
-        "description": "Juttassa el mobilapplikáció-ötletét a felhasználók kezébe gyorsan.",
+      "mobile-app": {
+        "name": "Mobilalkalmazás",
+        "description": "Platformfüggetlen iOS- és Android-alkalmazások React Native-vel, az első verziótól az App Store-ig.",
         "features": [
           "React Native (iOS + Android)",
-          "Legfeljebb 8 képernyő",
-          "Felhasználói hitelesítés",
-          "Alap API-integráció",
-          "App Store beküldési támogatás",
-          "30 napos megjelenés utáni támogatás"
-        ],
-        "cta": "Kezdjük el",
-        "listPrice": "€22 000",
-        "listPriceHUF": "8 500 000 Ft"
-      },
-      "custom-mobile": {
-        "name": "Egyedi mobilapplikáció",
-        "price": "€8 210+",
-        "priceHUF": "3 000 000+ Ft",
-        "description": "Teljes funkciókészletű mobilalkalmazás összetett integrációkkal és egyedi funkcionalitással.",
-        "features": [
-          "Minden, ami a Mobil MVP-ben",
-          "Korlátlan képernyő és folyamat",
+          "Felhasználói fiókok és belépés",
           "Push értesítések",
-          "Offline támogatás",
-          "Natív eszközintegrációk",
-          "Egyedi backend API"
+          "Térkép, kamera és egyéb eszközfunkciók",
+          "Egyedi backend API",
+          "App Store és Google Play beküldés",
+          "Megjelenés utáni támogatás"
         ],
-        "cta": "Beszéljük meg",
-        "listPrice": "€40 000+",
-        "listPriceHUF": "15 000 000+ Ft"
+        "cta": "Beszéljük meg"
       },
       "discovery": {
         "name": "Discovery",
         "price": "€200",
         "priceHUF": "80 000 Ft",
-        "description": "Fizetett mikro-audit / tisztázó sprint — beszámít a folytatólagos fejlesztésbe.",
-        "features": [
-          "Hatáskör és kockázatdiagnózis",
-          "Frissítés vs redesign vs újraépítés javaslat",
-          "Írásos roadmap és becsült sáv",
-          "Beszámít a követő fejlesztésbe",
-          "30 perces átbeszélő hívás"
-        ],
-        "cta": "Discovery foglalása",
-        "listPrice": "€2 500",
-        "listPriceHUF": "1 000 000 Ft"
+        "description": "Még nem biztos, mire van szüksége? Fizetős tisztázó sprint: hatókör, kockázatok és írásos roadmap becsült árral. A díj beszámít a fejlesztésbe, ha folytatjuk.",
+        "cta": "Discovery foglalása"
       }
     },
     "faqItems": [
@@ -392,7 +311,7 @@
       },
       {
         "question": "Mennyi szokott lenni a fejlesztési időkeret?",
-        "answer": "Egy vállalati weboldal általában 3–5 hétig tart. Egy webalkalmazás MVP 6–12 hétig fut, a bonyolultságtól függően. Minden projekt kezdése előtt egyértelmű ütemtervet állítunk fel, és elkötelezzük magunkat annak betartása mellett."
+        "answer": "Egy vállalati weboldal általában 2–3 hétig tart. Egy webalkalmazás MVP 6–12 hétig fut, egy mobilapp szintén 6–12 hétig, a bonyolultságtól függően. Minden projekt kezdése előtt egyértelmű ütemtervet állítunk fel, és elkötelezzük magunkat annak betartása mellett."
       },
       {
         "question": "Van-e folyamatos támogatás a megjelenés után?",
@@ -400,7 +319,7 @@
       },
       {
         "question": "El lehet kezdeni kisebb csomaggal, majd bővíteni?",
-        "answer": "Igen. A skálázhatóságot már az elejétől szem előtt tartjuk. Sok ügyfelünk az Alapcsomaggal vagy a Növekedési csomaggal indul, majd a termék növekedésével bővíti azt. Úgy tervezzük az architektúrát, hogy a skálázás ne igényelje az újraírást."
+        "answer": "Igen. A skálázhatóságot már az elejétől szem előtt tartjuk. Sok ügyfelünk egy weboldallal vagy az alkalmazása egy első, fókuszált verziójával indul, majd a termék növekedésével bővíti azt. Úgy tervezzük az architektúrát, hogy a skálázás ne igényelje az újraírást."
       },
       {
         "question": "Mi a helyzet, ha már van kész designom?",
@@ -413,46 +332,57 @@
     ],
     "earlyPackagingNote": "Korai ügyfél-csomagolás, amíg van kapacitás — a listás ár a kiforrott craft sáv; a jelenlegi „kezdőár” a bevezető ajánlat.",
     "earlyClient": "Korai ügyfél",
-    "savePercent": "Akár ~80% kedvezmény",
-    "listPriceA11y": "Listás ár {{listPrice}}, korai ügyfél ár {{price}}"
+    "listPriceA11y": "Listás ár {{listPrice}}, korai ügyfél ár {{price}}",
+    "packages": {
+      "eyebrow": "Amit építünk",
+      "heading": "Weboldalak, webalkalmazások és mobilappok",
+      "subtext": "A céges weboldalak fix kezdőárról indulnak. Minden alkalmazás más, ezért előbb beszélünk, utána adunk árajánlatot."
+    },
+    "quoteOnly": {
+      "label": "projektre szabott ár",
+      "heading": "Egyedi ajánlat",
+      "body": "Előbb beszélünk, utána világos árajánlatot küldünk."
+    }
   },
   "work": {
     "eyebrow": "Portfólió",
-    "heading": "Amit kovácsoltunk",
-    "subheading": "Termékek, platformok és weboldalak válogatása, amelyeket olyan ügyfeleknek fejlesztettünk, akiknek fontos volt a minőség.",
+    "heading": "Amit fejlesztettünk",
+    "subheading": "Termékek, platformok és weboldalak válogatása — ügyfeleinknek, akiknek fontos volt a minőség, és saját magunknak.",
     "viewCaseStudy": "Esettanulmány megtekintése",
     "cta": {
-      "heading": "Szeretnék itt szerepelni?",
-      "subtext": "Szívesen hozzáadjuk az Önök termékét ehhez az oldalhoz. Fejlesszük együtt az értékeset.",
-      "button": "Projektet Indítunk"
+      "heading": "Szeretne itt szerepelni?",
+      "subtext": "Bízzon meg minket, hogy lefejlesszük az Ön termékét, és ezen az oldalon fogunk büszkélkedni vele.",
+      "button": "Projektindítás"
     },
     "projects": {
-      "alpha": {
-        "name": "Alpha projekt",
-        "category": "Webalkalmazás",
-        "description": "Teljes stackű SaaS irányítópult műveleti csapatok számára - valós idejű adatok, multi-tenant architektúra és áttekinthető analitikai felület, napi több ezer aktív felhasználó kiszolgálására."
+      "vibe": {
+        "name": "VIBE",
+        "category": "iOS-alkalmazás",
+        "description": "Saját iOS-alkalmazásunk a budapesti elektronikus éjszakai élethez: minden esemény, line-up és jegy egy térképen. 339 esemény automatikus importja három jegyforrásból, a flyereket AI olvassa ki. Három hónap az első committól az App Store-ig."
       },
-      "beta": {
-        "name": "Beta projekt",
-        "category": "Weboldal",
-        "description": "Egy több telephelyen működő szolgáltató vállalkozás gyors, modern marketing weboldalt igényelt, amely leadeket generál és a prémium piaci pozicionálást tükrözi."
+      "skomai-logistico": {
+        "name": "SKOMAI Logistico",
+        "category": "Céges weboldal",
+        "description": "Gyors, kétnyelvű weboldal egy magyar–spanyol piacra lépési tanácsadónak, amelyet teljes egészében mi készítettünk el az alapoktól — dizájn, fejlesztés és spanyol szöveg. Az általános kapcsolati űrlap helyére díjmentes, 10 lépéses előminősítő kérdőív került, így minden megkeresés a szükséges válaszokkal és dokumentumokkal érkezik."
       },
-      "gamma": {
-        "name": "Gamma projekt",
-        "category": "Mobilapplikáció",
-        "description": "Platformfüggetlen fogyasztói applikáció, amely összeköti a szolgáltatókat az ügyfelekkel - React Native-vel iOS-re és Androidra, valós idejű chat és helymeghatározás funkciókkal."
+      "horgasz-szallas": {
+        "name": "Horgász Szállás",
+        "category": "Foglalási platform",
+        "description": "Foglalási platform magyarországi horgászszállásoknak. A horgászok víz, halfaj és dátum szerint keresnek, majd foglalási kérést küldenek, amelyet a tulajdonos elfogad vagy elutasít — ütközésvizsgálattal a dupla foglalások ellen, Last Minute ajánlatokkal és valós idejű chattel."
       }
-    }
+    },
+    "visitSite": "Élő oldal megtekintése",
+    "comingSoon": "Hamarosan indul"
   },
   "studio": {
     "eyebrow": "A Stúdió",
     "heading": "A Flintworks Stúdió",
     "subheading": "Nem csak ügyfeleknek fejlesztünk - a sajátunkat is építjük.",
-    "subheading2": "A Stúdió a Flintworks termékfejlesztési ága - ahol a számunkra fontos ötleteket nulláról felépítjük, ugyanolyan rigorózus megközelítéssel, mint minden ügyfélprojektünknél.",
+    "subheading2": "A Stúdió a Flintworks termékfejlesztési ága - ahol a számunkra fontos ötleteket nulláról felépítjük, ugyanolyan alapos megközelítéssel, mint minden ügyfélprojektünknél.",
     "inProgress": {
-      "eyebrow": "Fejlesztés alatt",
+      "eyebrow": "Saját termékeink",
       "heading": "Amin éppen dolgozunk.",
-      "subtext": "Ezek a projektek jelenleg fejlesztés alatt állnak. Többet osztunk meg róluk, ahogy közelednek a megjelenéshez."
+      "subtext": "Saját fejlesztésű és üzemeltetésű termékeink."
     },
     "followBuild": "Kövessék a fejlesztést",
     "viewCaseStudy": "Esettanulmány megtekintése",
@@ -461,28 +391,24 @@
       "eyebrow": "Miért fejlesztünk",
       "heading": "A fejlesztők fejlesztenek.",
       "paragraphs": [
-        "Azért hoztuk létre a Stúdiót, mert egy fejlesztő ügynökség számára a legjobb módja az éles maradásnak az, ha folyamatosan saját termékeket is szállít. A saját magunknak való fejlesztés valódi döntéshozatalt kényszerít ki, nem csupán mások elvárásainak megvalósítását.",
+        "Azért hoztuk létre a Stúdiót, mert egy fejlesztő ügynökség számára a legjobb módja a technológiák élvonalán való maradásnak az, ha folyamatosan saját termékeket is szállít. A saját magunknak való fejlesztés valódi döntéshozatalt kényszerít ki, nem csupán mások elvárásainak megvalósítását.",
         "Ez egyben azt is jelenti, hogy folyamatosan teszteljük saját stackünket, megtaláljuk a problémás pontokat és felfedezzük, mi működik igazán éles körülmények között - olyan tudás ez, amely közvetlenül minden ügyfelünk projektjét is gazdagítja.",
         "A Stúdió az a hely is, ahol olyan problémákat veszünk magunknak, amelyek valóban fontosak nekünk. Nem minden igényel ügyfélmegbízást."
       ]
     },
     "projects": {
-      "studio-web": {
-        "name": "Projekt: TBD",
-        "platform": "Webalkalmazás",
-        "description": "Olyan webalkalmazás, amelyet belső használatra fejlesztünk, hogy megoldjunk egy problémát, amellyel mindennapi munkánkban újra és újra találkoztunk. Részletek hamarosan."
-      },
       "studio-mobile": {
         "name": "VIBE",
         "platform": "Mobilalkalmazás",
-        "description": "Az éjszakai élet útlevele — budapesti elektronikus discovery app térképes programkereséssel, AI-alapú katalógusgazdagítással és ellenőrzött résztvevői értékelésekkel a teljes jelenet mentén."
+        "description": "Az éjszakai élet operációs rendszere — a budapesti elektronikus közösség egy térképen: minden esemény, line-up és jegy, ellenőrzött résztvevők értékeléseivel."
       }
-    }
+    },
+    "live": "Elérhető az App Store-ban"
   },
   "caseStudy": {
     "backToStudio": "Vissza a Stúdióhoz",
     "relatedCta": "Hasonló terméket szeretne?",
-    "relatedCtaButton": "Projektet Indítunk",
+    "relatedCtaButton": "Projektindítás",
     "appStore": "App Store",
     "playStore": "Google Play",
     "watchDemo": "Demó megtekintése",
@@ -515,36 +441,44 @@
     "projects": {
       "studio-mobile": {
         "name": "VIBE",
-        "oneLiner": "Az éjszakai élet útlevele.",
-        "metaDescription": "A VIBE a Flintworks Stúdió budapesti nightlife discovery appja — térképes programkeresés, AI katalógusgazdagítás és ellenőrzött résztvevői értékelések. Megjelenés: 2026. augusztus.",
+        "oneLiner": "Az éjszakai élet operációs rendszere.",
+        "metaDescription": "A VIBE a Flintworks Stúdió iOS-alkalmazása a budapesti elektronikus éjszakai élethez — minden esemény, line-up és jegy egy térképen, automatikus eseményimport AI-os flyerfeldolgozással és ellenőrzött résztvevői értékelésekkel. Elérhető az App Store-ban.",
         "role": "David — fejlesztő és társalapító",
-        "timeline": "~3 hónap fejlesztés · Megjelenés: 2026. augusztus 17.",
+        "timeline": "3 hónap fejlesztés · Megjelent: 2026. augusztus 29.",
         "platform": "Mobilalkalmazás",
         "problem": "A budapesti elektronikus nightlife felfedezése széttöredezett az Instagram, a Facebook Events, a jegyoldalak és a chatcsoportok között. A rajongóknak — elsősorban a helyi jelenet 20–35 éves rendszeres látogatóinak — egy megbízható hely kell arra, hogy mi van, hol, kikkel és milyen áron — nem egy újabb „legközelebbi hely” térkép. Szükségük van bizalmi jelekkel a bulik után is. A VIBE személyes nightlife OS-ként pozicionál: felfedezés, jelenetgráf és értékelések, anélkül hogy elsődleges jegyárusítóvá válna.",
-        "approach": "Solo technikai építés társalapítóként a Flintworks Stúdión belül: React Native/Expo fogyasztói app, saját Express/Postgres API, admin CMS, és AI-alapú katalóguspipeline, ami frissen és strukturáltan tartja a listákat. Termék tézis: a katalógus teljességén, gazdagításon és értékeléseken nyerni; kifelé mutató jegy linkek — nem teljes jegyértékesítés.",
+        "approach": "Solo technikai építés társalapítóként a Flintworks Stúdión belül: React Native/Expo app, saját Express/Postgres API, admin felület és egy scraper worker, amely három forrásból (Oneticket, Cooltix, Resident Advisor) importálja az eseményeket. Termék tézis: a katalógus teljességén, a line-upokon és az értékeléseken nyerni; a jegyvásárlás a jegyárusítóknál marad, a megvett jegyek pedig offline tárcában várnak — saját jegyértékesítés nélkül.",
         "architecture": [
-          "Mobil: Expo/React Native, Expo Router, Mapbox térkép clusteringgel, OAuth (Apple/Google/Facebook) + e-mail auth, PostHog analytics, Expo push értesítések.",
-          "API: Express 5, PostgreSQL, JWT auth, szerepkör-tudatos felületek felhasználóknak, platform adminnak és org/artist adminnak.",
-          "Jobok: Redis + BullMQ scheduler worker katalógusfrissítéshez, értékelés-újraszámoláshoz és push küldéshez.",
-          "AI katalógus: flyer → strukturált eseménymezők költségtudatos inferenciával; közösségi lineup kinyerés set time-okhoz; artist gazdagítás műfajokhoz.",
-          "Értékelések: egy rövid flow, ellenőrzött résztvevőkhöz kötve, eseményeken, előadókon, szervezeteken és helyszíneken át.",
-          "Ops: GitHub Actions deploy VPS-re (API + scheduler worker); admin UI entitásokhoz, értékelésekhez és schedulerhez."
+          "Mobil: Expo/React Native, Expo Router, Mapbox térkép clusteringgel, Apple/Google/Facebook és e-mailes belépés, PostHog analitika, Expo push értesítések.",
+          "API: Express 5, PostgreSQL (65 migráció), Zod validáció, JWT auth, szerepkör-alapú felületek felhasználóknak, előadóknak, szervezőknek és platform adminoknak.",
+          "Jobok: Redis + BullMQ worker az ütemezett jegyfrissítéshez, az értékelések újraszámolásához és az értékelést kérő push értesítésekhez.",
+          "Import: scraper worker gyűjti az eseményeket három forrásból (Oneticket, Cooltix, Resident Advisor); minden új flyeren egyszer fut le a Gemini vision, és kitölti a strukturált mezőket.",
+          "Értékelések: egy rövid, esemény utáni flow, amely csak ellenőrzött résztvevőknek nyílik meg — tárcában lévő jegy vagy az esemény alatti helyszíni jelenlét alapján.",
+          "Ops: GitHub Actions deployolja az API-t, a workert, az admin felületet és a scrapert, health checkkel ellenőrzött újraindítással VPS-en; 179 tesztfájl a szerveren, a scraperben és az appban."
         ],
         "challenge": "Budapesti nightlife katalógust teljesnek és frissnek tartani, miközben AI-val következtetjük ki a hiányzó struktúrát — különösen flyerből — anélkül, hogy az inferencia költsége elszabadulna. Emellett: a set time-ok gyakran későn érkeznek; az előadóknak nincsenek tiszta műfajcímkéi; az értékelések csak akkor számítanak, ha megbízhatóak és gyorsak.",
         "solution": [
-          "A flyer-víziót elsődleges strukturált adatforrásként kezeljük, ahol a listák hiányosak.",
-          "Az AI-t szelektíven és költségkontrollal futtatjuk, hogy a folyamatos gazdagítás megfizethető maradjon.",
-          "Közösségi lineup AI kinyerési útvonalat szállítunk, hogy a set time-ok megjelenésükkor bekerüljenek a katalógusba.",
-          "Artist gazdagítási útvonalat szállítunk, amely műfajokat következtet a felfedezéshez és szűréshez.",
-          "Egy ellenőrzött résztvevői értékelési flow-t szállítunk, amely a teljes entitásgráfot pontozza — esemény, előadó, szervezet, helyszín — gyors UX-ben."
+          "Három jegyforrás automatikus scrapelése; a Gemini csak az új események flyerein fut — az ismert URL-eknél csak a jegyajánlatok frissülnek.",
+          "Az ütemezett jobok nem indíthatnak fizetős AI-hívást, az előadói műfajbecslés pedig egy korai költségugrás után 9 hónapos cooldownt kapott.",
+          "A közösség feltölthet egy line-up screenshotot: az AI termenként kinyeri a set time-okat, és csak a felhasználó jóváhagyása után kerül bármi mentésre.",
+          "Az előadói műfajokat rögzített listából, előadónként legfeljebb ötöt következtetünk ki, így a felfedezési szűrők tiszták maradnak.",
+          "Értékelni csak ellenőrzött résztvevő tud — tárcában lévő jegy vagy az esemény alatti helyszíni jelenlét alapján —, a flow pedig négy gyors lépés: belépés, hangulat, line-up, megerősítés."
         ],
         "features": [
-          "Térkép-első budapesti felfedezés — mi van, hol",
-          "Flyer → strukturált esemény AI költségtudatos frissességgel",
-          "Közösségi lineup AI — set time-ok ahogy megjelennek",
-          "Ellenőrzött résztvevői multi-entitás értékelések eseményekre, előadókra, szervezetekre és helyszínekre",
-          "Artist műfajgazdagítás a felfedezéshez és szűréshez"
-        ]
+          "Térkép-első budapesti felfedezés — mi van, hol, és mi tart nyitva most",
+          "Automatikus eseményimport három jegyforrásból, AI-os flyerfeldolgozással",
+          "Termenkénti timetable „most játszik” jelöléssel, többnapos fesztiválokra is",
+          "Ellenőrzött résztvevők értékelései eseményekre, előadókra és a helyszín hangulatára",
+          "Offline jegytárca — a megosztott jegy PDF-ből a QR-kód azonnal kész a bejáratnál",
+          "Közösségi line-up AI — set time-ok egyetlen screenshotból"
+        ],
+        "metrics": {
+          "events": "esemény a katalógusban, 3 forrásból importálva",
+          "ratings": "értékelés ellenőrzött résztvevőktől",
+          "ratedAttendances": "ellenőrzött részvételből lett értékelés",
+          "buildMonths": "hónap az első committól az App Store-ig"
+        },
+        "metricsNote": "Adatok 2026. szeptemberi állapot szerint."
       }
     }
   },
@@ -552,14 +486,14 @@
     "eyebrow": "Rólunk",
     "heading": "Másképpen",
     "headingHighlight": "felépítve",
-    "subheading": "A Flintworks azért létezik, hogy valóban működő szoftvereket fejlesszen - határidőre, kereten belül és tartósan.",
+    "subheading": "A Flintworks azért jött létre, hogy ambíciózus projekteket fejlesszen - határidőre, kereten belül, és a jövőre tervezve.",
     "story": {
       "eyebrow": "Megközelítésünk",
       "heading": "Egy fókuszált ügynökség, amely súlyán felül teljesít.",
       "paragraphs": [
         "A Flintworks egy senior szintű szoftverfejlesztő ügynökség, egy egyszerű elvvel: kevesebbet csinálunk, de kivételesen jól csináljuk. Nem akarunk mindenki számára minden lenni - arra a munkára specializálódtunk, amelyben igazán kitűnünk.",
-        "Olyan projekteket vállalunk, amelyekben hiszünk, és minden fejlesztést úgy kezeljük, mintha a saját termékünk lenne. Ez azt jelenti: nehéz kérdéseket teszünk fel, visszautasítjuk a hatókört, ami nem szolgálja az Önök céljait, és mélyen törődünk azzal, ami végül kiszáll.",
-        "Amikor velünk dolgoznak, olyan emberekkel dolgoznak, akik valódi termékeket szállítottak valódi felhasználóknak - nem ingyengyakorlaton lévő hallgatókkal. Láttuk, mi szokott rosszul menni nagy léptékben, és ennek megfelelően fejlesztünk."
+        "Olyan projekteket vállalunk, amelyekben hiszünk, és minden fejlesztést úgy kezeljük, mintha a saját termékünk lenne. Ez azt jelenti: nehéz kérdéseket teszünk fel, visszautasítjuk a rossz ötleteket, amelyek nem szolgálják az Önök céljait, és mélyen törődünk azzal, amit végül kiadunk a kezünkből.",
+        "Amikor velünk dolgoznak, olyan emberekkel dolgoznak, akik valódi termékeket fejlesztettek valódi felhasználóknak."
       ]
     },
     "values": {
@@ -674,11 +608,11 @@
       },
       "seo": {
         "name": "Keresőoptimalizálás (SEO)",
-        "description": "On-page és technikai SEO, kulcsszókutatás, tartalomstratégia és lokális keresőoptimalizálás - hogy ügyfelei előbb találjanak rá Önre, mint a versenytársakra."
+        "description": "On-page és technikai SEO, kulcsszókutatás, tartalomstratégia és lokális keresőoptimalizálás - hogy ügyfelei előbb találjanak rá Önre, mint a versenytársaira."
       },
       "ppc": {
         "name": "Fizetett hirdetések (PPC)",
-        "description": "Google Ads, Meta Ads (Facebook és Instagram) és TikTok kampányok - az Ön büdzséjére, céljaihoz és mérhető eredményekre építve."
+        "description": "Google Ads, Meta Ads (Facebook és Instagram) és TikTok kampányok - az Ön költségvetéséhez, céljaihoz igazítva, mérhető eredményekre építve."
       },
       "social-media": {
         "name": "Közösségi média kezelés",
@@ -686,11 +620,11 @@
       },
       "email-marketing": {
         "name": "E-mail marketing",
-        "description": "Hírlevél-kampányok, automatizált folyamatok, listaépítés és teljesítményriportok - hogy közönségéből visszatérő ügyfelek legyenek."
+        "description": "Hírlevél-kampányok, automatizált folyamatok, listaépítés és teljesítményriportok - hogy érdeklődőiből visszatérő ügyfelek legyenek."
       },
       "content-marketing": {
         "name": "Tartalommarketing",
-        "description": "Blogírás, lead magnetek és tartalomstratégiák, amelyek tekintélyt építenek, organikus forgalmat hoznak és támogatják az értékesítési folyamatot."
+        "description": "Blogírás, lead magnetek és tartalomstratégiák, amelyek követőtábort építenek, organikus forgalmat hoznak és támogatják az értékesítési folyamatot."
       },
       "analytics": {
         "name": "Analitika és riportálás",
@@ -702,7 +636,7 @@
       }
     },
     "home": {
-      "heading": "A marketing hamarosan megérkezik a Flintworksbe.",
+      "heading": "A marketing hamarosan megérkezik igényelhető szolgáltatásaink közé.",
       "subtext": "Teljes marketing részleget építünk - arculattervezés, SEO, fizetett hirdetések, közösségi média és még sok más. Egy ügynökség. Minden, amire a növekedéshez szükség van."
     },
     "pricing": {
@@ -735,7 +669,7 @@
         "full-service": {
           "name": "Scale",
           "bestFor": "Vállalkozásoknak, amelyek teljes marketing menedzsmentet szeretnének",
-          "includes": "Teljes tölcsér — hirdetések, tartalom, analitika, CRO",
+          "includes": "Teljes körű marketingkezelés — hirdetések, tartalom, analitika, CRO",
           "listPrice": "€1 500+/hó",
           "listPriceHUF": "600 000+ Ft/hó",
           "price": "€710+/hó",
@@ -750,13 +684,13 @@
     "hero": {
       "eyebrow": "Hamarosan",
       "heading": "Marketing & Növekedés",
-      "subheading": "Teljes körű belső marketing részleget építünk. Arculattervezés, SEO, fizetett hirdetések, közösségimédia-kezelés és még sok más - egy helyen, attól a csapattól, amelyben már megbízik."
+      "subheading": "Teljes körű marketing részleget építünk. Arculattervezés, SEO, fizetett hirdetések, közösségimédia-kezelés és még sok más - egy helyen, attól a csapattól, amelyben már megbízik."
     },
-    "subServicesEyebrow": "Ami benne van",
+    "subServicesEyebrow": "Mit takar a marketing?",
     "subServicesHeading": "Minden, amire a növekedéshez szükség van.",
     "bottomCta": {
-      "heading": "Legyen az első, aki megtudja.",
-      "body": "A marketing hamarosan megérkezik a Flintworksbe. Adja meg e-mail-címét, és azonnal értesítjük, amint elindulunk."
+      "heading": "Legyen az első, aki értesül.",
+      "body": "A marketing hamarosan megérkezik igényelhető szolgáltatásaink közé. Adja meg e-mail-címét, és azonnal értesítjük, amint elindulunk."
     },
     "about": {
       "visionEyebrow": "Teljes körű jövőkép",
@@ -764,7 +698,7 @@
     }
   },
   "footer": {
-    "tagline": "Budapesten kovácsolva. A világnak építve.",
+    "tagline": "Budapesten fejlesztve. A világnak építve.",
     "location": "Budapest, Magyarország 🇭🇺",
     "copyright": "© 2026 Flintworks. Minden jog fenntartva.",
     "sections": {

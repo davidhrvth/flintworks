@@ -1,22 +1,16 @@
 export interface PricingTier {
   id: string
-  popular?: boolean
-  custom?: boolean
+  /** No public price — the card shows a custom-quote block and a contact CTA */
+  quoteOnly?: boolean
 }
 
-export const webPricingTiers: PricingTier[] = [
-  { id: 'refresh' },
-  { id: 'landing' },
-  { id: 'starter' },
-  { id: 'growth', popular: true },
-  { id: 'scale', custom: true },
-  { id: 'discovery' },
+export const buildPricingTiers: PricingTier[] = [
+  { id: 'website' },
+  { id: 'web-app', quoteOnly: true },
+  { id: 'mobile-app', quoteOnly: true },
 ]
 
-export const mobilePricingTiers: PricingTier[] = [
-  { id: 'mobile-mvp' },
-  { id: 'custom-mobile', custom: true },
-]
+export const discoveryTierId = 'discovery'
 
 export const marketingPricingTiers = ['starter', 'growth', 'full-service'] as const
 

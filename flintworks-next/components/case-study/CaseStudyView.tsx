@@ -10,6 +10,7 @@ import {
   Users,
   Layers,
   Music2,
+  Ticket,
 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
@@ -17,7 +18,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { EmberBadge } from '@/components/ui/EmberBadge'
 import type { CaseStudy } from '@/data/case-studies'
 
-const featureIcons = [MapPin, Sparkles, Music2, Users, Layers]
+const featureIcons = [MapPin, Sparkles, Music2, Users, Ticket, Layers]
 
 interface CaseStudyViewProps {
   study: CaseStudy
@@ -48,6 +49,8 @@ export function CaseStudyView({ study }: CaseStudyViewProps) {
   const showStoreCtas = Boolean(study.appStoreUrl || study.playStoreUrl)
   const showDemo = Boolean(study.demoVideoUrl)
   const showScreenshots = Boolean(study.screenshots && study.screenshots.length > 0)
+  const metricsNote = t(`${base}.metricsNote`, { defaultValue: '' })
+  const isPhoneLayout = study.screenshotLayout === 'phone'
   const quoteText = study.hasQuote ? t(`${base}.quote`, { defaultValue: '' }) : ''
   const showQuote = Boolean(study.hasQuote && quoteText)
 
@@ -316,6 +319,9 @@ export function CaseStudyView({ study }: CaseStudyViewProps) {
                 ))}
               </div>
             )}
+            {showRealMetrics && metricsNote && (
+              <p className="mt-4 text-xs font-mono text-text-muted">{metricsNote}</p>
+            )}
           </div>
         </section>
       )}
@@ -325,10 +331,20 @@ export function CaseStudyView({ study }: CaseStudyViewProps) {
         <section className="py-20 lg:py-28 border-t border-border bg-surface/40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading heading={t('caseStudy.sections.screenshots')} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div
+              className={
+                isPhoneLayout
+                  ? 'grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6'
+                  : 'grid grid-cols-1 sm:grid-cols-2 gap-6'
+              }
+            >
               {study.screenshots.map((src, i) => (
                 <AnimatedSection key={src} delay={i * 0.08}>
-                  <div className="rounded-xl overflow-hidden border border-border bg-background">
+                  <div
+                    className={`overflow-hidden border border-border bg-background ${
+                      isPhoneLayout ? 'rounded-[1.75rem]' : 'rounded-xl'
+                    }`}
+                  >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={src}

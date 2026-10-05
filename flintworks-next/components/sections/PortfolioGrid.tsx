@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { AnimatedSection } from '../ui/AnimatedSection'
@@ -24,7 +24,11 @@ export function PortfolioGrid({ limit }: { limit?: number }) {
   const displayProjects = limit ? projects.slice(0, limit) : projects
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div
+      className={`grid grid-cols-1 gap-6 ${
+        displayProjects.length % 3 === 0 ? 'md:grid-cols-2 lg:grid-cols-3' : 'lg:grid-cols-2'
+      }`}
+    >
       {displayProjects.map((project, i) => (
         <AnimatedSection key={project.id} delay={i * 0.1}>
           <motion.article
@@ -32,14 +36,25 @@ export function PortfolioGrid({ limit }: { limit?: number }) {
             whileHover={{ scale: 1.01, y: -2 }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
           >
-            <div className="w-full h-40 rounded-lg bg-surface border border-border mb-6 flex items-center justify-center overflow-hidden">
-              <span className="font-mono text-xs text-text-muted">{'// TODO: replace with real screenshot'}</span>
-            </div>
+            {project.image && (
+              <div className="w-full aspect-[16/10] rounded-lg bg-surface border border-border mb-6 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.image}
+                  alt={t(`work.projects.${project.id}.name`)}
+                  loading="lazy"
+                  className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+            )}
 
             <div className="flex items-center gap-3 mb-3">
               <EmberBadge variant={badgeVariantMap[project.type] ?? 'surface'}>
                 {t(`work.projects.${project.id}.category`)}
               </EmberBadge>
+              {project.comingSoon && (
+                <EmberBadge variant="coming-soon">{t('work.comingSoon')}</EmberBadge>
+              )}
             </div>
 
             <h3 className="font-display font-bold text-xl text-text-heading mb-2 group-hover:text-ember transition-colors">
@@ -60,13 +75,25 @@ export function PortfolioGrid({ limit }: { limit?: number }) {
               ))}
             </div>
 
-            <Link
-              href={project.caseStudyUrl || `/work#${project.id}`}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-ember hover:text-flame transition-colors group/link"
-            >
-              {t('work.viewCaseStudy')}
-              <ArrowRight size={14} className="group-hover/link:translate-x-0.5 transition-transform" />
-            </Link>
+            {project.caseStudyUrl ? (
+              <Link
+                href={project.caseStudyUrl}
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-ember hover:text-flame transition-colors group/link"
+              >
+                {t('work.viewCaseStudy')}
+                <ArrowRight size={14} className="group-hover/link:translate-x-0.5 transition-transform" />
+              </Link>
+            ) : project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-ember hover:text-flame transition-colors group/link"
+              >
+                {t('work.visitSite')}
+                <ArrowUpRight size={14} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+              </a>
+            ) : null}
           </motion.article>
         </AnimatedSection>
       ))}

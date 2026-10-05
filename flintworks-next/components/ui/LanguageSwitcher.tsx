@@ -1,12 +1,16 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
+import { LANG_CHOICE_KEY } from '@/i18n'
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation()
   const current = i18n.language.startsWith('hu') ? 'hu' : 'en'
 
   const setLanguage = (lang: 'en' | 'hu') => {
+    try {
+      localStorage.setItem(LANG_CHOICE_KEY, lang)
+    } catch {}
     i18n.changeLanguage(lang)
   }
 

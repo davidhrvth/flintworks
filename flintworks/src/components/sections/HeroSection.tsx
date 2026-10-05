@@ -56,7 +56,6 @@ export function HeroSection() {
         >
           <span className="text-text-heading block">{t('hero.line1')}</span>
           <GradientText className="block">{t('hero.line2')}</GradientText>
-          <span className="text-text-heading block">{t('hero.line3')}</span>
         </motion.h1>
 
         <motion.p
