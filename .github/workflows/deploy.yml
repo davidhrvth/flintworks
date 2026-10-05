@@ -1,0 +1,123 @@
+name: Deploy (production)
+
+# Push to the `production` branch -> build on the runner -> rsync to the VPS -> restart -> health check.
+# The VPS (1 CPU / 1.9 GB RAM) is never used to build.
+
+on:
+  push:
+    branches: [production]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+env:
+  DEPLOY_HOST: 95.138.193.192
+  DEPLOY_USER: flintworks
+  # Public host key of the VPS (ssh-keyscan -t ed25519), pinned so CI never trusts-on-first-use.
+  DEPLOY_HOST_KEY: "95.138.193.192 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMC0vn+AexDNZMro3ZE5oG7ok1SGlgsnrKf/MnCl6E1p"
+  REMOTE_ROOT: /srv/flintworks
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      # NEXT_PUBLIC_* values are inlined into the client bundle at build time.
+      - name: Build frontend (Next.js standalone)
+        run: npm run build -w flintworks-next
+        env:
+          NEXT_PUBLIC_SITE_PASSWORD: ${{ secrets.NEXT_PUBLIC_SITE_PASSWORD }}
+          NEXT_PUBLIC_SITE_PROTECTION_ENABLED: ${{ vars.NEXT_PUBLIC_SITE_PROTECTION_ENABLED }}
+          NEXT_PUBLIC_CONTACT_API_URL: ${{ vars.NEXT_PUBLIC_CONTACT_API_URL || '/api/contact' }}
+
+      - name: Build backend
+        run: npm run build -w flintworks-backend
+
+      # Next standalone output does not include static assets or public/.
+      - name: Assemble frontend bundle
+        run: |
+          S=flintworks-next/.next/standalone/flintworks-next
+          test -f "$S/server.js"
+          mkdir -p "$S/.next"
+          cp -r flintworks-next/.next/static "$S/.next/static"
+          cp -r flintworks-next/public "$S/public"
+
+      - name: Set up SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          echo "$DEPLOY_HOST_KEY" > ~/.ssh/known_hosts
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          cat > ~/.ssh/config <<EOF
+          Host vps
+            HostName $DEPLOY_HOST
+            User $DEPLOY_USER
+            IdentityFile ~/.ssh/deploy_key
+            IdentitiesOnly yes
+            StrictHostKeyChecking yes
+          EOF
+
+      - name: Keep previous release for rollback
+        run: |
+          ssh vps '
+            set -e
+            cd /srv/flintworks
+            rm -rf flintworks-next/.next/standalone.prev flintworks-backend/dist.prev
+            cp -a flintworks-next/.next/standalone flintworks-next/.next/standalone.prev
+            cp -a flintworks-backend/dist flintworks-backend/dist.prev
+          '
+
+      - name: Upload
+        run: |
+          # .next/cache is Next runtime cache on the server; leave it alone.
+          rsync -az --delete --exclude='/flintworks-next/.next/cache' \
+            flintworks-next/.next/standalone/ vps:$REMOTE_ROOT/flintworks-next/.next/standalone/
+          rsync -az --delete flintworks-backend/dist/ vps:$REMOTE_ROOT/flintworks-backend/dist/
+
+      - name: Restart and health check (auto-rollback on failure)
+        run: |
+          ssh vps 'bash -s' <<'REMOTE'
+          set -u
+          cd /srv/flintworks
+
+          healthy() {
+            for i in $(seq 1 20); do
+              if curl -fsS -m 5 -o /dev/null http://127.0.0.1:3000/ \
+                 && curl -fsS -m 5 -o /dev/null http://127.0.0.1:3001/health; then
+                return 0
+              fi
+              sleep 2
+            done
+            return 1
+          }
+
+          sudo systemctl restart flintworks-backend flintworks-next
+          if healthy; then
+            echo "Deploy healthy."
+            exit 0
+          fi
+
+          echo "Health check failed - rolling back." >&2
+          journalctl -u flintworks-next -u flintworks-backend -n 40 --no-pager >&2 || true
+          rm -rf flintworks-next/.next/standalone flintworks-backend/dist
+          mv flintworks-next/.next/standalone.prev flintworks-next/.next/standalone
+          mv flintworks-backend/dist.prev flintworks-backend/dist
+          sudo systemctl restart flintworks-backend flintworks-next
+          exit 1
+          REMOTE
+
+      - name: Public smoke test
+        run: curl -fsS -m 15 -o /dev/null -w 'https://flintworks.hu -> %{http_code}\n' https://flintworks.hu
