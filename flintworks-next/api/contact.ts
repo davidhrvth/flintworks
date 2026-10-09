@@ -5,7 +5,6 @@ export interface ContactFormData {
   email: string
   company?: string
   service: string
-  budget: string
   message: string
 }
 
@@ -14,15 +13,29 @@ export interface ContactResponse {
   message: string
 }
 
+/** `status` is the HTTP status, or 0 when the request never got a response. */
+export class ContactSubmitError extends Error {
+  constructor(public readonly status: number) {
+    super(`Contact form submission failed (${status || 'network error'})`)
+    this.name = 'ContactSubmitError'
+  }
+}
+
 export async function submitContactForm(data: ContactFormData): Promise<ContactResponse> {
-  const response = await fetch(CONTACT_API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
+  let response: Response
+
+  try {
+    response = await fetch(CONTACT_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+  } catch {
+    throw new ContactSubmitError(0)
+  }
 
   if (!response.ok) {
-    throw new Error(`Contact form submission failed: ${response.statusText}`)
+    throw new ContactSubmitError(response.status)
   }
 
   return response.json()

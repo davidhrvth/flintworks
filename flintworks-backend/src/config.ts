@@ -36,10 +36,10 @@ export const config = {
     user: required('SMTP_USER', process.env.SMTP_USER),
     pass: required('SMTP_PASSWORD', process.env.SMTP_PASSWORD),
   },
-  mailFrom: optional('MAIL_FROM', '"Flintworks" <hello@flintworks.io>'),
+  mailFrom: optional('MAIL_FROM', '"Flintworks" <hello@flintworks.hu>'),
   mailFromNotification: optional(
     'MAIL_FROM_NOTIFICATION',
-    '"Flintworks" <noreply@flintworks.io>',
+    '"Flintworks" <noreply@flintworks.hu>',
   ),
   mailToTeam: required('MAIL_TO_TEAM', process.env.MAIL_TO_TEAM),
 }

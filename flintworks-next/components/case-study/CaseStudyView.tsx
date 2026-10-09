@@ -46,7 +46,7 @@ export function CaseStudyView({ study }: CaseStudyViewProps) {
   const showMetricsComingSoon =
     study.status === 'pre-launch' && (!study.metrics || study.metrics.length === 0)
   const showRealMetrics = Boolean(study.metrics && study.metrics.length > 0)
-  const showStoreCtas = Boolean(study.appStoreUrl || study.playStoreUrl)
+  const showStoreCtas = Boolean(study.appStoreUrl || study.playStoreUrl || study.siteUrl)
   const showDemo = Boolean(study.demoVideoUrl)
   const showScreenshots = Boolean(study.screenshots && study.screenshots.length > 0)
   const metricsNote = t(`${base}.metricsNote`, { defaultValue: '' })
@@ -127,6 +127,17 @@ export function CaseStudyView({ study }: CaseStudyViewProps) {
                         className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border text-text-heading text-sm font-semibold hover:border-ember/40 transition-colors"
                       >
                         {t('caseStudy.playStore')}
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
+                    {study.siteUrl && (
+                      <a
+                        href={study.siteUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border text-text-heading text-sm font-semibold hover:border-ember/40 transition-colors"
+                      >
+                        {t('caseStudy.visitSite')}
                         <ExternalLink size={14} />
                       </a>
                     )}
@@ -310,8 +321,8 @@ export function CaseStudyView({ study }: CaseStudyViewProps) {
             {showRealMetrics && study.metrics && (
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 {study.metrics.map((metric) => (
-                  <AnimatedSection key={metric.labelKey}>
-                    <div className="p-6 rounded-xl border border-border bg-surface/50 text-center">
+                  <AnimatedSection key={metric.labelKey} className="h-full">
+                    <div className="h-full p-6 rounded-xl border border-border bg-surface/50 text-center">
                       <p className="font-display text-3xl text-text-heading mb-2">{metric.value}</p>
                       <p className="text-sm text-text-muted">{t(metric.labelKey)}</p>
                     </div>

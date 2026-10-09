@@ -55,13 +55,13 @@ export default function Contact() {
 
                 <div className="border-t border-border pt-8 space-y-4">
                   <a
-                    href="mailto:hello@flintworks.io"
+                    href="mailto:hello@flintworks.hu"
                     className="flex items-center gap-3 text-text-body hover:text-ember transition-colors group"
                   >
                     <div className="p-2 rounded-lg bg-surface border border-border group-hover:border-ember/30 transition-colors">
                       <Mail size={16} className="text-ember" />
                     </div>
-                    <span className="font-mono text-sm">hello@flintworks.io</span>
+                    <span className="font-mono text-sm">hello@flintworks.hu</span>
                   </a>
 
                   <div className="flex items-center gap-3 text-text-muted">

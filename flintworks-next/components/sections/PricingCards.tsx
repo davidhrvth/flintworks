@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Check } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { AnimatedSection } from '../ui/AnimatedSection'
+import { contactHref } from '@/data/contact'
 import type { PricingTier } from '@/data/pricing'
 import type { Currency } from '../ui/CurrencyToggle'
 
@@ -56,7 +57,7 @@ export function PricingCards({ tiers, currency }: PricingCardsProps) {
               </ul>
 
               <Link
-                href="/contact"
+                href={contactHref(tier.contactTopic)}
                 className={`block w-full text-center py-3 rounded-lg font-semibold text-sm transition-all duration-150 ${
                   tier.quoteOnly
                     ? 'border border-ember text-ember hover:bg-ember hover:text-white'

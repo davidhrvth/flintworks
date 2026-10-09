@@ -14,7 +14,7 @@ const socialLinks = [
   { icon: Code2, label: 'GitHub', href: 'https://github.com' },
   { icon: Briefcase, label: 'LinkedIn', href: 'https://linkedin.com' },
   { icon: MessageCircle, label: 'Twitter / X', href: 'https://x.com' },
-  { icon: Mail, label: 'Email', href: 'mailto:hello@flintworks.io' },
+  { icon: Mail, label: 'Email', href: 'mailto:hello@flintworks.hu' },
 ]
 
 export function Footer() {
@@ -35,7 +35,7 @@ export function Footer() {
     ],
     [t('footer.sections.connect')]: [
       { label: t('footer.links.contact'), href: '/contact' },
-      { label: 'hello@flintworks.io', href: 'mailto:hello@flintworks.io' },
+      { label: 'hello@flintworks.hu', href: 'mailto:hello@flintworks.hu' },
     ],
   }
 

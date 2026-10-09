@@ -23,6 +23,7 @@ export interface CaseStudy {
   heroImage?: string
   appStoreUrl?: string
   playStoreUrl?: string
+  siteUrl?: string
   demoVideoUrl?: string
   metrics?: CaseStudyMetric[]
   /** Optional quote i18n presence flag — quote copy lives in i18n when true */
@@ -39,6 +40,7 @@ export const caseStudies: CaseStudy[] = [
     status: 'launched',
     heroImage: '/case-studies/vibe/hero.webp',
     appStoreUrl: 'https://apps.apple.com/hu/app/vibe-passport-to-nightlife/id6777436186',
+    siteUrl: 'https://vibevents.eu',
     screenshotLayout: 'phone',
     screenshots: [
       '/case-studies/vibe/app-map.webp',

@@ -1,121 +1,162 @@
 'use client'
 
-import { Mail, Code2, Briefcase, MessageCircle, Clock, MapPin } from 'lucide-react'
+import { useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
+import { ContactChannels, ContactQuickActions } from '@/components/sections/ContactChannels'
 import { ContactForm } from '@/components/sections/ContactForm'
+import { EmberParticles } from '@/components/sections/EmberParticles'
 import { GradientText } from '@/components/ui/GradientText'
 
-const socialLinks = [
-  { icon: Code2, label: 'GitHub', href: 'https://github.com' },
-  { icon: Briefcase, label: 'LinkedIn', href: 'https://linkedin.com' },
-  { icon: MessageCircle, label: 'Twitter / X', href: 'https://x.com' },
-]
+const NEXT_STEPS = ['step1', 'step2', 'step3'] as const
+
+// One ember glow centred on the line where the hero meets the form: the hero
+// paints the half above that line, the form area the half below.
+const glowAbove = 'radial-gradient(ellipse 760px 320px at 38% 100%, rgba(255,77,0,0.14) 0%, transparent 70%)'
+const glowBelow = 'radial-gradient(ellipse 760px 320px at 38% 0%, rgba(255,77,0,0.14) 0%, transparent 70%)'
 
 export default function ContactPageContent() {
   const { t } = useTranslation()
+  const shouldReduceMotion = useReducedMotion()
+  const [sent, setSent] = useState(false)
+
+  const stagger = (i: number) => ({
+    initial: shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+  })
 
   return (
-    <section className="pt-32 pb-20 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="mb-12">
-          <span className="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ember mb-4 block">
-            {t('contact.eyebrow')}
-          </span>
-          <h1 className="font-display font-bold text-5xl lg:text-7xl text-text-heading leading-tight">
-            {t('contact.heading')}{' '}
-            <GradientText>{t('contact.headingHighlight')}</GradientText>
-          </h1>
-        </AnimatedSection>
+    <section className="relative pb-20 lg:pb-28">
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
-          <AnimatedSection className="lg:col-span-3" delay={0.1}>
-            <div className="glass rounded-xl border border-white/5 p-8 lg:p-10">
-              <ContactForm />
-            </div>
-          </AnimatedSection>
+      {/* Hero: embers rise from the top edge of the form */}
+      <div className="relative">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+          style={{ background: glowAbove }}
+        />
+        <EmberParticles />
 
-          <AnimatedSection className="lg:col-span-2" delay={0.2} direction="left">
-            <div className="space-y-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 lg:pb-14">
+          <motion.div {...stagger(0)}>
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ember/30 bg-ember/5 text-ember font-mono text-xs tracking-widest uppercase mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-ember animate-pulse" />
+              {t('contact.badge')}
+            </span>
+          </motion.div>
+
+          <motion.h1
+            className="font-display font-bold text-5xl lg:text-7xl text-text-heading leading-tight"
+            {...stagger(1)}
+          >
+            {t('contact.heading')} <GradientText>{t('contact.headingHighlight')}</GradientText>
+          </motion.h1>
+
+          <motion.p className="mt-5 text-text-body text-lg max-w-2xl leading-relaxed" {...stagger(2)}>
+            {t('contact.subheading')}
+          </motion.p>
+
+          <motion.div className="mt-6 lg:hidden" {...stagger(3)}>
+            <ContactQuickActions />
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="relative">
+        <div
+          className="absolute inset-x-0 top-0 h-[420px] pointer-events-none"
+          aria-hidden="true"
+          style={{ background: glowBelow }}
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+            <motion.div className="lg:col-span-7" {...stagger(3)}>
+              <div className="relative glass rounded-2xl p-5 sm:p-8 lg:p-10">
+                {/* Struck edge: the line the embers come off */}
+                <div
+                  className="absolute inset-x-6 -top-px h-px bg-gradient-to-r from-transparent via-ember to-transparent"
+                  aria-hidden="true"
+                />
+                <div
+                  className="absolute inset-x-16 -top-3 h-6 bg-ember/25 blur-2xl pointer-events-none"
+                  aria-hidden="true"
+                />
+                <ContactForm onSent={() => setSent(true)} />
+              </div>
+            </motion.div>
+
+            <motion.aside
+              className="lg:col-span-5 lg:top-28 lg:[@media(min-height:800px)]:sticky space-y-8"
+              {...stagger(4)}
+            >
               <div>
-                <h2 className="font-display font-bold text-2xl text-text-heading mb-3">
-                  {t('contact.info.heading')}
+                <h2 className="font-display font-bold text-2xl text-text-heading mb-2">
+                  {t('contact.direct.heading')}
                 </h2>
-                <p className="text-text-body leading-relaxed">{t('contact.info.body')}</p>
+                <p className="text-text-body text-sm leading-relaxed mb-5">{t('contact.direct.body')}</p>
+                <ContactChannels />
               </div>
 
-              <div className="border-t border-border pt-8 space-y-4">
-                <a
-                  href="mailto:hello@flintworks.io"
-                  className="flex items-center gap-3 text-text-body hover:text-ember transition-colors group"
-                >
-                  <div className="p-2 rounded-lg bg-surface border border-border group-hover:border-ember/30 transition-colors">
-                    <Mail size={16} className="text-ember" />
-                  </div>
-                  <span className="font-mono text-sm">hello@flintworks.io</span>
-                </a>
-
-                <div className="flex items-center gap-3 text-text-muted">
-                  <div className="p-2 rounded-lg bg-surface border border-border">
-                    <MapPin size={16} className="text-ember" />
-                  </div>
-                  <div>
-                    <span className="text-sm text-text-body">{t('contact.info.location')}</span>
-                    <p className="text-xs text-text-muted mt-0.5">{t('contact.info.locationNote')}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 text-text-muted">
-                  <div className="p-2 rounded-lg bg-surface border border-border">
-                    <Clock size={16} className="text-text-muted" />
-                  </div>
-                  <span className="text-sm">{t('contact.info.response')}</span>
-                </div>
+              <div className="glass rounded-xl p-6">
+                <h2 className="font-mono text-xs font-medium text-text-muted uppercase tracking-wider mb-5">
+                  {t('contact.info.next.label')}
+                </h2>
+                <ol>
+                  {NEXT_STEPS.map((step, i) => {
+                    const current = sent && i === 0
+                    return (
+                      <li key={step} className="relative flex gap-4 pb-5 last:pb-0">
+                        {i < NEXT_STEPS.length - 1 && (
+                          <span
+                            className="absolute left-3.5 top-7 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-ember/40 to-border"
+                            aria-hidden="true"
+                          />
+                        )}
+                        <span
+                          className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border font-mono text-[10px] font-bold transition-all duration-500 ${
+                            current
+                              ? 'border-ember bg-ember text-white animate-pulse-glow'
+                              : 'border-ember/30 bg-ember/10 text-ember'
+                          }`}
+                        >
+                          {`0${i + 1}`}
+                        </span>
+                        <span
+                          className={`pt-1 text-sm leading-relaxed transition-colors duration-500 ${
+                            current ? 'text-text-heading' : 'text-text-body'
+                          }`}
+                        >
+                          {t(`contact.info.next.${step}`)}
+                        </span>
+                      </li>
+                    )
+                  })}
+                </ol>
               </div>
 
-              <div className="border-t border-border pt-8">
-                <p className="font-mono text-xs font-medium text-text-muted uppercase tracking-wider mb-4">
-                  {t('contact.info.findUs')}
-                </p>
-                <div className="flex items-center gap-4">
-                  {socialLinks.map(({ icon: Icon, label, href }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="p-2.5 rounded-lg bg-surface border border-border text-text-muted hover:text-ember hover:border-ember/30 transition-all duration-150"
-                    >
-                      <Icon size={18} />
-                    </a>
-                  ))}
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-surface border border-border">
+                  <MapPin size={16} className="text-ember" />
+                </div>
+                <div>
+                  <p className="text-sm text-text-body">{t('contact.info.location')}</p>
+                  <p className="text-xs text-text-muted mt-0.5">{t('contact.info.locationNote')}</p>
                 </div>
               </div>
-
-              <div className="border-t border-border pt-8">
-                <div className="glass rounded-xl p-6 border border-border/50">
-                  <p className="font-mono text-xs text-text-muted uppercase tracking-wider mb-2">
-                    {t('contact.info.next.label')}
-                  </p>
-                  <ol className="space-y-2 text-text-body text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-ember font-mono font-bold shrink-0">01</span>
-                      {t('contact.info.next.step1')}
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-ember font-mono font-bold shrink-0">02</span>
-                      {t('contact.info.next.step2')}
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-ember font-mono font-bold shrink-0">03</span>
-                      {t('contact.info.next.step3')}
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
+            </motion.aside>
+          </div>
         </div>
       </div>
     </section>

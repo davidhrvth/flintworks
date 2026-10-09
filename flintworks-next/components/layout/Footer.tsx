@@ -1,15 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { Code2, Briefcase, MessageCircle, Mail, MapPin } from 'lucide-react'
+import { MessageCircle, Mail, MapPin, Phone } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Logo } from '../ui/Logo'
+import { CONTACT_EMAIL, CONTACT_PHONE, contactLinks } from '@/config/contact'
 
 const socialLinks = [
-  { icon: Code2, label: 'GitHub', href: 'https://github.com' },
-  { icon: Briefcase, label: 'LinkedIn', href: 'https://linkedin.com' },
-  { icon: MessageCircle, label: 'Twitter / X', href: 'https://x.com' },
-  { icon: Mail, label: 'Email', href: 'mailto:hello@flintworks.io' },
+  { icon: Mail, label: 'Email', href: contactLinks.email },
+  { icon: Phone, label: 'Phone', href: contactLinks.phone },
+  { icon: MessageCircle, label: 'WhatsApp', href: contactLinks.whatsapp },
 ]
 
 export function Footer() {
@@ -30,7 +30,8 @@ export function Footer() {
     ],
     [t('footer.sections.connect')]: [
       { label: t('footer.links.contact'), href: '/contact' },
-      { label: 'hello@flintworks.io', href: 'mailto:hello@flintworks.io' },
+      { label: CONTACT_EMAIL, href: contactLinks.email },
+      { label: CONTACT_PHONE, href: contactLinks.phone },
     ],
   }
 

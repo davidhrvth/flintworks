@@ -48,7 +48,9 @@
     "line3": "mi megépítjük.",
     "subheadline": "A Flintworks egy budapesti szoftverfejlesztő ügynökség, amely webalkalmazásokat, mobilapplikációkat és digitális platformokat épít komoly vállalkozásoknak - Magyarországon és azon túl.",
     "seeOurWork": "Munkáink",
-    "getQuote": "Ajánlatot Kérek"
+    "getQuote": "Ajánlatot Kérek",
+    "hint": "Mozgassa a kurzort · Kattintson a szikráért",
+    "hintTouch": "Koppintson a szikráért"
   },
   "home": {
     "whyFlintworks": {
@@ -412,6 +414,7 @@
     "appStore": "App Store",
     "playStore": "Google Play",
     "watchDemo": "Demó megtekintése",
+    "visitSite": "Weboldal megtekintése",
     "status": {
       "preLaunch": "Megjelenés: {{month}}",
       "launched": "Megjelent"
@@ -535,16 +538,28 @@
     }
   },
   "contact": {
-    "eyebrow": "Kapcsolat",
+    "badge": "Válasz 24 órán belül",
     "heading": "Fejlesszük együtt",
     "headingHighlight": "a jövőt",
+    "subheading": "Írja meg, mire van szüksége, és egyértelmű következő lépéssel jelentkezünk. Inkább beszélne velünk? Hívjon vagy írjon közvetlenül.",
+    "direct": {
+      "heading": "Inkább beszélne velünk?",
+      "body": "Az űrlap nem kötelező. Így közvetlenül elér minket."
+    },
+    "channels": {
+      "phone": "Telefon",
+      "call": "Hívás",
+      "email": "E-mail",
+      "whatsappNote": "Írjon nekünk WhatsAppon",
+      "booking": "Időpontfoglalás",
+      "bookingNote": "30 perces bemutatkozó hívás",
+      "copy": "{{label}} másolása",
+      "copied": "Kimásolva"
+    },
     "info": {
-      "heading": "Fejlesszük együtt",
-      "body": "Legyen szó kész ötletről vagy csak egy megoldandó problémáról, szívesen meghallgatják. Töltse ki az űrlapot, és egyeztetünk egy hívást.",
       "location": "Budapest, Magyarország",
       "locationNote": "Magyar és nemzetközi ügyfelekkel egyaránt dolgozunk.",
       "response": "Általában 24 órán belül válaszolunk.",
-      "findUs": "Megtalálnak minket online",
       "next": {
         "label": "Mi történik ezután?",
         "step1": "24 órán belül átnézzük az üzenetét",
@@ -558,36 +573,74 @@
     "email": "E-mail",
     "company": "Cég",
     "companyOptional": "(opcionális)",
-    "service": "Szolgáltatás",
-    "budget": "Költségkeret",
-    "message": "Üzenet",
     "namePlaceholder": "Az Ön neve",
     "emailPlaceholder": "email@ceg.hu",
     "companyPlaceholder": "Cég neve",
-    "messagePlaceholder": "Meséljen a projektjéről...",
-    "services": {
-      "placeholder": "Válasszon szolgáltatást...",
-      "webApp": "Webalkalmazás és platform",
-      "businessWebsite": "Vállalati weboldal",
-      "mobileApp": "Mobilapplikáció",
-      "startup": "Startup fejlesztés",
-      "other": "Egyéb / Nem biztos"
+    "messagePlaceholder": "Mit szeretne megépíteni vagy megoldani?",
+    "messageHelp": "Néhány mondat is elég. Hasznos, ha megírja: mire szolgál, kik fogják használni, és van-e határidő.",
+    "steps": {
+      "topic": "Mire van szüksége?",
+      "message": "Meséljen róla",
+      "details": "Hol érhetjük el?"
     },
-    "budgets": {
-      "placeholder": "Válasszon költségkeretet...",
-      "under5k": "€5 000 alatt",
-      "5kTo15k": "€5 000 – €15 000",
-      "15kTo50k": "€15 000 – €50 000",
-      "over50k": "€50 000 felett",
-      "unknown": "Még nem tudom"
+    "topics": {
+      "business-website": {
+        "label": "Weboldal",
+        "description": "Céges oldal vagy landing page",
+        "hint": "A céges weboldalak {{price}} kezdőárról indulnak. Írja meg, mit kell tudnia az oldalnak.",
+        "placeholder": "Mivel foglalkozik a vállalkozása, és mit szeretne elérni az oldallal?"
+      },
+      "web-app": {
+        "label": "Webapp",
+        "description": "Platform, portál vagy SaaS",
+        "hint": "Projektre szabott ár: előbb beszélünk, utána világos árajánlatot küldünk.",
+        "placeholder": "Mit kell tudnia az alkalmazásnak, és kik fogják használni?"
+      },
+      "mobile-app": {
+        "label": "Mobilapp",
+        "description": "iOS és Android",
+        "hint": "Projektre szabott ár: előbb beszélünk, utána világos árajánlatot küldünk.",
+        "placeholder": "Mit kell tudnia az appnak? iOS, Android vagy mindkettő?"
+      },
+      "startup": {
+        "label": "Startup / MVP",
+        "description": "Az ötlettől az indulásig",
+        "hint": "Az első ötlettől az elindított MVP-ig. Írja meg, hol tart most.",
+        "placeholder": "Mi az ötlet, és hol tart vele?"
+      },
+      "discovery": {
+        "label": "Discovery",
+        "description": "Előbb hatókör és roadmap",
+        "hint": "Fizetős tisztázó sprint {{price}} áron: hatókör, kockázatok és írásos roadmap. A díj beszámít a fejlesztésbe, ha folytatjuk.",
+        "placeholder": "Milyen problémát szeretne megoldani?"
+      },
+      "other": {
+        "label": "Valami más",
+        "description": "Bizonytalan, vagy csak kérdezne",
+        "hint": "Semmi gond. Írja le a helyzetet, és javaslunk egy megfelelő megoldást.",
+        "placeholder": "Miben segíthetünk?"
+      }
     },
-    "validation": "Kérjük, töltse ki az összes kötelező mezőt.",
-    "error": "Hiba történt. Kérjük, próbálja újra, vagy írjon közvetlenül a hello@flintworks.io e-mail-címre.",
+    "errors": {
+      "topic": "Válassza ki, ami a legközelebb áll hozzá. A „Valami más” is jó.",
+      "message": "Írjon egy-két mondatot, hogy tudjuk, miben segíthetünk.",
+      "name": "Kérjük, adja meg a nevét.",
+      "emailMissing": "Kérjük, adja meg az e-mail-címét, hogy válaszolhassunk.",
+      "emailInvalid": "Ez az e-mail-cím nem tűnik helyesnek.",
+      "summary": "Kérjük, ellenőrizze a kiemelt mezőket.",
+      "rejected": "Ezt nem tudtuk elfogadni. Kérjük, ellenőrizze az adatait, és próbálja újra.",
+      "rateLimited": "Túl sok próbálkozás. Kérjük, várjon néhány percet, vagy írjon nekünk közvetlenül.",
+      "server": "Most nem sikerült elküldeni az üzenetét. Próbálja újra, vagy küldje el e-mailben: a szövege megmarad."
+    },
+    "emailInstead": "Küldés e-mailben",
     "sending": "Küldés...",
-    "sendIt": "Küldés",
+    "send": "Üzenet küldése",
     "success": {
       "heading": "Üzenet elküldve!",
-      "body": "24 órán belül jelentkezünk."
+      "body": "Köszönjük, {{name}}! 24 órán belül jelentkezünk.",
+      "confirmation": "A visszaigazolást elküldtük ide: {{email}}.",
+      "seeWork": "Munkáink megtekintése",
+      "again": "Új üzenet írása"
     }
   },
   "marketing": {

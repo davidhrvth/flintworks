@@ -9,7 +9,7 @@ Production-ready HTML email templates for Flintworks. All templates use **inline
 ## Templates
 
 ### 1. `contact-confirmation.html`
-Sent automatically to the client after they submit the contact form on flintworks.io.
+Sent automatically to the client after they submit the contact form on flintworks.hu.
 
 **Purpose:** Acknowledge receipt, confirm a 24hr response window, and show the client a summary of what they submitted.
 
@@ -32,7 +32,6 @@ Sent internally to the Flintworks team every time a new contact form submission 
 | `{{email}}` | Submitter's email address (also used in the mailto CTA) |
 | `{{company}}` | Submitter's company name (may be empty — handle gracefully) |
 | `{{service}}` | Service they selected |
-| `{{budget}}` | Budget range they selected |
 | `{{message}}` | Their message |
 
 ---
@@ -127,7 +126,7 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: 'hello@flintworks.io', // TODO: replace sender address
+    user: 'hello@flintworks.hu', // TODO: replace sender address
     pass: process.env.SMTP_PASSWORD,
   },
 });
@@ -140,7 +139,7 @@ async function sendContactConfirmation({ name, email, service, message }) {
   });
 
   await transporter.sendMail({
-    from: '"Flintworks" <hello@flintworks.io>', // TODO: replace sender address
+    from: '"Flintworks" <hello@flintworks.hu>', // TODO: replace sender address
     to: email,
     subject: `We got your message, ${name}`,
     html,
@@ -168,7 +167,7 @@ function renderTemplate(templatePath, variables) {
 
 // Send contact confirmation to client
 await resend.emails.send({
-  from: 'Flintworks <hello@flintworks.io>', // TODO: replace sender address
+  from: 'Flintworks <hello@flintworks.hu>', // TODO: replace sender address
   to: [clientEmail],
   subject: `We got your message, ${name}`,
   html: renderTemplate('./email-templates/contact-confirmation.html', {
@@ -180,15 +179,14 @@ await resend.emails.send({
 
 // Send internal notification
 await resend.emails.send({
-  from: 'Flintworks <noreply@flintworks.io>', // TODO: replace sender address
-  to: ['team@flintworks.io'],                 // TODO: replace internal address
+  from: 'Flintworks <noreply@flintworks.hu>', // TODO: replace sender address
+  to: ['team@flintworks.hu'],                 // TODO: replace internal address
   subject: `New contact: ${name}`,
   html: renderTemplate('./email-templates/contact-notification.html', {
     name,
     email,
     company,
     service,
-    budget,
     message,
   }),
 });

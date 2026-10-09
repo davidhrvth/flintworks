@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { transporter } from '../lib/mailer.js'
 import { renderTemplate } from '../lib/renderTemplate.js'
-import { formatBudget, formatCompany, formatService } from '../lib/labels.js'
+import { formatCompany, formatService } from '../lib/labels.js'
 import { config } from '../config.js'
 
 export const contactFormSchema = z.object({
@@ -9,7 +9,6 @@ export const contactFormSchema = z.object({
   email: z.string().trim().email().max(320),
   company: z.string().trim().max(200).optional(),
   service: z.string().trim().min(1).max(100),
-  budget: z.string().trim().min(1).max(100),
   message: z.string().trim().min(1).max(5000),
 })
 
@@ -17,7 +16,6 @@ export type ContactFormData = z.infer<typeof contactFormSchema>
 
 export async function sendContactEmails(data: ContactFormData): Promise<void> {
   const serviceLabel = formatService(data.service)
-  const budgetLabel = formatBudget(data.budget)
   const companyLabel = formatCompany(data.company)
 
   const confirmationHtml = renderTemplate('contact-confirmation.html', {
@@ -31,7 +29,6 @@ export async function sendContactEmails(data: ContactFormData): Promise<void> {
     email: data.email,
     company: companyLabel,
     service: serviceLabel,
-    budget: budgetLabel,
     message: data.message,
   })
 

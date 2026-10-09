@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${name} — Case Study | Flintworks Studio`,
       description,
-      url: `https://flintworks.io/studio/${slug}`,
+      url: `https://flintworks.hu/studio/${slug}`,
       type: 'article',
     },
   }

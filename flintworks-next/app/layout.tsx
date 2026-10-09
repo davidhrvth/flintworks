@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://flintworks.io'),
+  metadataBase: new URL('https://flintworks.hu'),
   manifest: '/site.webmanifest',
   title: {
     default: 'Flintworks — Software Agency Budapest',
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      en: 'https://flintworks.io',
-      hu: 'https://flintworks.io',
+      en: 'https://flintworks.hu',
+      hu: 'https://flintworks.hu',
     },
   },
 }

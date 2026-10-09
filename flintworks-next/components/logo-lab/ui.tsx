@@ -274,7 +274,7 @@ export function TabStrip({ c, dark }: { c: Concept; dark: boolean }) {
       </div>
       <div className="px-3 py-2" style={{ background: tab }}>
         <div className="rounded-full px-3 py-1 text-xs" style={{ background: strip, color: text }}>
-          flintworks.io
+          flintworks.hu
         </div>
       </div>
     </div>
@@ -306,7 +306,7 @@ export function BusinessCards({ c, wm }: { c: Concept; wm?: WordmarkKey }) {
         <div className="text-[#0A0A0B]">
           <div className="font-display font-bold text-sm">Your Name</div>
           <div className="text-[11px] opacity-60">Founder</div>
-          <div className="font-mono text-[10px] mt-3 opacity-70">hello@flintworks.io · flintworks.io · Budapest</div>
+          <div className="font-mono text-[10px] mt-3 opacity-70">hello@flintworks.hu · flintworks.hu · Budapest</div>
         </div>
       </div>
     </div>
@@ -336,7 +336,7 @@ export function OgCard({ c, wm }: { c: Concept; wm?: WordmarkKey }) {
         <Lockup concept={c} wordmark={wm} height={48} p={PALETTES.dark} />
         <span className="font-mono text-[11px] tracking-[0.3em] uppercase text-text-muted">We forge the future</span>
       </div>
-      <span className="absolute left-5 bottom-4 font-mono text-[10px] text-text-muted">flintworks.io</span>
+      <span className="absolute left-5 bottom-4 font-mono text-[10px] text-text-muted">flintworks.hu</span>
     </div>
   )
 }

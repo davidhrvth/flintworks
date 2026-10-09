@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About — Flintworks',
     description: 'Senior-level software agency from Budapest. Built different.',
-    url: 'https://flintworks.io/about',
+    url: 'https://flintworks.hu/about',
     type: 'website',
   },
 }

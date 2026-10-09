@@ -12,6 +12,7 @@ import { GlowCard } from '@/components/ui/GlowCard'
 import { MarketingPricingCard } from '@/components/ui/MarketingPricingCard'
 import { ENABLE_MARKETING } from '@/config/features'
 import { CurrencyToggle, type Currency } from '@/components/ui/CurrencyToggle'
+import { contactHref } from '@/data/contact'
 import { buildPricingTiers, discoveryTierId, marketingPricingTiers } from '@/data/pricing'
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
@@ -116,7 +117,7 @@ export default function PricingPageContent() {
                 </p>
               </div>
               <Link
-                href="/contact"
+                href={contactHref('discovery')}
                 className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg border border-ember text-ember text-sm font-semibold hover:bg-ember hover:text-white transition-colors group"
               >
                 {t(`${discovery}.cta`)}
@@ -175,7 +176,7 @@ export default function PricingPageContent() {
               </h2>
               <p className="text-text-body text-lg max-w-xl mx-auto mb-8">{t('pricing.custom.body')}</p>
               <Link
-                href="/contact"
+                href={contactHref('other')}
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-ember text-white font-semibold hover:bg-flame transition-colors group"
               >
                 {t('pricing.custom.cta')}

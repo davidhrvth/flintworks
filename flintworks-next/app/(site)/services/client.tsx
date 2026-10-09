@@ -5,6 +5,7 @@ import { Check, ArrowRight, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
 import { GlowCard } from '@/components/ui/GlowCard'
+import { contactHref } from '@/data/contact'
 import { services } from '@/data/services'
 
 export default function ServicesPageContent() {
@@ -104,7 +105,7 @@ export default function ServicesPageContent() {
                         </div>
 
                         <Link
-                          href="/contact"
+                          href={contactHref(service.contactTopic)}
                           className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-ember text-ember font-semibold text-sm hover:bg-ember hover:text-white transition-all duration-150 group"
                         >
                           {t('services.startWith', { name: t(`services.items.${service.id}.name`) })}
@@ -128,7 +129,7 @@ export default function ServicesPageContent() {
             </h2>
             <p className="text-text-body text-lg mb-8 max-w-xl mx-auto">{t('services.cta.body')}</p>
             <Link
-              href="/contact"
+              href={contactHref('other')}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-ember text-white font-semibold hover:bg-flame transition-colors group"
             >
               {t('services.cta.button')}

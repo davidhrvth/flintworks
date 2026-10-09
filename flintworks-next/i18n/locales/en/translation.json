@@ -47,7 +47,9 @@
     "line2": "The Future",
     "subheadline": "Flintworks is a Budapest-based software agency forging web apps, mobile products, and digital platforms for businesses that mean business — in Hungary and beyond.",
     "seeOurWork": "See Our Work",
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "hint": "Move to heat · Click to strike",
+    "hintTouch": "Tap to strike a spark"
   },
   "home": {
     "whyFlintworks": {
@@ -411,6 +413,7 @@
     "appStore": "App Store",
     "playStore": "Google Play",
     "watchDemo": "Watch Demo",
+    "visitSite": "Visit the site",
     "status": {
       "preLaunch": "Launching {{month}}",
       "launched": "Launched"
@@ -534,16 +537,28 @@
     }
   },
   "contact": {
-    "eyebrow": "Contact",
+    "badge": "Replies within 24 hours",
     "heading": "Let's build",
     "headingHighlight": "something",
+    "subheading": "Tell us what you need and we'll come back with a clear next step. Prefer to talk? Call or message us directly.",
+    "direct": {
+      "heading": "Prefer to talk?",
+      "body": "The form is optional. These reach us directly."
+    },
+    "channels": {
+      "phone": "Phone",
+      "call": "Call",
+      "email": "Email",
+      "whatsappNote": "Message us on WhatsApp",
+      "booking": "Book a call",
+      "bookingNote": "30-minute intro call",
+      "copy": "Copy {{label}}",
+      "copied": "Copied"
+    },
     "info": {
-      "heading": "Let's build something together",
-      "body": "Whether you have a fully-formed idea or just a problem that needs solving, we'd love to hear about it. Fill in the form and we'll set up a call.",
       "location": "Budapest, Hungary",
       "locationNote": "We work with clients across Hungary and internationally.",
       "response": "We typically respond within 24 hours.",
-      "findUs": "Find us online",
       "next": {
         "label": "What happens next?",
         "step1": "We review your message within 24 hours",
@@ -557,36 +572,74 @@
     "email": "Email",
     "company": "Company",
     "companyOptional": "(optional)",
-    "service": "Service",
-    "budget": "Budget Range",
-    "message": "Message",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@company.com",
     "companyPlaceholder": "Company name",
-    "messagePlaceholder": "Tell us about your project...",
-    "services": {
-      "placeholder": "Select a service...",
-      "webApp": "Web App & Platform",
-      "businessWebsite": "Business Website",
-      "mobileApp": "Mobile App",
-      "startup": "Startup Development",
-      "other": "Other / Not Sure"
+    "messagePlaceholder": "What are you trying to build or fix?",
+    "messageHelp": "A few sentences is plenty. Useful to mention: what it's for, who will use it, and any deadline.",
+    "steps": {
+      "topic": "What do you need?",
+      "message": "Tell us about it",
+      "details": "Where can we reach you?"
     },
-    "budgets": {
-      "placeholder": "Select a budget range...",
-      "under5k": "Under €5,000",
-      "5kTo15k": "€5,000 – €15,000",
-      "15kTo50k": "€15,000 – €50,000",
-      "over50k": "Over €50,000",
-      "unknown": "Not sure yet"
+    "topics": {
+      "business-website": {
+        "label": "Website",
+        "description": "Company site or landing page",
+        "hint": "Business websites start from {{price}}. Tell us what yours needs to do.",
+        "placeholder": "What does your business do, and what should the site achieve?"
+      },
+      "web-app": {
+        "label": "Web app",
+        "description": "Platform, portal or SaaS",
+        "hint": "Priced per project: we talk first, then send you a clear quote.",
+        "placeholder": "What should the app do, and who will use it?"
+      },
+      "mobile-app": {
+        "label": "Mobile app",
+        "description": "iOS and Android",
+        "hint": "Priced per project: we talk first, then send you a clear quote.",
+        "placeholder": "What should the app do? iOS, Android or both?"
+      },
+      "startup": {
+        "label": "Startup / MVP",
+        "description": "From idea to launch",
+        "hint": "From first idea to a launched MVP. Tell us where you are right now.",
+        "placeholder": "What's the idea, and how far along are you?"
+      },
+      "discovery": {
+        "label": "Discovery",
+        "description": "Scope and roadmap first",
+        "hint": "A paid clarity sprint for {{price}}: scope, risks and a written roadmap. The fee is credited toward the build if you continue.",
+        "placeholder": "What problem are you trying to solve?"
+      },
+      "other": {
+        "label": "Something else",
+        "description": "Not sure yet, or just a question",
+        "hint": "No problem. Describe the situation and we'll suggest the right approach.",
+        "placeholder": "What's on your mind?"
+      }
     },
-    "validation": "Please fill in all required fields.",
-    "error": "Something went wrong. Please try again or email us directly at hello@flintworks.io",
+    "errors": {
+      "topic": "Pick the closest fit. \"Something else\" is fine.",
+      "message": "Add a sentence or two so we know how to help.",
+      "name": "Please tell us your name.",
+      "emailMissing": "We need an email address to reply to.",
+      "emailInvalid": "That email address doesn't look right.",
+      "summary": "Please check the highlighted fields.",
+      "rejected": "We couldn't accept that. Please check your details and try again.",
+      "rateLimited": "Too many attempts. Please wait a few minutes, or email us directly.",
+      "server": "We couldn't send your message just now. Try again, or send it by email: your text is kept."
+    },
+    "emailInstead": "Send it by email instead",
     "sending": "Sending...",
-    "sendIt": "Send It",
+    "send": "Send message",
     "success": {
       "heading": "Message sent!",
-      "body": "We'll be in touch within 24 hours."
+      "body": "Thanks, {{name}}. We'll be in touch within 24 hours.",
+      "confirmation": "A confirmation is on its way to {{email}}.",
+      "seeWork": "See our work",
+      "again": "Send another message"
     }
   },
   "marketing": {

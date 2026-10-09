@@ -132,10 +132,10 @@ context:
   [`MarketingPricingCard.tsx:37`](../../flintworks-next/components/ui/MarketingPricingCard.tsx#L37)
 
 - Pass page currency into marketing cards on `/pricing`
-  [`client.tsx:147`](../../flintworks-next/app/pricing/client.tsx#L147)
+  [`client.tsx:147`](../../flintworks-next/app/(site)/pricing/client.tsx#L147)
 
 - Marketing page toggle + indicative currency note
-  [`client.tsx:106`](../../flintworks-next/app/marketing/client.tsx#L106)
+  [`client.tsx:106`](../../flintworks-next/app/(site)/marketing/client.tsx#L106)
 
 - Retainer list/sale strings + early-client subtext (not “unannounced”)
   [`en/translation.json:710`](../../flintworks-next/i18n/locales/en/translation.json#L710)
