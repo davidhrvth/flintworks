@@ -196,7 +196,7 @@ await resend.emails.send({
 
 ## Notes
 
-- **Font stack:** Templates use `'Syne', 'Inter', Arial, sans-serif`. Syne and Inter will render in Apple Mail if the fonts are installed on the device. Gmail and Outlook will fall back to Arial cleanly.
-- **No external dependencies:** The Flintworks wordmark and `✦` symbol are plain text — no images required.
-- **Dark backgrounds:** All templates use the dark Flintworks palette. Outlook on Windows renders dark backgrounds correctly when background colours are applied to `<td>` elements, which these templates do.
+- **Font stack:** Headings use `'Syne'`, body copy uses `'Inter'`, and labels/meta tags use `'JetBrains Mono'`, with clean web-safe fallbacks (`Arial, sans-serif` and `Consolas, monospace`) across all email clients.
+- **Brand logo:** Templates embed the official Flintworks Knapped mark and wordmark via high-resolution asset `https://flintworks.hu/brand/flintworks-logo-on-dark.png`, with styled alt-text fallback if images are initially blocked.
+- **Dark backgrounds:** All templates use the dark Flintworks palette (`#0A0A0B` ink base, `#111114` surfaces, `#FF4D00` ember accents). Outlook on Windows and mobile dark mode clients render backgrounds correctly because colors are applied via `bgcolor` attributes and inline styles.
 - **Variable safety:** Always sanitise user-supplied values before injecting them into templates to prevent HTML injection.

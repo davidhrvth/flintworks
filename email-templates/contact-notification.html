@@ -4,128 +4,224 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Contact Form Submission — Flintworks</title>
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
+  <title>New Contact Form Submission: {{name}} — Flintworks</title>
+  <!-- Google Fonts for supported clients -->
+  <!--[if !mso]><!-- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <!--<![endif]-->
+  <style type="text/css">
+    :root {
+      color-scheme: dark;
+      supported-color-schemes: dark;
+    }
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      -webkit-text-size-adjust: 100% !important;
+      -ms-text-size-adjust: 100% !important;
+      background-color: #0A0A0B !important;
+    }
+    table {
+      border-collapse: separate !important;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    img {
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+    a {
+      text-decoration: none;
+    }
+    .cta-btn:hover {
+      background-color: #FF8C42 !important;
+    }
+    .link-hover:hover {
+      color: #FF8C42 !important;
+      text-decoration: underline !important;
+    }
+    @media only screen and (max-width: 600px) {
+      .email-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .mobile-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+      .mobile-stack {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .mobile-header-badge {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0A0A0B; font-family: 'Syne', 'Inter', Arial, sans-serif;">
+<body bgcolor="#0A0A0B" style="margin: 0; padding: 0; background-color: #0A0A0B; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #C4C4CF;">
 
-  <!-- Outer wrapper -->
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0A0A0B;">
+  <!-- Outer wrapper table -->
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#0A0A0B" style="background-color: #0A0A0B;">
     <tr>
-      <td align="center" style="padding: 40px 16px;">
+      <td align="center" style="padding: 36px 12px 48px 12px;">
 
-        <!-- Email card — max 600px -->
-        <table border="0" cellpadding="0" cellspacing="0" width="600" style="max-width: 600px; width: 100%; background-color: #111114; border: 1px solid #1E1E24; border-radius: 8px; overflow: hidden;">
+        <!-- Email Container — 600px max -->
+        <table border="0" cellpadding="0" cellspacing="0" width="600" class="email-wrapper" style="max-width: 600px; width: 100%; background-color: #111114; border: 1px solid #1E1E24; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);">
+
+          <!-- Top Brand Spark Accent Bar -->
+          <tr>
+            <td height="3" style="height: 3px; background-color: #FF4D00; line-height: 3px; font-size: 0;">&nbsp;</td>
+          </tr>
 
           <!-- Header -->
           <tr>
-            <td align="center" style="padding: 36px 40px 28px 40px; border-bottom: 1px solid #1E1E24;">
-              <table border="0" cellpadding="0" cellspacing="0">
+            <td class="mobile-padding" style="padding: 30px 36px 26px 36px; border-bottom: 1px solid #1E1E24;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td>
-                    <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #F0F0F5; letter-spacing: 0.12em; text-transform: uppercase;">FLINTWORKS</span>
-                    <span style="font-size: 18px; color: #FF4D00; margin-left: 6px;">✦</span>
+                  <!-- Official Logo (Horizontal Knapped Mark + Syne Wordmark) -->
+                  <td align="left" valign="middle">
+                    <a href="https://flintworks.hu" target="_blank" style="text-decoration: none; display: inline-block;">
+                      <img src="https://flintworks.hu/brand/flintworks-logo-on-dark.png" width="168" height="23" alt="FLINTWORKS" border="0" style="display: block; width: 168px; max-width: 100%; height: auto; border: 0; outline: none; text-decoration: none; font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 800; color: #F0F0F5; letter-spacing: 0.14em; text-transform: uppercase;" />
+                    </a>
+                  </td>
+                  <!-- Lead Alert Status Pill -->
+                  <td align="right" valign="middle" class="mobile-header-badge">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="background-color: #26120B; border: 1px solid #FF4D00; border-radius: 9999px; padding: 5px 12px;">
+                          <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 10px; font-weight: 700; color: #FF4D00; letter-spacing: 0.12em; text-transform: uppercase;">
+                            <span style="color: #FF4D00; font-size: 8px; vertical-align: middle; margin-right: 4px;">&#9679;</span> NEW LEAD
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <!-- Alert banner -->
+          <!-- Main Body -->
           <tr>
-            <td style="padding: 0;">
+            <td class="mobile-padding" style="padding: 36px 36px 32px 36px;">
+
+              <!-- Lead Intro Header -->
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td style="background-color: #FF4D00; padding: 10px 40px;">
-                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; font-weight: 700; color: #F0F0F5; letter-spacing: 0.1em; text-transform: uppercase;">&#9679; New Contact Submission</p>
+                  <td style="padding-bottom: 8px;">
+                    <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 11px; font-weight: 600; color: #FF4D00; letter-spacing: 0.14em; text-transform: uppercase; display: block;">
+                      INCOMING SUBMISSION
+                    </span>
                   </td>
                 </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Body -->
-          <tr>
-            <td style="padding: 40px 40px 32px 40px;">
-
-              <!-- Intro -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td style="padding-bottom: 28px;">
-                    <h1 style="margin: 0 0 8px 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 22px; font-weight: 700; color: #F0F0F5; line-height: 1.3;">
-                      {{name}} just submitted the contact form.
+                  <td style="padding-bottom: 12px;">
+                    <h1 style="margin: 0; font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 700; color: #F0F0F5; line-height: 1.3; letter-spacing: -0.01em;">
+                      {{name}} submitted the contact form.
                     </h1>
-                    <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; color: #C4C4CF; line-height: 1.6;">
-                      Full submission details below. Respond within 24 hours.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 24px;">
+                    <p style="margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 14px; color: #8E8E9F; line-height: 1.6;">
+                      A new project enquiry was submitted through <strong style="color: #C4C4CF;">flintworks.hu/contact</strong>. Standard SLA target is response within <strong style="color: #F0F0F5;">24 hours</strong>.
                     </p>
                   </td>
                 </tr>
               </table>
 
-              <!-- Data table -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0A0A0B; border: 1px solid #1E1E24; border-radius: 6px;">
+              <!-- Lead Specification Card -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0E0E11; border: 1px solid #1E1E24; border-radius: 8px; margin-bottom: 24px; overflow: hidden;">
                 <tr>
-                  <td style="padding: 24px 28px;">
+                  <td style="padding: 14px 20px 10px 20px; border-bottom: 1px solid #1A1A20; background-color: #141418;">
+                    <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 10px; font-weight: 700; color: #8E8E9F; letter-spacing: 0.12em; text-transform: uppercase;">
+                      CLIENT SPECIFICATIONS
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px;">
 
                     <!-- Name -->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;">
                       <tr>
-                        <td width="120" valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: 0.08em; text-transform: uppercase;">Name</span>
+                        <td width="110" valign="top" class="mobile-stack" style="padding-bottom: 4px;">
+                          <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 11px; font-weight: 600; color: #8E8E9F; letter-spacing: 0.08em; text-transform: uppercase;">
+                            NAME
+                          </span>
                         </td>
-                        <td valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; color: #F0F0F5;">{{name}}</span>
+                        <td valign="top" class="mobile-stack">
+                          <span style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 14px; font-weight: 600; color: #F0F0F5;">
+                            {{name}}
+                          </span>
                         </td>
                       </tr>
                     </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;"><tr><td style="border-top: 1px solid #1E1E24; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
+
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;"><tr><td style="border-top: 1px solid #1A1A22; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
 
                     <!-- Email -->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;">
                       <tr>
-                        <td width="120" valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: 0.08em; text-transform: uppercase;">Email</span>
+                        <td width="110" valign="top" class="mobile-stack" style="padding-bottom: 4px;">
+                          <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 11px; font-weight: 600; color: #8E8E9F; letter-spacing: 0.08em; text-transform: uppercase;">
+                            EMAIL
+                          </span>
                         </td>
-                        <td valign="top">
-                          <a href="mailto:{{email}}" style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; color: #FF4D00; text-decoration: underline;">{{email}}</a>
+                        <td valign="top" class="mobile-stack">
+                          <a href="mailto:{{email}}" class="link-hover" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 14px; font-weight: 600; color: #FF4D00; text-decoration: none;">
+                            {{email}}
+                          </a>
                         </td>
                       </tr>
                     </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;"><tr><td style="border-top: 1px solid #1E1E24; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
+
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;"><tr><td style="border-top: 1px solid #1A1A22; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
 
                     <!-- Company -->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;">
                       <tr>
-                        <td width="120" valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: 0.08em; text-transform: uppercase;">Company</span>
+                        <td width="110" valign="top" class="mobile-stack" style="padding-bottom: 4px;">
+                          <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 11px; font-weight: 600; color: #8E8E9F; letter-spacing: 0.08em; text-transform: uppercase;">
+                            COMPANY
+                          </span>
                         </td>
-                        <td valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; color: #F0F0F5;">{{company}}</span>
+                        <td valign="top" class="mobile-stack">
+                          <span style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 14px; color: #F0F0F5;">
+                            {{company}}
+                          </span>
                         </td>
                       </tr>
                     </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;"><tr><td style="border-top: 1px solid #1E1E24; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
+
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 14px;"><tr><td style="border-top: 1px solid #1A1A22; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
 
                     <!-- Service -->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;">
-                      <tr>
-                        <td width="120" valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: 0.08em; text-transform: uppercase;">Service</span>
-                        </td>
-                        <td valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; color: #F0F0F5;">{{service}}</span>
-                        </td>
-                      </tr>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 18px;"><tr><td style="border-top: 1px solid #1E1E24; font-size: 0; line-height: 0;">&nbsp;</td></tr></table>
-
-                    <!-- Message -->
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
-                        <td width="120" valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 11px; font-weight: 700; color: #FF4D00; letter-spacing: 0.08em; text-transform: uppercase;">Message</span>
+                        <td width="110" valign="top" class="mobile-stack" style="padding-bottom: 4px;">
+                          <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 11px; font-weight: 600; color: #8E8E9F; letter-spacing: 0.08em; text-transform: uppercase;">
+                            SERVICE
+                          </span>
                         </td>
-                        <td valign="top">
-                          <span style="font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; color: #C4C4CF; line-height: 1.7;">{{message}}</span>
+                        <td valign="top" class="mobile-stack">
+                          <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="background-color: rgba(255, 77, 0, 0.1); border: 1px solid rgba(255, 77, 0, 0.25); border-radius: 4px; padding: 3px 10px;">
+                                <span style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 13px; font-weight: 600; color: #FF4D00;">
+                                  {{service}}
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
                       </tr>
                     </table>
@@ -134,11 +230,53 @@
                 </tr>
               </table>
 
-              <!-- CTA button -->
-              <table border="0" cellpadding="0" cellspacing="0" style="margin-top: 32px;">
+              <!-- Client Message Card -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0E0E11; border: 1px solid #1E1E24; border-left: 3px solid #FF4D00; border-radius: 6px; margin-bottom: 28px; overflow: hidden;">
                 <tr>
-                  <td align="center" style="background-color: #FF4D00; border-radius: 5px;">
-                    <a href="mailto:{{email}}" style="display: inline-block; padding: 14px 32px; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #F0F0F5; text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;">Reply to {{name}}</a>
+                  <td style="padding: 14px 20px 10px 20px; border-bottom: 1px solid #1A1A20; background-color: #141418;">
+                    <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 10px; font-weight: 700; color: #8E8E9F; letter-spacing: 0.12em; text-transform: uppercase;">
+                      PROJECT SCOPE / MESSAGE
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 20px;">
+                    <p style="margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 14px; color: #F0F0F5; line-height: 1.7; white-space: pre-wrap;">{{message}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Action Bar / Quick Reply -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 24px;">
+                <tr>
+                  <td align="left">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="center" bgcolor="#FF4D00" style="background-color: #FF4D00; border-radius: 6px;">
+                          <a href="mailto:{{email}}?subject=Re:%20Flintworks%20Enquiry%20-%20{{name}}" class="cta-btn" style="display: inline-block; padding: 14px 28px; font-family: 'Syne', -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 13px; font-weight: 700; color: #FFFFFF; text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 6px; line-height: 1;">
+                            Reply to {{name}} &rarr;
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-top: 10px;">
+                    <span style="font-family: 'Inter', Arial, sans-serif; font-size: 12px; color: #8E8E9F;">
+                      Direct email: <a href="mailto:{{email}}" style="color: #FF4D00; text-decoration: underline;">{{email}}</a>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- SLA Target Bar -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px solid #1E1E24; padding-top: 20px;">
+                <tr>
+                  <td style="background-color: #141418; border: 1px solid #1E1E24; border-radius: 6px; padding: 12px 16px;">
+                    <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 11px; color: #8E8E9F; display: block;">
+                      <strong style="color: #FF4D00;">SLA WORKFLOW:</strong> 1. Check project fit &rarr; 2. Reply within 24h &rarr; 3. Offer 30-min discovery call
+                    </span>
                   </td>
                 </tr>
               </table>
@@ -148,13 +286,28 @@
 
           <!-- Footer -->
           <tr>
-            <td align="center" style="padding: 24px 40px; border-top: 1px solid #1E1E24;">
-              <p style="margin: 0; font-family: 'Syne', 'Inter', Arial, sans-serif; font-size: 12px; color: #C4C4CF; opacity: 0.5;">Internal notification · Flintworks CRM</p>
+            <td class="mobile-padding" style="padding: 22px 36px 26px 36px; border-top: 1px solid #1E1E24; background-color: #0E0E11;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="left">
+                    <span style="font-family: 'JetBrains Mono', Consolas, Monaco, monospace; font-size: 11px; color: #6B6B7A; text-transform: uppercase; letter-spacing: 0.08em;">
+                      INTERNAL CRM NOTIFICATION · FLINTWORKS DISPATCH
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" style="padding-top: 6px;">
+                    <span style="font-family: 'Inter', Arial, sans-serif; font-size: 11px; color: #54545E;">
+                      Sent automatically from flintworks.hu backend · Budapest, Hungary
+                    </span>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
 
         </table>
-        <!-- /Email card -->
+        <!-- /Email Container -->
 
       </td>
     </tr>

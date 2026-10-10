@@ -75,9 +75,12 @@ jobs:
           ssh vps '
             set -e
             cd /srv/flintworks
-            rm -rf flintworks-next/.next/standalone.prev flintworks-backend/dist.prev
+            rm -rf flintworks-next/.next/standalone.prev flintworks-backend/dist.prev email-templates.prev
             cp -a flintworks-next/.next/standalone flintworks-next/.next/standalone.prev
             cp -a flintworks-backend/dist flintworks-backend/dist.prev
+            if [ -d email-templates ]; then
+              cp -a email-templates email-templates.prev
+            fi
           '
 
       - name: Upload
@@ -86,6 +89,7 @@ jobs:
           rsync -az --delete --exclude='/flintworks-next/.next/cache' \
             flintworks-next/.next/standalone/ vps:$REMOTE_ROOT/flintworks-next/.next/standalone/
           rsync -az --delete flintworks-backend/dist/ vps:$REMOTE_ROOT/flintworks-backend/dist/
+          rsync -az --delete email-templates/ vps:$REMOTE_ROOT/email-templates/
 
       - name: Restart and health check (auto-rollback on failure)
         run: |
@@ -115,6 +119,10 @@ jobs:
           rm -rf flintworks-next/.next/standalone flintworks-backend/dist
           mv flintworks-next/.next/standalone.prev flintworks-next/.next/standalone
           mv flintworks-backend/dist.prev flintworks-backend/dist
+          if [ -d email-templates.prev ]; then
+            rm -rf email-templates
+            mv email-templates.prev email-templates
+          fi
           sudo systemctl restart flintworks-backend flintworks-next
           exit 1
           REMOTE
