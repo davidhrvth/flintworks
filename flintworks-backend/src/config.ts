@@ -42,4 +42,11 @@ export const config = {
     '"Flintworks" <noreply@flintworks.hu>',
   ),
   mailToTeam: required('MAIL_TO_TEAM', process.env.MAIL_TO_TEAM),
+  /** Append-only waitlist file. Keep outside dist/ so deploys don't wipe it. */
+  marketingNotifyCsvPath: resolve(
+    optional(
+      'MARKETING_NOTIFY_CSV_PATH',
+      resolve(__dirname, '../data/marketing-notify.csv'),
+    ),
+  ),
 }

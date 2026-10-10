@@ -22,3 +22,8 @@ services:
       - flintworks-backend/.env.production
     ports:
       - "127.0.0.1:3001:3001"
+    volumes:
+      - marketing-notify-data:/data
+
+volumes:
+  marketing-notify-data:

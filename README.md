@@ -7,7 +7,7 @@ Monorepo for the Flintworks web platform: Next.js frontend, Express API, email t
 | Directory | Description |
 |---|---|
 | [`flintworks-next/`](flintworks-next/) | Production Next.js app (flintworks.hu) |
-| [`flintworks-backend/`](flintworks-backend/) | Express API for contact form and email delivery |
+| [`flintworks-backend/`](flintworks-backend/) | Express API for contact form, marketing waitlist (CSV + email), and SMTP delivery |
 | [`email-templates/`](email-templates/) | HTML email templates used by the backend |
 | [`flintworks/`](flintworks/) | Legacy Vite + React site |
 

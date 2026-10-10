@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { CheckCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import {
+  MarketingNotifySubmitError,
+  submitMarketingNotify,
+} from '@/api/marketingNotify'
 
 interface MarketingNotifyFormProps {
   className?: string
@@ -12,17 +16,25 @@ interface MarketingNotifyFormProps {
 export function MarketingNotifyForm({ className = '', layout = 'inline' }: MarketingNotifyFormProps) {
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email.trim()) return
-    const existing: string[] = JSON.parse(localStorage.getItem('flintworks_marketing_notify') || '[]')
-    localStorage.setItem('flintworks_marketing_notify', JSON.stringify([...existing, email.trim()]))
-    setSubmitted(true)
+    if (status === 'submitting') return
+    const trimmed = email.trim()
+    if (!trimmed) return
+
+    setStatus('submitting')
+    try {
+      await submitMarketingNotify(trimmed)
+      setStatus('success')
+    } catch (error) {
+      console.error(error instanceof MarketingNotifySubmitError ? error.message : error)
+      setStatus('error')
+    }
   }
 
-  if (submitted) {
+  if (status === 'success') {
     return (
       <div className={`flex items-center gap-2 text-ember font-semibold text-sm ${className}`}>
         <CheckCircle size={16} className="shrink-0" />
@@ -31,43 +43,47 @@ export function MarketingNotifyForm({ className = '', layout = 'inline' }: Marke
     )
   }
 
-  if (layout === 'inline') {
-    return (
-      <form onSubmit={handleSubmit} className={`flex gap-2 ${className}`}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={t('marketing.notifyPlaceholder')}
-          required
-          className="flex-1 min-w-0 px-4 py-2.5 rounded-lg bg-background border border-border text-text-heading text-sm placeholder:text-text-muted focus:outline-none focus:border-ember/40 transition-colors"
-        />
-        <button
-          type="submit"
-          className="shrink-0 px-5 py-2.5 rounded-lg bg-ember text-white text-sm font-semibold hover:bg-flame transition-colors"
-        >
-          {t('marketing.notifyButton')}
-        </button>
-      </form>
-    )
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className={`space-y-2 ${className}`}>
+  const fields = (
+    <>
       <input
         type="email"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e) => {
+          setEmail(e.target.value)
+          if (status === 'error') setStatus('idle')
+        }}
         placeholder={t('marketing.notifyPlaceholder')}
         required
-        className="w-full px-4 py-2.5 rounded-lg bg-background border border-border text-text-heading text-sm placeholder:text-text-muted focus:outline-none focus:border-ember/40 transition-colors"
+        disabled={status === 'submitting'}
+        className="flex-1 min-w-0 w-full px-4 py-2.5 rounded-lg bg-background border border-border text-text-heading text-sm placeholder:text-text-muted focus:outline-none focus:border-ember/40 transition-colors disabled:opacity-60"
       />
       <button
         type="submit"
-        className="w-full py-2.5 rounded-lg bg-ember text-white text-sm font-semibold hover:bg-flame transition-colors"
+        disabled={status === 'submitting'}
+        className={
+          layout === 'inline'
+            ? 'shrink-0 px-5 py-2.5 rounded-lg bg-ember text-white text-sm font-semibold hover:bg-flame transition-colors disabled:opacity-60'
+            : 'w-full py-2.5 rounded-lg bg-ember text-white text-sm font-semibold hover:bg-flame transition-colors disabled:opacity-60'
+        }
       >
         {t('marketing.notifyButton')}
       </button>
-    </form>
+    </>
+  )
+
+  return (
+    <div className={className}>
+      <form
+        onSubmit={handleSubmit}
+        className={layout === 'inline' ? 'flex gap-2' : 'space-y-2'}
+      >
+        {fields}
+      </form>
+      {status === 'error' && (
+        <p className="mt-2 text-sm text-flame" role="alert">
+          {t('marketing.notifyError')}
+        </p>
+      )}
+    </div>
   )
 }

@@ -32,6 +32,9 @@ coverage/
 next-env.d.ts
 .vercel
 
+# local waitlist data (server CSV)
+flintworks-backend/data/
+
 # editor
 .vscode/*
 !.vscode/extensions.json

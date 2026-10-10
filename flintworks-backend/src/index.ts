@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit'
 import { config } from './config.js'
 import { verifyMailer } from './lib/mailer.js'
 import { contactRouter } from './routes/contact.js'
+import { marketingNotifyRouter } from './routes/marketingNotify.js'
 
 const app = express()
 
@@ -42,6 +43,7 @@ app.get('/health', (_req, res) => {
 })
 
 app.use('/api', contactRouter)
+app.use('/api', marketingNotifyRouter)
 
 async function start(): Promise<void> {
   try {

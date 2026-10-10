@@ -20,12 +20,14 @@ FROM base AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 backend
+    adduser --system --uid 1001 backend && \
+    mkdir -p /data && chown backend:nodejs /data
 COPY --from=builder /app/flintworks-backend/dist ./dist
 COPY --from=builder /app/flintworks-backend/node_modules ./node_modules
 COPY --from=builder /app/flintworks-backend/package.json ./package.json
 COPY email-templates /email-templates
 ENV EMAIL_TEMPLATES_DIR=/email-templates
+ENV MARKETING_NOTIFY_CSV_PATH=/data/marketing-notify.csv
 USER backend
 EXPOSE 3001
 ENV PORT=3001

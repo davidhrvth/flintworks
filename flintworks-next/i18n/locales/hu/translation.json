@@ -654,6 +654,7 @@
     "notifyPlaceholder": "email@ceg.hu",
     "notifyButton": "Értesítsen",
     "notifySuccess": "Feliratkozott!",
+    "notifyError": "Nem sikerült menteni az e-mail-címet. Próbálja újra.",
     "subServices": {
       "brand-identity": {
         "name": "Arculattervezés",

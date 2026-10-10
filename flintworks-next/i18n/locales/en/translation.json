@@ -653,6 +653,7 @@
     "notifyPlaceholder": "your@email.com",
     "notifyButton": "Notify Me",
     "notifySuccess": "You're on the list!",
+    "notifyError": "Couldn't save your email. Please try again.",
     "subServices": {
       "brand-identity": {
         "name": "Brand Identity Design",
